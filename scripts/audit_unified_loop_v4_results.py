@@ -32,7 +32,7 @@ OUTPUT = Path("results/unified_loop_v4")
 PLAN = STUDY / "plan.json"
 PROTOCOL_LOCK = STUDY / "protocol_lock.json"
 EVALUATION_PLAN = Path("artifacts/unified_loop_v4_execution/evaluation_plan.md")
-HEAVY_LOCK = Path("/home/steve/Documents/Codex/2026-10-27/why-you-chatgpt-desktop-always-quit/work/local-resume/heavy-experiment.lock")
+HEAVY_LOCK = Path(os.environ.get("ZEROCLEAN_HEAVY_LOCK", "/tmp/zeroclean-heavy-experiment.lock"))
 MEMORY_BYTES = 12 * 1024**3
 THREAD_VARIABLES = ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS",
                     "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS")

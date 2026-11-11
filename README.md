@@ -11,8 +11,8 @@ Supplemental code, sandboxed rule verifier, fallback-gated intrinsic detector, c
 | `zeroclean/` | Core library: exact-string CSV loader (`data.py`), syscall-confined rule sandbox (`sandbox.py`), leave-one-out support and NMI vicinity index (`statistics.py`), counterfactual feature engine (`loop.py`), verification queue (`verification.py`), closed-loop state driver (`closed_loop.py`), exact-string evaluator (`evaluation.py`), and upstream ZeroED/ZeroEC adapters (`upstream_zeroed.py`, `upstream_zeroec.py`). |
 | `experimental/unified_loop_v6/` | ZeroClean-Loop v6 cohort implementation: fallback-gated intrinsic detection and single-determinant FD discovery (`detection.py`), key-grouped multi-source consensus (`consensus.py`), counterfactual candidate scoring and inverse-violation weighted whole-row guard (`repair.py`), cohort runner (`run_study.py`, `execute_cohort.py`), SHA-256 protocol lock (`protocol_lock.json`, `plan.json`), and v6 unit/integration tests (`test_*.py`). |
 | `experimental/` | Cohort runners and matched study implementations for `unified_loop_v2`–`v5`, format-contract overlays (`format_overlay.py`), and Flights source-consensus specifications (`latent_consensus*.py`). |
-| `scripts/` | Benchmark bootstrap (`bootstrap_benchmarks.py`), independent rational-arithmetic v6 auditor (`audit_unified_loop_v6_results.py`, `recount_v6_metrics.py`), cohort evaluators (`evaluate_unified_loop_v2.py`–`v6.py`), and paper table/figure generators (`generate_icde_tables.py`, `generate_icde_figures.py`, `f4p_style.py`). |
-| `paper/` | Generated LaTeX macro/table artifacts (`generated_macros.tex`, `generated_table_*.tex`), single-source fact sheet (`paper_facts.json`), and rendered vector/raster figures (`figures/fig_example.*` through `figures/fig_diagnostics.*`, `figures/figure_data.json`). |
+| `scripts/` | Benchmark bootstrap (`bootstrap_benchmarks.py`), independent rational-arithmetic v6 auditor (`audit_unified_loop_v6_results.py`, `recount_v6_metrics.py`), manuscript claim verifier (`check_paper_claims.py`), cohort evaluators (`evaluate_unified_loop_v2.py`–`v6.py`), and paper table/figure generators (`generate_icde_tables.py`, `generate_icde_figures.py`, `f4p_style.py`). |
+| `paper/` | ICDE 2027 manuscript source and compiled PDF (`main.tex`, `main.pdf`, `references.bib`), generated LaTeX macro/table artifacts (`generated_macros.tex`, `generated_table_*.tex`), single-source fact sheet (`paper_facts.json`), and rendered vector/raster figures (`figures/fig_example.*` through `figures/fig_diagnostics.*`, `figures/figure_data.json`). |
 | `results/unified_loop_v6/` | Frozen ZeroClean-Loop v6 six-dataset predictions (`predictions/`), per-dataset SHA-256 freeze manifests (`frozen/`), stage diagnostics (`diagnostics/`), evaluator summary (`summary_metrics.json`), and independent audit receipt (`independent_audit.json`, `independent_audit.md`). |
 | `results/` | Frozen `summary_metrics.json` and diagnostic artifacts for progressive cohorts (`unified_loop_v2`–`v5`, `source_v1`, `format_overlay_v1`, `conservative_seed_v1`) and ablation studies (`components_source_v2`, `flight_model_spec_v1`). |
 | `docs/` | Technical notes on upstream ZeroED/ZeroEC baseline reconstruction, prompt recovery, dirty-only protocol boundaries, and closed-loop verification. |
@@ -80,14 +80,16 @@ To run the standalone auditor's built-in synthetic gate and tamper-detection sel
 
 ---
 
-## Regenerating All Paper Tables and Figures
+## Regenerating All Paper Tables, Figures, and Manuscript PDF
 
 ```bash
 .venv/bin/python scripts/generate_icde_tables.py
 .venv/bin/python scripts/generate_icde_figures.py
+.venv/bin/python scripts/check_paper_claims.py
+(cd paper && tectonic main.tex)
 ```
 
-`generate_icde_tables.py` writes `paper/generated_macros.tex`, `paper/generated_table_*.tex`, and `paper/paper_facts.json`. `generate_icde_figures.py` compiles the TikZ schematics (requires `tectonic` and `pdftoppm`) and renders the `figures4papers`-styled matplotlib plots (`paper/figures/fig_*.pdf` and 300 DPI `.png`), enforcing an automated bounding-box overlap check before saving.
+`generate_icde_tables.py` writes `paper/generated_macros.tex`, `paper/generated_table_*.tex`, and `paper/paper_facts.json`. `generate_icde_figures.py` compiles the TikZ schematics (requires `tectonic` and `pdftoppm`) and renders the `figures4papers`-styled matplotlib plots (`paper/figures/fig_*.pdf` and 300 DPI `.png`), enforcing an automated bounding-box overlap check before saving. `check_paper_claims.py` mechanically verifies every numerical and running-example claim in `paper/main.tex` against the frozen artifacts.
 
 ---
 

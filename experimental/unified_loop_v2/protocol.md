@@ -116,7 +116,7 @@ The foreground inference process holds the shared exclusive flock for its
 entire lifetime, queues when occupied, serializes datasets, limits numerical
 libraries to one thread and preserves a 12-GiB address-space guard:
 
-`/home/steve/Documents/Codex/2026-10-27/why-you-chatgpt-desktop-always-quit/work/local-resume/heavy-experiment.lock`
+`${ZEROCLEAN_HEAVY_LOCK:-/tmp/zeroclean-heavy-experiment.lock}`
 
 Execution cohort is `local-unified-loop-v2-20261028`. Cloud and older source
 timings remain separate. Original inputs, old predictions, original sandbox
