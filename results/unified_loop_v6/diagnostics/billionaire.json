@@ -1,0 +1,3239 @@
+{
+  "candidate_pool": {
+    "candidate_cells": 3109,
+    "distinct_candidates": 3132,
+    "exact_duplicate_records_merged": 1789,
+    "proposal_records_seen": 4921
+  },
+  "cohort": "local-unified-loop-v6-20261031",
+  "consensus": {
+    "config": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "exact_peer_strings_only": true,
+    "policy_version": "intrinsic-key-source-consensus-v1",
+    "proposals_are_conditional_on_separate_detection": true,
+    "reason": "no_temporal_columns",
+    "score_semantics": "heuristic_evidence_strength_not_calibrated_correctness",
+    "source_votes_capped": true,
+    "status": "not_applicable",
+    "temporal_columns": [],
+    "temporal_role_discovery_observation_unit": "distinct_exact_dirty_row"
+  },
+  "counterfactual_detection_update": {
+    "demoted": [],
+    "promoted": []
+  },
+  "detection": {
+    "aggregate": {
+      "changed_cell_count": 357,
+      "final_positive_count": 4810,
+      "gated_column_count": 0,
+      "inherited_positive_count": 4453,
+      "promoted_cell_count": 357,
+      "promoted_inherited_negative_count": 357,
+      "unknown_fallback_column_count": 0
+    },
+    "columns": [
+      {
+        "column": 0,
+        "column_name": "Name",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.7840466926070039,
+          "distinct_nonempty_formats": 40,
+          "distinct_nonempty_values": 2015,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.7385214007782102,
+          "nonempty_observations": 2570,
+          "observations": 2614,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "name"
+            ]
+          },
+          "structured_fraction": 0.019844357976653695
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 163,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 163,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 155,
+        "source_positive_fraction": 0.05929609793420046,
+        "v3_evidence_counts": {
+          "missing_in_nearly_complete_column": 44,
+          "promoted_cells": 11,
+          "promoted_inherited_negatives": 11,
+          "validated_target_specific_rule_violation": 141
+        },
+        "validated_rule_violation_count": 141
+      },
+      {
+        "column": 1,
+        "column_name": "Rank",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.19320843091334894,
+          "distinct_nonempty_formats": 21,
+          "distinct_nonempty_values": 495,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.9668227946916471,
+          "nonempty_observations": 2562,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "rank"
+            ]
+          },
+          "structured_fraction": 0.9816549570647931
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 145,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 145,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 139,
+        "source_positive_fraction": 0.0531752104055088,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 74,
+          "inferred_type_contradiction": 85,
+          "missing_in_nearly_complete_column": 52,
+          "promoted_cells": 11,
+          "promoted_inherited_negatives": 11,
+          "validated_target_specific_rule_violation": 156
+        },
+        "validated_rule_violation_count": 156
+      },
+      {
+        "column": 2,
+        "column_name": "Year",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.0062622309197651665,
+          "distinct_nonempty_formats": 4,
+          "distinct_nonempty_values": 16,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.9659491193737769,
+          "nonempty_observations": 2555,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "year"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 169,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 169,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 169,
+        "source_positive_fraction": 0.06465187452180567,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 59,
+          "inferred_type_contradiction": 87,
+          "validated_target_specific_rule_violation": 169
+        },
+        "validated_rule_violation_count": 169
+      },
+      {
+        "column": 3,
+        "column_name": "Company Founded",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.08948808128175069,
+          "distinct_nonempty_formats": 5,
+          "distinct_nonempty_values": 229,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.9667838999609223,
+          "nonempty_observations": 2559,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "company",
+              "founded"
+            ]
+          },
+          "structured_fraction": 0.9796795623290347
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 247,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 247,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 151,
+        "source_positive_fraction": 0.05776587605202754,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 55,
+          "inferred_type_contradiction": 85,
+          "promoted_cells": 2,
+          "promoted_inherited_negatives": 2,
+          "validated_target_specific_rule_violation": 160
+        },
+        "validated_rule_violation_count": 160
+      },
+      {
+        "column": 4,
+        "column_name": "Company Name",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.620007908264136,
+          "distinct_nonempty_formats": 108,
+          "distinct_nonempty_values": 1568,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.3989719256623171,
+          "nonempty_observations": 2529,
+          "observations": 2614,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "company",
+              "name"
+            ]
+          },
+          "structured_fraction": 0.0035587188612099642
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 263,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 263,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 273,
+        "source_positive_fraction": 0.10443764345830145,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 97
+        },
+        "validated_rule_violation_count": 97
+      },
+      {
+        "column": 5,
+        "column_name": "Company Relationship",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.0588703261734288,
+          "distinct_nonempty_formats": 22,
+          "distinct_nonempty_values": 148,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.9212410501193318,
+          "nonempty_observations": 2514,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "company",
+              "relationship"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 166,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 166,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 165,
+        "source_positive_fraction": 0.06312165263963275,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 224,
+          "dominant_observed_case_space_variant": 13,
+          "promoted_cells": 149,
+          "promoted_inherited_negatives": 149,
+          "validated_target_specific_rule_violation": 148
+        },
+        "validated_rule_violation_count": 148
+      },
+      {
+        "column": 6,
+        "column_name": "Company Sector",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.22195985832349469,
+          "distinct_nonempty_formats": 32,
+          "distinct_nonempty_values": 564,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.6249508067689886,
+          "nonempty_observations": 2541,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "company",
+              "sector"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 170,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 170,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 178,
+        "source_positive_fraction": 0.06809487375669472,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 78
+        },
+        "validated_rule_violation_count": 78
+      },
+      {
+        "column": 7,
+        "column_name": "Company Type",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.027580772261623327,
+          "distinct_nonempty_formats": 8,
+          "distinct_nonempty_values": 70,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.9925137903861309,
+          "nonempty_observations": 2538,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "company",
+              "type"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 202,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 202,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 204,
+        "source_positive_fraction": 0.07804131599081866,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 141,
+          "promoted_cells": 34,
+          "promoted_inherited_negatives": 34,
+          "validated_target_specific_rule_violation": 148
+        },
+        "validated_rule_violation_count": 148
+      },
+      {
+        "column": 8,
+        "column_name": "Demographics Age",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.04467084639498432,
+          "distinct_nonempty_formats": 4,
+          "distinct_nonempty_values": 114,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.9663009404388715,
+          "nonempty_observations": 2552,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "age",
+              "demographics"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 157,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 157,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 151,
+        "source_positive_fraction": 0.05776587605202754,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 62,
+          "inferred_type_contradiction": 86,
+          "validated_target_specific_rule_violation": 157
+        },
+        "validated_rule_violation_count": 157
+      },
+      {
+        "column": 9,
+        "column_name": "Demographics Gender",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.01701622477245746,
+          "distinct_nonempty_formats": 3,
+          "distinct_nonempty_values": 43,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.9814008705975465,
+          "nonempty_observations": 2527,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "demographics",
+              "gender"
+            ]
+          },
+          "structured_fraction": 0.01741195092995647
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 210,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 210,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 198,
+        "source_positive_fraction": 0.0757459831675593,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 123,
+          "promoted_cells": 4,
+          "promoted_inherited_negatives": 4,
+          "validated_target_specific_rule_violation": 211
+        },
+        "validated_rule_violation_count": 211
+      },
+      {
+        "column": 10,
+        "column_name": "Location Citizenship",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.06388780677834048,
+          "distinct_nonempty_formats": 9,
+          "distinct_nonempty_values": 164,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.5551227113361901,
+          "nonempty_observations": 2567,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "citizenship",
+              "location"
+            ]
+          },
+          "structured_fraction": 0.018309310479158552
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 241,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 241,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 203,
+        "source_positive_fraction": 0.07765876052027544,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 167,
+          "missing_in_nearly_complete_column": 47,
+          "promoted_cells": 18,
+          "promoted_inherited_negatives": 18,
+          "validated_target_specific_rule_violation": 237
+        },
+        "validated_rule_violation_count": 237
+      },
+      {
+        "column": 11,
+        "column_name": "Location Country Code",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.057489245209229566,
+          "distinct_nonempty_formats": 3,
+          "distinct_nonempty_values": 147,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.9780993351583888,
+          "nonempty_observations": 2557,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": true,
+            "tokens": [
+              "code",
+              "country",
+              "location"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 256,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 256,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 242,
+        "source_positive_fraction": 0.09257842387146137,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 58,
+          "promoted_cells": 7,
+          "promoted_inherited_negatives": 7,
+          "validated_target_specific_rule_violation": 252
+        },
+        "validated_rule_violation_count": 252
+      },
+      {
+        "column": 12,
+        "column_name": "Location GDP",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.039627039627039624,
+          "distinct_nonempty_formats": 14,
+          "distinct_nonempty_values": 102,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.965034965034965,
+          "nonempty_observations": 2574,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "gdp",
+              "location"
+            ]
+          },
+          "structured_fraction": 0.9778554778554779
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 195,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 195,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 117,
+        "source_positive_fraction": 0.04475899005355777,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 50,
+          "inferred_type_contradiction": 90,
+          "missing_in_nearly_complete_column": 40,
+          "promoted_cells": 1,
+          "promoted_inherited_negatives": 1,
+          "validated_target_specific_rule_violation": 182
+        },
+        "validated_rule_violation_count": 182
+      },
+      {
+        "column": 13,
+        "column_name": "Location Region",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.034724931720639875,
+          "distinct_nonempty_formats": 13,
+          "distinct_nonempty_values": 89,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.666406554818572,
+          "nonempty_observations": 2563,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "location",
+              "region"
+            ]
+          },
+          "structured_fraction": 0.015996878657822865
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 244,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 244,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 278,
+        "source_positive_fraction": 0.1063504208110176,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 134,
+          "missing_in_nearly_complete_column": 51,
+          "validated_target_specific_rule_violation": 216
+        },
+        "validated_rule_violation_count": 216
+      },
+      {
+        "column": 14,
+        "column_name": "Wealth Type",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.032651455546813535,
+          "distinct_nonempty_formats": 8,
+          "distinct_nonempty_values": 83,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.4331235247836349,
+          "nonempty_observations": 2542,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "type",
+              "wealth"
+            ]
+          },
+          "structured_fraction": 0.024783634933123525
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 233,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 233,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 233,
+        "source_positive_fraction": 0.0891354246365723,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 150,
+          "promoted_cells": 56,
+          "promoted_inherited_negatives": 56,
+          "validated_target_specific_rule_violation": 231
+        },
+        "validated_rule_violation_count": 231
+      },
+      {
+        "column": 15,
+        "column_name": "Wealth Worth In Billions",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.07796741660201707,
+          "distinct_nonempty_formats": 21,
+          "distinct_nonempty_values": 201,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.9720713731574864,
+          "nonempty_observations": 2578,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "billions",
+              "in",
+              "wealth",
+              "worth"
+            ]
+          },
+          "structured_fraction": 0.9844840961986036
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 108,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 108,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 108,
+        "source_positive_fraction": 0.041315990818668706,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 57,
+          "inferred_type_contradiction": 72,
+          "missing_in_nearly_complete_column": 36,
+          "promoted_cells": 64,
+          "promoted_inherited_negatives": 64,
+          "validated_target_specific_rule_violation": 172
+        },
+        "validated_rule_violation_count": 172
+      },
+      {
+        "column": 16,
+        "column_name": "Wealth How Category",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.0357976653696498,
+          "distinct_nonempty_formats": 10,
+          "distinct_nonempty_values": 92,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.4198443579766537,
+          "nonempty_observations": 2570,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "category",
+              "how",
+              "wealth"
+            ]
+          },
+          "structured_fraction": 0.050972762645914396
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 206,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 206,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 206,
+        "source_positive_fraction": 0.07880642693190512,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 135,
+          "missing_in_nearly_complete_column": 44,
+          "validated_target_specific_rule_violation": 203
+        },
+        "validated_rule_violation_count": 203
+      },
+      {
+        "column": 17,
+        "column_name": "Wealth How From Emerging",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.01678376268540203,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 43,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.9839968774395004,
+          "nonempty_observations": 2562,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "emerging",
+              "from",
+              "how",
+              "wealth"
+            ]
+          },
+          "structured_fraction": 0.01600312256049961
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 183,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 183,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 183,
+        "source_positive_fraction": 0.07000765110941086,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 89,
+          "missing_in_nearly_complete_column": 52,
+          "validated_target_specific_rule_violation": 183
+        },
+        "validated_rule_violation_count": 183
+      },
+      {
+        "column": 18,
+        "column_name": "Wealth How Industry",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.04584304584304584,
+          "distinct_nonempty_formats": 17,
+          "distinct_nonempty_values": 118,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.3958818958818959,
+          "nonempty_observations": 2574,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "how",
+              "industry",
+              "wealth"
+            ]
+          },
+          "structured_fraction": 0.006604506604506605
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 304,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 304,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 307,
+        "source_positive_fraction": 0.11744452945677124,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 139,
+          "missing_in_nearly_complete_column": 40,
+          "validated_target_specific_rule_violation": 224
+        },
+        "validated_rule_violation_count": 224
+      },
+      {
+        "column": 19,
+        "column_name": "Wealth How Inherited",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.03209393346379648,
+          "distinct_nonempty_formats": 8,
+          "distinct_nonempty_values": 82,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.6317025440313112,
+          "nonempty_observations": 2555,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "how",
+              "inherited",
+              "wealth"
+            ]
+          },
+          "structured_fraction": 0.1334637964774951
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 197,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 197,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 197,
+        "source_positive_fraction": 0.07536342769701607,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 138,
+          "validated_target_specific_rule_violation": 197
+        },
+        "validated_rule_violation_count": 197
+      },
+      {
+        "column": 20,
+        "column_name": "Wealth How Was Founder",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.0218408736349454,
+          "distinct_nonempty_formats": 1,
+          "distinct_nonempty_values": 56,
+          "dominant_format": "A",
+          "dominant_format_fraction": 1.0,
+          "nonempty_observations": 2564,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "founder",
+              "how",
+              "was",
+              "wealth"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 188,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 188,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 188,
+        "source_positive_fraction": 0.07192042846212701,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 98,
+          "missing_in_nearly_complete_column": 50,
+          "validated_target_specific_rule_violation": 188
+        },
+        "validated_rule_violation_count": 188
+      },
+      {
+        "column": 21,
+        "column_name": "Wealth How Was Political",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.020606531881804044,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 53,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.9801710730948678,
+          "nonempty_observations": 2572,
+          "observations": 2614,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "how",
+              "political",
+              "was",
+              "wealth"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 206,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 206,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 206,
+        "source_positive_fraction": 0.07880642693190512,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 90,
+          "missing_in_nearly_complete_column": 42,
+          "validated_target_specific_rule_violation": 206
+        },
+        "validated_rule_violation_count": 206
+      }
+    ],
+    "config": {
+      "canonical_min_agreement": 0.9,
+      "canonical_min_support": 5,
+      "context_global_min_agreement": 0.97,
+      "context_min_agreement": 0.95,
+      "context_min_coverage": 0.15,
+      "context_min_gain_over_marginal": 0.1,
+      "context_min_groups": 2,
+      "context_min_peers": 3,
+      "demoted_score": 0.49,
+      "fallback_min_grammar_fraction": 0.8,
+      "fallback_min_nonempty_rate": 0.45,
+      "fallback_min_observations": 8,
+      "fallback_missing_min_complete_fraction": 0.8,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_missing_fraction": 0.02,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "missing_min_observations": 30,
+      "promoted_score": 0.75,
+      "source_positive_fraction_threshold": 0.4,
+      "type_min_fraction": 0.95
+    },
+    "decision_threshold": 0.5,
+    "decision_threshold_operator": ">",
+    "input_fingerprint": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "intrinsic_context": {
+      "conflicting_cell_count": 0,
+      "contradicting_cell_count": 0,
+      "qualified_relations": []
+    },
+    "observation_source": "immutable_original_dirty_strings",
+    "protocol": "unified_loop_v6_dirty_intrinsic_promotions_v1",
+    "score_semantics": "policy_scores_not_calibrated_probabilities",
+    "shape": [
+      2614,
+      22
+    ],
+    "starting_scores": "completed_empty_carry",
+    "v6_fallback_structural_promotion": {
+      "candidate_count": 0,
+      "policy": "empty_predicate_fallback_dirty_grammar_and_completeness_v1",
+      "promoted_count": 0,
+      "retained_count": 0,
+      "source_metadata_only": true
+    },
+    "v6_structural_promotion": {
+      "candidate_count": 611,
+      "column_semantics": "not_used",
+      "policy": "generic_dirty_distribution_format_outliers_v1",
+      "promoted_count": 0,
+      "retained_count": 611
+    }
+  },
+  "detection_mask_sha256": "d354da55369f027451baac9b53b3a9aa96a1c00dd9b23225ba693eb2edd67356",
+  "elapsed_local_seconds": 46.32787303900113,
+  "fresh_rule_input": {
+    "dependency_count": 9,
+    "model": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh"
+    },
+    "provenance": {
+      "clean_reference_access": false,
+      "dirty_only": true,
+      "evaluation_feedback_access": false,
+      "external_metadata_access": false,
+      "input_packet_sha256": "b42a6800b6d55daeabb9ee0e0953749112b49253cbaf9f82d33b30523bfdf8f5",
+      "request_hash": "35bdcae9919631f8ba2636a2c826dad2630daea5095ce37cf38063cc3c0fece3",
+      "response_sha256": "4d5ff472006ff3205a2f983e41d5d87e1ea46b682f8894f096cfa33690988dc5",
+      "study_version": "unified_loop_v6",
+      "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+    },
+    "rule_count": 24,
+    "rule_union": {
+      "input_dependency_counts": {
+        "cached": 10,
+        "fresh": 9
+      },
+      "input_rule_counts": {
+        "cached": 54,
+        "fresh": 24
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 19,
+      "union_rule_count": 78
+    },
+    "schema_version": "unified-loop-v6-dirty-rules-v1"
+  },
+  "probabilities_sha256": "12121ece647d2a8eb5cb404ed534bfbbffbe093da5f47d44c1a3334d18846a9f",
+  "repair": {
+    "catalog_roles": null,
+    "catalog_safeguard": false,
+    "config": {
+      "candidate_cap": 3,
+      "catalog_min_exact_peers": 2,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "numeric_min_canonical_agreement": 0.95,
+      "numeric_min_exact_peers": 3,
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "counts": {
+      "abstained_cells": 1718,
+      "budget_pruned_strings": 0,
+      "candidate_cells_outside_detection": 0,
+      "detection_positive_cells": 4810,
+      "guarded_candidate_selection": 3000,
+      "noisy_seeded_carry": 92,
+      "null_abstention_records": 0,
+      "selected_cells": 3092
+    },
+    "detection_mask_modified": false,
+    "method": "unified_loop_v6",
+    "requires_combined_row_guard": true
+  },
+  "row_guard": {
+    "checked_rows": 1843,
+    "rolled_back_rows": 4
+  },
+  "rules": {
+    "accepted_rule_count": 70,
+    "applicability": [
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_01",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 95
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_02",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 34
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_03",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 145
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_04",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 40
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_05",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 169
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_06",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 58
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_07",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 158
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_08",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 51
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_09",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 56
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_10",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 41
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_11",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 148
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_12",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 56
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_13",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 48
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_14",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 30
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_15",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 148
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_16",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 96
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_17",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 157
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_18",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 50
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_19",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 207
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_20",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 76
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_21",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 201
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_22",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 63
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_23",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 211
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_24",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 63
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_25",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 145
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_26",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 48
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_27",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 194
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_28",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 61
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_29",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 159
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_30",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 56
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_31",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          15
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 108
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_32",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          15
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_33",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 202
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_34",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 75
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_35",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          17
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 183
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_36",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          17
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 183
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_37",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          18
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 224
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_38",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          18
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 70
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_39",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          19
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 197
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_40",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          19
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 53
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_41",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          20
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 188
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_42",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          20
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 188
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_43",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          21
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 206
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_44",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          21
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 206
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_45",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 164
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_46",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 141
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_47",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 148
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_48",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 163
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_49",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 51
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_50",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          15
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 133
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_51",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 36
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_52",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 176
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_53",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 60
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_54",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 13
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_02",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 18
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_03",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 85
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_04",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 110
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_05",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 49
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_10",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 88
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_11",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 120
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_13",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 171
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_14",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 96
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_16",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 159
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_17",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          15
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 72
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_18",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 155
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_19",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          17
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 131
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_21",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          19
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 138
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_22",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          20
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 138
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_23",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          21
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 113
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:bil_24",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 2614,
+        "violation_rows": 48
+      }
+    ],
+    "input_union": {
+      "input_dependency_counts": {
+        "cached": 10,
+        "fresh": 9
+      },
+      "input_rule_counts": {
+        "cached": 54,
+        "fresh": 24
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 19,
+      "union_rule_count": 78
+    },
+    "raw_row_count": 2614,
+    "validation": [
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_01",
+        "source_sha256": "9021bb4275ca743e77fa89391a84fd4ef859949b73327d555872eeb56f93e55d",
+        "target": "Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_02",
+        "source_sha256": "66f9e9fc6224aa94b3aa027c61c94ed8b99cee1443a57db542b63bf450f10920",
+        "target": "Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_03",
+        "source_sha256": "89288b1bbc23c33e840be5252004bf82efbdb3ff5eed5664857c39402a6af87d",
+        "target": "Rank"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_04",
+        "source_sha256": "bb6cc141734e39de29cbc5e162f1f1792f01ea26eb6beb0d19ff8fb15b750db3",
+        "target": "Rank"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_05",
+        "source_sha256": "9a70364326b9beb88a4ff6b9ae1dfbecd4cb73d859e9fbb763146fa4868c8b3a",
+        "target": "Year"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_06",
+        "source_sha256": "ba476f044ab7c888f3de8ec4b50f2e6efd40336d2d3757cd3cf778209b2b5ad5",
+        "target": "Year"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_07",
+        "source_sha256": "ae92d88ec228c1168f0f26c8312e80cedb4e3870800cf0d0203079d99dd7558c",
+        "target": "Company Founded"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_08",
+        "source_sha256": "3c114496b443224d90aadef62d35afc2dabad0826b3bb09f18d7c0ddb0fb4d78",
+        "target": "Company Founded"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_09",
+        "source_sha256": "6a7ad65250c558a73cabe954df60ea97750c650e4a3b71167c1d14a64a412315",
+        "target": "Company Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_10",
+        "source_sha256": "41015b974de47702c886efc9d635b8f324c073e558d27f5ee666d178394bd0b6",
+        "target": "Company Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_11",
+        "source_sha256": "d642f7556f84e7b0a197c533700119606704ecfd161468c3720f194cb4305b73",
+        "target": "Company Relationship"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_12",
+        "source_sha256": "6c3702ea9f748babecf339652b42df4bdf681769956705b25713ebd9af14ba0c",
+        "target": "Company Relationship"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_13",
+        "source_sha256": "b729f6bf30c324ea8e8f4a1efb96ecae034fdcfaed14d9f82dc3acad10e73605",
+        "target": "Company Sector"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_14",
+        "source_sha256": "473ed9a24893519b3fba789889de94d414323b21cb3564a3674747e195445576",
+        "target": "Company Sector"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_15",
+        "source_sha256": "1f33c748149bedba91972505bc2bc6564810399f6622fb73270378bc70c2818c",
+        "target": "Company Type"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_16",
+        "source_sha256": "fabbb70e45e261524e45ccc5679e354e2e226a96aa47ad6a1ab142f54da25dd9",
+        "target": "Company Type"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_17",
+        "source_sha256": "ea8e2bf26cd29907ae98ac5f0233a73be9a46316bec2e38563672edb969539b9",
+        "target": "Demographics Age"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_18",
+        "source_sha256": "59628adf18364a48d070cff490c757152b8a38939c1a3e716768765db2ac3025",
+        "target": "Demographics Age"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_19",
+        "source_sha256": "286b6141540156ad066b5c81c2fd1912900139e4ef7c5a4eb49715f28dd60e83",
+        "target": "Demographics Gender"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_20",
+        "source_sha256": "47fa23e80853762805ceb8b5d4b14b516038e59f0ce8847b87236eded5f3d721",
+        "target": "Demographics Gender"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_21",
+        "source_sha256": "5fa1ef62c9c2d7b00c81070e2c3468777b143b7918280b135ebe75d1990a401e",
+        "target": "Location Citizenship"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_22",
+        "source_sha256": "43c869176c9ccdd31b132b388290a235525dcc2aa704d6e52ba62510e7e676a5",
+        "target": "Location Citizenship"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_23",
+        "source_sha256": "080fde44759143d5e4ca31161cd520e836c8ae588e5a9f3af689b91331966d66",
+        "target": "Location Country Code"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_24",
+        "source_sha256": "3b56e5369c507858cc4a7fa2343224e79c96c206fd8fa3dcd2e40c868f2ab853",
+        "target": "Location Country Code"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_25",
+        "source_sha256": "7ddc2425932bbcc1c35a3045444a6b0c62c9c05a4da0c2f4aeb1f221dc81111f",
+        "target": "Location GDP"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_26",
+        "source_sha256": "d6c01aeca65b5ffdc5084cba0d6c1d8f6e5727ff85bdbb04b291c7857e196a5d",
+        "target": "Location GDP"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_27",
+        "source_sha256": "262554df07f9520ad370c4db8e17ebb57569baf8531bec3ba20df59548624879",
+        "target": "Location Region"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_28",
+        "source_sha256": "5486ec3c7455386fb6a51d2d7ffb26344495656f5000464e8c6e4d652c419164",
+        "target": "Location Region"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_29",
+        "source_sha256": "55f739ed3c62fa04615086ee52fed1134173eb978ea36842fcb88b699635ab0f",
+        "target": "Wealth Type"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_30",
+        "source_sha256": "c6dd9f22037640d4f4e4388d811eba2c45216b7505686910da0982c5239e74de",
+        "target": "Wealth Type"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_31",
+        "source_sha256": "4f882769e74bcdf0f318c224e1738d516d0cd09e4ada0d57bbe873c1a8fbcce8",
+        "target": "Wealth Worth In Billions"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_32",
+        "source_sha256": "35f71cbb46f283b52c8ebe5c31c31aff514e360bc86c9d24694f84df1488b477",
+        "target": "Wealth Worth In Billions"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_33",
+        "source_sha256": "7ee999950067815c8524cdb9909e92da2de0f880d7cf60f2fed3e3c0c84cb2ce",
+        "target": "Wealth How Category"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_34",
+        "source_sha256": "d40c0a4092a23edea99cb06c02c3f72d0ddd07ad288c36f0872e90992335219c",
+        "target": "Wealth How Category"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_35",
+        "source_sha256": "db0d46866fb38056b12cb225ef4c8e14e6d4ad28ff4f104af46de2d7a3933699",
+        "target": "Wealth How From Emerging"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_36",
+        "source_sha256": "4c57d173ac27ae25a2aa8a5a0d11e0ad4c782f89541c30a3659a2b6dfcb8167e",
+        "target": "Wealth How From Emerging"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_37",
+        "source_sha256": "4e1d0608ec5b4fdb731d7e4c5763277a2cf0c437fe67d1ebd0ee1172d3ac8505",
+        "target": "Wealth How Industry"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_38",
+        "source_sha256": "52146becff6ffdc0970f5f54a2f817ea5de6f1722ff90acf252df3568a3daaa5",
+        "target": "Wealth How Industry"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_39",
+        "source_sha256": "0aec06e9f2d345ddb22444fe755721f0aa353c0964b99f8bea49b5e0da1bb4ba",
+        "target": "Wealth How Inherited"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_40",
+        "source_sha256": "afef1dd576a07d29db49809f476b5d8ddcfd293680fd9fd82aed7679995875b6",
+        "target": "Wealth How Inherited"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_41",
+        "source_sha256": "99f4fe05ea2d36952fc6ae52da3bf71faeaaafe72db97dd5696501bbe69b3d8d",
+        "target": "Wealth How Was Founder"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_42",
+        "source_sha256": "5b6091fdf5e35b133d08481875b7471ad1426f2221e82909608b024c7fca3339",
+        "target": "Wealth How Was Founder"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_43",
+        "source_sha256": "55597f6d21013e2099257fc500afa58640f33e0e3e9b3c32ea6f3844b1315ecb",
+        "target": "Wealth How Was Political"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_44",
+        "source_sha256": "283e1df272643127f8c519cc218db91d482a8996da108c5d9cdc7afd77accd4e",
+        "target": "Wealth How Was Political"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_45",
+        "source_sha256": "ede8b8282486d2aee96973a1097a541e0de06a0dee1b284ec53b6e5e2afccea4",
+        "target": "Location Country Code"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_46",
+        "source_sha256": "979f1af93c3affaf46d04bcc1f05240bae8df5deddb7b6f69564fa70fc874d24",
+        "target": "Location Citizenship"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_47",
+        "source_sha256": "57d3e30813210fa7b17c071ad5c7876c5a042d1122625c15c6e72bb4857aa671",
+        "target": "Location Region"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_48",
+        "source_sha256": "559c9bfa2be3a241e9a6b2dbe04d588a0ce2898a8c17491dac112f032ab717cd",
+        "target": "Location GDP"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_49",
+        "source_sha256": "a24733221b430a589c3370412e461c1c23e65d8c25fbf72e251b486aec1d5d6d",
+        "target": "Demographics Gender"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_50",
+        "source_sha256": "b5660001a8e9421d295b173800506d8c47c7be6708f514837209cbae3bcb5f55",
+        "target": "Wealth Worth In Billions"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_51",
+        "source_sha256": "cbb6ead34f563e3919144246fff3f893f9bece0541c87ff052c909403cd065e9",
+        "target": "Rank"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_52",
+        "source_sha256": "6d6c5a9d1a00ecd6d9a46a235ac904c24cb9b7a3c0a6c35daa04decac716f947",
+        "target": "Wealth How Category"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_53",
+        "source_sha256": "1ac1b6824e5db2357b04c5f376b0c021914d4c22b7daec837e2a5b772859257e",
+        "target": "Wealth Type"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "cached:p2_54",
+        "source_sha256": "dc8dc20bc75592ccb5e8c1073cfc4a294f9c0ae00228a6bda093ad887a2562f9",
+        "target": "Name"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_01",
+        "source_sha256": "ea271b65dac40ac358c15213a4e281be3fd0ab6c598ed47cbb55ba6f82f9c703",
+        "target": "Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_02",
+        "source_sha256": "b2df2ccbaeb23fdb0e5de844c3bac7b6e51f4789c1364418cb707c99b28ebf23",
+        "target": "Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_03",
+        "source_sha256": "31cf006beae676e8410fcb5e3300c248d9fae80693e7a983ca1f3a01e0a8f870",
+        "target": "Rank"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_04",
+        "source_sha256": "4505a70921db4308af0ee43cdad38e255ba13d0afb4fd2c47daba30aa805f3c3",
+        "target": "Year"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_05",
+        "source_sha256": "77709bf81488c943577ec782b3f93d468b6e8408e04f712ec41462b47e79c651",
+        "target": "Company Founded"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_06",
+        "source_sha256": "5cf2d1322f5f3e60f0ccc2ef6ea0c37cf880f5098cde2dbed02552d11cc2a767",
+        "target": "Company Name"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_07",
+        "source_sha256": "e456efca9cc1bc0936cd1c4135efce81a12c087b2a668f1cec0659ba7959bb27",
+        "target": "Company Relationship"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_08",
+        "source_sha256": "9f3b7b532fcf08579129de4ab8c4b95071401634554d51b860a55b1b7ebac871",
+        "target": "Company Sector"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_09",
+        "source_sha256": "63aa7e6627a76865a195887e5d87f62526477a1e92354992c2f045b652b7db02",
+        "target": "Company Type"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_10",
+        "source_sha256": "b338fff8bec83f9c208bff363914992e801119741b3add236f41cf5d71db5e7d",
+        "target": "Demographics Age"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_11",
+        "source_sha256": "d197dece6fa5ccc3160225eabbe7ca85b469624a02609fcd89829cb638ada3ca",
+        "target": "Demographics Gender"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_12",
+        "source_sha256": "302075ba96ea86407148526725c50e5dbd7d0820ad71193102fb94aa68dbeab8",
+        "target": "Location Citizenship"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_13",
+        "source_sha256": "749bde34c71d7da203b414d3ff500616a9dc9bf0f94100831232370cba4a8805",
+        "target": "Location Country Code"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_14",
+        "source_sha256": "750568829265c986a0b25b5513932d2c9b3991ff937ad29d3db611a74815ac6a",
+        "target": "Location GDP"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_15",
+        "source_sha256": "6d88a4ae22860cd98d02ff82e5baa0984afef484e33e6198b11d84119bec2048",
+        "target": "Location Region"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_16",
+        "source_sha256": "de8e4784cc50bae29cbd32369dc45ac77ac1c7605c06895b7d04c6daa205304a",
+        "target": "Wealth Type"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_17",
+        "source_sha256": "1a5177b1e97c07b646fba0c5d0bfc6983ea4268420444f3a9ef15ed637121775",
+        "target": "Wealth Worth In Billions"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_18",
+        "source_sha256": "4662b8ffffae3b21728c63d3bf3f42de828b8d3ae7c54cdbcfa046b3c3370d74",
+        "target": "Wealth How Category"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_19",
+        "source_sha256": "d49167b033f2eeac7090813b1426702db08a0d9d0a5726f3f6a7a988f597936f",
+        "target": "Wealth How From Emerging"
+      },
+      {
+        "accepted": false,
+        "batch_status_counts": {
+          "invalid_rule": 3
+        },
+        "error_count": 2614,
+        "error_rate": 1.0,
+        "error_samples": [],
+        "evaluated_rows": 0,
+        "id": "fresh:bil_20",
+        "source_sha256": "fb7e375bcd35f93cdbfa4696e0a950a8b8baf11c8bd8716da41b23427bb5c3a5",
+        "target": "Wealth How Industry"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_21",
+        "source_sha256": "d49dd4dc457a1d4ff9bd96fb33864e21d36c805168525ee81ebbdcc464dfbeaf",
+        "target": "Wealth How Inherited"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_22",
+        "source_sha256": "b4cec644ef423fc819de5e2d5183546add10dff8eda0b9363c7f2b065baad9a4",
+        "target": "Wealth How Was Founder"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_23",
+        "source_sha256": "e1d8a5be4e59b2db8c3756278a3b391080c1f10e5a6d879d9b9f855cf6805519",
+        "target": "Wealth How Was Political"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2614,
+        "id": "fresh:bil_24",
+        "source_sha256": "09b458fb2725eee78f1be5b23ee1f23108f6afa72c60a5c47b96145d43f9451d",
+        "target": "Wealth Type"
+      }
+    ]
+  }
+}

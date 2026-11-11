@@ -1,0 +1,1514 @@
+{
+  "candidate_pool": {
+    "candidate_cells": 2450,
+    "distinct_candidates": 2535,
+    "exact_duplicate_records_merged": 237,
+    "proposal_records_seen": 2772
+  },
+  "cohort": "local-unified-loop-v6-20261031",
+  "consensus": {
+    "config": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "exact_peer_strings_only": true,
+    "policy_version": "intrinsic-key-source-consensus-v1",
+    "proposals_are_conditional_on_separate_detection": true,
+    "reason": "no_temporal_columns",
+    "score_semantics": "heuristic_evidence_strength_not_calibrated_correctness",
+    "source_votes_capped": true,
+    "status": "not_applicable",
+    "temporal_columns": [],
+    "temporal_role_discovery_observation_unit": "distinct_exact_dirty_row"
+  },
+  "counterfactual_detection_update": {
+    "demoted": [],
+    "promoted": []
+  },
+  "detection": {
+    "aggregate": {
+      "changed_cell_count": 14595,
+      "final_positive_count": 2661,
+      "gated_column_count": 7,
+      "inherited_positive_count": 17232,
+      "promoted_cell_count": 16,
+      "promoted_inherited_negative_count": 8,
+      "unknown_fallback_column_count": 9
+    },
+    "columns": [
+      {
+        "column": 0,
+        "column_name": "id",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 2410,
+        "dirty_profile": {
+          "distinct_fraction": 1.0,
+          "distinct_nonempty_formats": 1,
+          "distinct_nonempty_values": 2410,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 1.0,
+          "nonempty_observations": 2410,
+          "observations": 2410,
+          "schema": {
+            "free_text": false,
+            "identifier": true,
+            "tokens": [
+              "id"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2410,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 0,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2410,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {},
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 1,
+        "column_name": "beer_name",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 2409,
+        "dirty_profile": {
+          "distinct_fraction": 0.9560165975103735,
+          "distinct_nonempty_formats": 190,
+          "distinct_nonempty_values": 2304,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.26016597510373446,
+          "nonempty_observations": 2410,
+          "observations": 2410,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "beer",
+              "name"
+            ]
+          },
+          "structured_fraction": 0.14647302904564316
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2410,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 1,
+        "retained_positive_count": 1,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2410,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "embedded_control_or_replacement_character": 4,
+          "promoted_cells": 3,
+          "promoted_inherited_negatives": 0,
+          "validated_target_specific_rule_violation": 1
+        },
+        "validated_rule_violation_count": 1
+      },
+      {
+        "column": 2,
+        "column_name": "style",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 2380,
+        "dirty_profile": {
+          "distinct_fraction": 0.04197838736492103,
+          "distinct_nonempty_formats": 13,
+          "distinct_nonempty_values": 101,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.34372402327514545,
+          "nonempty_observations": 2406,
+          "observations": 2410,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "style"
+            ]
+          },
+          "structured_fraction": 0.0008312551953449709
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2410,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 30,
+        "retained_by_rule_count": 2,
+        "retained_positive_count": 30,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2410,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 30,
+          "missing_in_nearly_complete_column": 4,
+          "validated_target_specific_rule_violation": 2
+        },
+        "validated_rule_violation_count": 2
+      },
+      {
+        "column": 3,
+        "column_name": "ounces",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 922,
+        "dirty_profile": {
+          "distinct_fraction": 0.010792860107928601,
+          "distinct_nonempty_formats": 5,
+          "distinct_nonempty_values": 26,
+          "dominant_format": "9.9 A",
+          "dominant_format_fraction": 0.4943960149439601,
+          "nonempty_observations": 2409,
+          "observations": 2410,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "ounces"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2410,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 11,
+        "retained_by_rule_count": 1486,
+        "retained_positive_count": 1488,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2410,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 11,
+          "missing_in_nearly_complete_column": 1,
+          "validated_target_specific_rule_violation": 1486
+        },
+        "validated_rule_violation_count": 1486
+      },
+      {
+        "column": 4,
+        "column_name": "abv",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 1649,
+        "dirty_profile": {
+          "distinct_fraction": 0.03364565587734242,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 79,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.7052810902896082,
+          "nonempty_observations": 2348,
+          "observations": 2410,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "abv"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2410,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 74,
+        "retained_by_rule_count": 693,
+        "retained_positive_count": 761,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2410,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 74,
+          "validated_target_specific_rule_violation": 693
+        },
+        "validated_rule_violation_count": 693
+      },
+      {
+        "column": 5,
+        "column_name": "brewery_id",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 2408,
+        "dirty_profile": {
+          "distinct_fraction": 0.23204649232046493,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 559,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.9995848899958489,
+          "nonempty_observations": 2409,
+          "observations": 2410,
+          "schema": {
+            "free_text": false,
+            "identifier": true,
+            "tokens": [
+              "brewery",
+              "id"
+            ]
+          },
+          "structured_fraction": 0.9995848899958489
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2410,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 2,
+        "retained_by_rule_count": 2,
+        "retained_positive_count": 2,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2410,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 2,
+          "inferred_type_contradiction": 1,
+          "intrinsic_dirty_fd": 5,
+          "missing_in_nearly_complete_column": 1,
+          "promoted_cells": 5,
+          "promoted_inherited_negatives": 0,
+          "validated_target_specific_rule_violation": 2
+        },
+        "validated_rule_violation_count": 2
+      },
+      {
+        "column": 6,
+        "column_name": "brewery_name",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 2409,
+        "dirty_profile": {
+          "distinct_fraction": 0.22904564315352696,
+          "distinct_nonempty_formats": 43,
+          "distinct_nonempty_values": 552,
+          "dominant_format": "A A A",
+          "dominant_format_fraction": 0.4730290456431535,
+          "nonempty_observations": 2410,
+          "observations": 2410,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "brewery",
+              "name"
+            ]
+          },
+          "structured_fraction": 0.03029045643153527
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2410,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 1,
+        "retained_positive_count": 1,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2410,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 1
+        },
+        "validated_rule_violation_count": 1
+      },
+      {
+        "column": 7,
+        "column_name": "city",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.1975103734439834,
+          "distinct_nonempty_formats": 10,
+          "distinct_nonempty_values": 476,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.7232365145228216,
+          "nonempty_observations": 2410,
+          "observations": 2410,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "city"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 233,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 233,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 210,
+        "source_positive_fraction": 0.08713692946058091,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 128
+        },
+        "validated_rule_violation_count": 128
+      },
+      {
+        "column": 8,
+        "column_name": "state",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.022348816827344433,
+          "distinct_nonempty_formats": 1,
+          "distinct_nonempty_values": 51,
+          "dominant_format": "A",
+          "dominant_format_fraction": 1.0,
+          "nonempty_observations": 2282,
+          "observations": 2410,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "state"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 129,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 129,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 128,
+        "source_positive_fraction": 0.053112033195020746,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 132,
+          "intrinsic_dirty_fd": 159,
+          "promoted_cells": 8,
+          "promoted_inherited_negatives": 8,
+          "validated_target_specific_rule_violation": 128
+        },
+        "validated_rule_violation_count": 128
+      }
+    ],
+    "config": {
+      "canonical_min_agreement": 0.9,
+      "canonical_min_support": 5,
+      "context_global_min_agreement": 0.97,
+      "context_min_agreement": 0.95,
+      "context_min_coverage": 0.15,
+      "context_min_gain_over_marginal": 0.1,
+      "context_min_groups": 2,
+      "context_min_peers": 3,
+      "demoted_score": 0.49,
+      "fallback_min_grammar_fraction": 0.8,
+      "fallback_min_nonempty_rate": 0.45,
+      "fallback_min_observations": 8,
+      "fallback_missing_min_complete_fraction": 0.8,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_missing_fraction": 0.02,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "missing_min_observations": 30,
+      "promoted_score": 0.75,
+      "source_positive_fraction_threshold": 0.4,
+      "type_min_fraction": 0.95
+    },
+    "decision_threshold": 0.5,
+    "decision_threshold_operator": ">",
+    "input_fingerprint": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "intrinsic_context": {
+      "conflicting_cell_count": 0,
+      "contradicting_cell_count": 87,
+      "qualified_relations": [
+        {
+          "coverage": 0.7514522821576763,
+          "dependent": "brewery_name",
+          "determinants": [
+            "brewery_id"
+          ],
+          "distinct_group_modes": 236,
+          "gain_over_marginal": 0.9657647708448371,
+          "global_purity": 1.0,
+          "marginal_purity": 0.034235229155162895,
+          "observations": 1811,
+          "repeated_groups": 237
+        },
+        {
+          "coverage": 0.6966804979253112,
+          "dependent": "state",
+          "determinants": [
+            "brewery_id"
+          ],
+          "distinct_group_modes": 45,
+          "gain_over_marginal": 0.8808814770696843,
+          "global_purity": 1.0,
+          "marginal_purity": 0.11911852293031566,
+          "observations": 1679,
+          "repeated_groups": 223
+        },
+        {
+          "coverage": 0.7560165975103734,
+          "dependent": "brewery_id",
+          "determinants": [
+            "brewery_name"
+          ],
+          "distinct_group_modes": 238,
+          "gain_over_marginal": 0.9560922063666302,
+          "global_purity": 0.9901207464324918,
+          "marginal_purity": 0.03402854006586169,
+          "observations": 1822,
+          "repeated_groups": 238
+        },
+        {
+          "coverage": 0.7012448132780082,
+          "dependent": "state",
+          "determinants": [
+            "brewery_name"
+          ],
+          "distinct_group_modes": 45,
+          "gain_over_marginal": 0.8804733727810651,
+          "global_purity": 0.9994082840236687,
+          "marginal_purity": 0.11893491124260355,
+          "observations": 1690,
+          "repeated_groups": 224
+        },
+        {
+          "coverage": 0.7887966804979253,
+          "dependent": "state",
+          "determinants": [
+            "city"
+          ],
+          "distinct_group_modes": 44,
+          "gain_over_marginal": 0.8537611783271962,
+          "global_purity": 0.97317201472909,
+          "marginal_purity": 0.11941083640189375,
+          "observations": 1901,
+          "repeated_groups": 183
+        }
+      ]
+    },
+    "observation_source": "immutable_original_dirty_strings",
+    "protocol": "unified_loop_v6_dirty_intrinsic_promotions_v1",
+    "score_semantics": "policy_scores_not_calibrated_probabilities",
+    "shape": [
+      2410,
+      9
+    ],
+    "starting_scores": "completed_empty_carry",
+    "v6_fallback_structural_promotion": {
+      "candidate_count": 0,
+      "policy": "empty_predicate_fallback_dirty_grammar_and_completeness_v1",
+      "promoted_count": 0,
+      "retained_count": 0,
+      "source_metadata_only": true
+    },
+    "v6_structural_promotion": {
+      "candidate_count": 2,
+      "column_semantics": "not_used",
+      "policy": "generic_dirty_distribution_format_outliers_v1",
+      "promoted_count": 0,
+      "retained_count": 2
+    }
+  },
+  "detection_mask_sha256": "00cb2397bd495614e8b55a4c5b577d60fe51301b4f14f93f365ba9a72fbe629c",
+  "elapsed_local_seconds": 14.125465658988105,
+  "fresh_rule_input": {
+    "dependency_count": 5,
+    "model": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh"
+    },
+    "provenance": {
+      "clean_reference_access": false,
+      "dirty_only": true,
+      "evaluation_feedback_access": false,
+      "external_metadata_access": false,
+      "input_packet_sha256": "3c138f92797f2db8767efeb011c7c9391f3f258072b105b96d0eb49d86af9cb8",
+      "request_hash": "d42940dc58278479fbadd4870d0c54c76b2abff176d52d09fd2ac357ed1a9672",
+      "response_sha256": "f6fad042149217d136d0f155611a15c5b5247ff1acdcd39cc04ccedeb17439cc",
+      "study_version": "unified_loop_v6",
+      "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+    },
+    "rule_count": 8,
+    "rule_union": {
+      "input_dependency_counts": {
+        "cached": 3,
+        "fresh": 5
+      },
+      "input_rule_counts": {
+        "cached": 23,
+        "fresh": 8
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 7,
+      "union_rule_count": 31
+    },
+    "schema_version": "unified-loop-v6-dirty-rules-v1"
+  },
+  "probabilities_sha256": "4f8ab234ff884714a97de67a03927233c1e51eb6188224c44b97aec004df6e99",
+  "repair": {
+    "catalog_roles": null,
+    "catalog_safeguard": false,
+    "config": {
+      "candidate_cap": 3,
+      "catalog_min_exact_peers": 2,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "numeric_min_canonical_agreement": 0.95,
+      "numeric_min_exact_peers": 3,
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "counts": {
+      "abstained_cells": 213,
+      "budget_pruned_strings": 0,
+      "candidate_cells_outside_detection": 0,
+      "detection_positive_cells": 2661,
+      "guarded_candidate_selection": 2443,
+      "noisy_seeded_carry": 5,
+      "null_abstention_records": 0,
+      "selected_cells": 2448
+    },
+    "detection_mask_modified": false,
+    "method": "unified_loop_v6",
+    "requires_combined_row_guard": true
+  },
+  "row_guard": {
+    "checked_rows": 1789,
+    "rolled_back_rows": 2
+  },
+  "rules": {
+    "accepted_rule_count": 31,
+    "applicability": [
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_id_integer",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_brewery_id_integer",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 2
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_ounces_canonical",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1486
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_abv_fraction",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 693
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_state_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 128
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_beer_name_text_hygiene",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_style_text_hygiene",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_brewery_name_text_hygiene",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_city_text_hygiene",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_style_wrong_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 2
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_split_location_city",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 127
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_split_location_state",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 127
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_brewery_id_determines_brewery_name",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_brewery_id_determines_city",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 108
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_brewery_id_determines_state",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 108
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_beer_name",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_style",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_ounces",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_abv",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_brewery_id",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_brewery_name",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_city",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:p2_displaced_tuple_state",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_id_integer_syntax",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_brewery_id_integer_syntax",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_style_contains_measurement",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 2
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_ounces_measurement_syntax",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_abv_numeric_representation",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_state_code_syntax",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_city_embedded_state_code",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 127
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:beers_state_displaced_into_city",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 2410,
+        "violation_rows": 127
+      }
+    ],
+    "input_union": {
+      "input_dependency_counts": {
+        "cached": 3,
+        "fresh": 5
+      },
+      "input_rule_counts": {
+        "cached": 23,
+        "fresh": 8
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 7,
+      "union_rule_count": 31
+    },
+    "raw_row_count": 2410,
+    "validation": [
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_id_integer",
+        "source_sha256": "5f78e944384f3f2c8e5b4c9fd8cb418fafb205249da2e926a56742df032e191a",
+        "target": "id"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_brewery_id_integer",
+        "source_sha256": "d504170423835658492257d864471833b8c268964eeadafd9d4fd0a160e99190",
+        "target": "brewery_id"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_ounces_canonical",
+        "source_sha256": "65bf0c09b2dc0fc49d8c00e836e49e22a2d59446d7b7010db703e249d015201e",
+        "target": "ounces"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_abv_fraction",
+        "source_sha256": "df07a5411bcbc5a651b903e3a9ced9f9af014e86cdfdebaf08958721dea24c47",
+        "target": "abv"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_state_domain",
+        "source_sha256": "1bbd29ee939316391dfa756e6e83a6986b4d431b748c49dcd32ed7f526e30ac2",
+        "target": "state"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_beer_name_text_hygiene",
+        "source_sha256": "388e5901d06c5d07298caa26b66313819754cc80c1f31b228a1b3551b454fe9a",
+        "target": "beer_name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_style_text_hygiene",
+        "source_sha256": "2b98fd24169fb1fdc63e99e499d9bbdc1e268d7179b73480a6f094ef4cfde50f",
+        "target": "style"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_brewery_name_text_hygiene",
+        "source_sha256": "125c4cab09ba5a577911e45da26b2f5f718483fca01f9179a6c4ed8ff755bf0e",
+        "target": "brewery_name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_city_text_hygiene",
+        "source_sha256": "6fac07ea99a96893c272afd97628900076348fe1abaf42f41dc3e83d3c90838a",
+        "target": "city"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_style_wrong_domain",
+        "source_sha256": "e096cc9bfe8af2815a915ad9cb855cbc90e5bc62baaea82b711b30145dfcb20b",
+        "target": "style"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_split_location_city",
+        "source_sha256": "f4e8e5ce8c9a67724baa754d205a3a25a9e846f41cdb338fe8332df13fe5e041",
+        "target": "city"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_split_location_state",
+        "source_sha256": "f4e8e5ce8c9a67724baa754d205a3a25a9e846f41cdb338fe8332df13fe5e041",
+        "target": "state"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_brewery_id_determines_brewery_name",
+        "source_sha256": "6cfcac9e59766c6e1f7f267f4ed05052d6d22d85439393f76ba009b0ccac1218",
+        "target": "brewery_name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_brewery_id_determines_city",
+        "source_sha256": "048b8b369be3f19516fa48ad16fcfc27cb911fb5b766988af33377fbbc01f14e",
+        "target": "city"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_brewery_id_determines_state",
+        "source_sha256": "96a964cf76ed5453fa7b5d863986f51aceca8c70ea7d4beca046dc89fcb3b0a3",
+        "target": "state"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_beer_name",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "beer_name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_style",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "style"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_ounces",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "ounces"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_abv",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "abv"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_brewery_id",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "brewery_id"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_brewery_name",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "brewery_name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_city",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "city"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "cached:p2_displaced_tuple_state",
+        "source_sha256": "9bd89ca619b6f9b171849b29d7f316247286d1d468b45e57f2744acb6d0dedde",
+        "target": "state"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_id_integer_syntax",
+        "source_sha256": "933f88f4c300e50907ac38d3ccf5495b65d5c300bfb1f6e23e196fa4ba91c287",
+        "target": "id"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_brewery_id_integer_syntax",
+        "source_sha256": "83e57d5f8258abc24ad4f74b2fc63640b8c8163c6f41c5f25b4ead46d3454740",
+        "target": "brewery_id"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_style_contains_measurement",
+        "source_sha256": "45e63248401dbb707fa74b6a8407cd474d53adcef395bd380cfad98876eb4f7c",
+        "target": "style"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_ounces_measurement_syntax",
+        "source_sha256": "12c5053efc3fb9059b8ab5753ed173a4f8948dd032797f1df54293b12a2912ed",
+        "target": "ounces"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_abv_numeric_representation",
+        "source_sha256": "b2a9733b0b2e1a50ab186d9cd1dbba1bfefda25d07aec3abcbf9285c75dd2586",
+        "target": "abv"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_state_code_syntax",
+        "source_sha256": "eb77d19333e935a91074462ed09232cb8d1fbdddc310de01e55a49f7c76d3924",
+        "target": "state"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_city_embedded_state_code",
+        "source_sha256": "9c1356347c380494080d4a6262d8b8381ab533aaad8cbbd85aa69d0da6513a3d",
+        "target": "city"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2410,
+        "id": "fresh:beers_state_displaced_into_city",
+        "source_sha256": "394261a8118cf4d2a6a7b367c5c8a0fd48dd9757a606e16288aa0e865b96e973",
+        "target": "state"
+      }
+    ]
+  }
+}

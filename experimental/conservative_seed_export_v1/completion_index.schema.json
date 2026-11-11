@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:icde3:conservative-seed-completion-index-v1",
+  "title": "Root-bound completed conservative seed artifact index",
+  "description": "The canonical JSON content hash is not authority by itself. Root supplies the exact physical byte SHA-256 to the exporter. Runtime validation also checks every cross-file invariant listed below.",
+  "type": "object",
+  "required": ["schema_version", "protocol", "protocol_hash", "status", "datasets", "arms", "preparation_index_path", "protocol_lock_path", "entries", "files", "completed_round_records", "distinct_fresh_worker_sessions", "evaluation_performed", "model_dispatch_performed", "index_hash"],
+  "properties": {
+    "schema_version": {"const": "conservative-seed-completion-index-v1"},
+    "protocol": {"const": "conservative-seed-v1"},
+    "protocol_hash": {"$ref": "#/$defs/hash"},
+    "status": {"const": "all_six_both_arms_three_complete_rounds"},
+    "datasets": {"const": ["hospital", "flights", "beers", "rayyan", "billionaire", "movies"]},
+    "arms": {"const": ["seeded_carry", "empty_carry"]},
+    "preparation_index_path": {"const": "experimental/conservative_seed_v1/preparation_index.json"},
+    "protocol_lock_path": {"const": "experimental/conservative_seed_v1/protocol_lock.json"},
+    "entries": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"$ref": "#/$defs/entry"}},
+    "files": {"type": "object", "minProperties": 1, "propertyNames": {"$ref": "#/$defs/path"}, "additionalProperties": {"$ref": "#/$defs/hash"}},
+    "completed_round_records": {"const": 36},
+    "distinct_fresh_worker_sessions": {"const": 36},
+    "evaluation_performed": {"const": false},
+    "model_dispatch_performed": {"const": false},
+    "index_hash": {"$ref": "#/$defs/hash"}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "path": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*\\\\)(?!.*//)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*[/]$).+$", "description": "Canonical repository-relative path; no absolute paths, dot segments, backslashes, symlinks, or escapes. Runtime verifies exact expected path coverage before opening files."},
+    "entry": {
+      "type": "object",
+      "required": ["dataset", "arm", "run_directory", "plan_path", "manifest_path", "frozen_path", "state_path", "prediction_path", "completed_external_rounds", "plan_hash", "candidate_universe_sha256"],
+      "properties": {
+        "dataset": {"enum": ["hospital", "flights", "beers", "rayyan", "billionaire", "movies"]},
+        "arm": {"enum": ["seeded_carry", "empty_carry"]},
+        "run_directory": {"$ref": "#/$defs/path"},
+        "plan_path": {"$ref": "#/$defs/path"},
+        "manifest_path": {"$ref": "#/$defs/path"},
+        "frozen_path": {"$ref": "#/$defs/path"},
+        "state_path": {"$ref": "#/$defs/path"},
+        "prediction_path": {"$ref": "#/$defs/path"},
+        "completed_external_rounds": {"const": 3},
+        "plan_hash": {"$ref": "#/$defs/hash"},
+        "candidate_universe_sha256": {"$ref": "#/$defs/hash"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "x-runtime-invariants": [
+    "Exactly one ordered entry for every six-dataset/two-arm pair; exactly three completed rounds and 36 unique sessions; no partial-run index is written.",
+    "Known fixed inference protocol hash; all 11 original source files and all 36 coordinated original input bytes match its exact fixed-path lock.",
+    "The new exporter script, test module, interface note and this schema are separately byte-bound in files; they are not added to the old inference lock.",
+    "Original preparation seal and first request bytes, common paired plan, strict threshold, raw source scores/masks, hard-K3 prior+CTS universe, original tuples/peers, fixed parameters and candidate ordering are checked.",
+    "All request, batch, prompt projection, complete direct/grouped reply, state, ledger, raw prediction, complete round record, session-keyed owner, round-keyed owner, and final freeze hashes/relationships are checked without rerunning inference or predicates.",
+    "Captured rule results must agree whenever original/candidate/request/whole-row guard records describe the identical row tuple. Repeated identical counterfactual contexts must retain identical captured evidence, without executing predicates.",
+    "files contains exactly the independently enumerated required artifacts. Unknown/unconsumed paths, missing maps, substitutions, symlinks and path escapes fail closed without opening an unconsumed file.",
+    "The bridge validates every raw experimental bit is integer 0/1 and equals probability > 0.5, then converts only that mask field to boolean.",
+    "The only other authorized metadata transformation replaces repair_statuses with a pointer to the byte-exact raw snapshot SHA and field path. Full raw predictions and every state/ledger are retained.",
+    "Normalized float64 probability bytes, exact repair list/map and strict logical mask remain unchanged. Source baseline predictions are copied byte-for-byte and EC remains qualified.",
+    "Root must explicitly supply the exact physical completion-index SHA. Every bound input is rechecked immediately before index publication. Existing differing output is never overwritten; its exact file/directory inventory excludes extra paths, symlinks and special files. Index and export publication are atomic and exclusive.",
+    "No evaluation, model dispatch, outcome-based winner, best-round selection, promotion, or quality claim is performed."
+  ]
+}

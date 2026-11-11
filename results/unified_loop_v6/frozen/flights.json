@@ -1,0 +1,150 @@
+{
+  "cohort": "local-unified-loop-v6-20261031",
+  "config": {
+    "consensus": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "detection": {
+      "canonical_min_agreement": 0.9,
+      "canonical_min_support": 5,
+      "context_global_min_agreement": 0.97,
+      "context_min_agreement": 0.95,
+      "context_min_coverage": 0.15,
+      "context_min_gain_over_marginal": 0.1,
+      "context_min_groups": 2,
+      "context_min_peers": 3,
+      "demoted_score": 0.49,
+      "fallback_min_grammar_fraction": 0.8,
+      "fallback_min_nonempty_rate": 0.45,
+      "fallback_min_observations": 8,
+      "fallback_missing_min_complete_fraction": 0.8,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_missing_fraction": 0.02,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "missing_min_observations": 30,
+      "promoted_score": 0.75,
+      "source_positive_fraction_threshold": 0.4,
+      "type_min_fraction": 0.95
+    },
+    "repair": {
+      "candidate_cap": 3,
+      "catalog_min_exact_peers": 2,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "numeric_min_canonical_agreement": 0.95,
+      "numeric_min_exact_peers": 3,
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "runner": {
+      "address_space_bytes": 12884901888,
+      "blas_openmp_threads": 1,
+      "candidate_cap": 3,
+      "candidate_order": [
+        "actionable_key_source_consensus",
+        "seed",
+        "cts_existing_order"
+      ],
+      "catalog_repair_policy": "entity_fd_or_observed_numeric_canonical_form_and_exact_dirty_peers",
+      "combined_row_guard": "rollback_all_edits_on_new_violation_or_runtime_error",
+      "constant_false_rule_policy": "retain_as_counterfactual_guard",
+      "counterfactual_batch_rows": 1000,
+      "cts_witness_provenance": "complete_cell_cts_only_peer_union_before_candidate_filtering",
+      "decision_threshold": 0.5,
+      "decision_threshold_operator": ">",
+      "detection_all_true_rule_policy": "exclude_from_detection_keep_in_guard",
+      "detection_negative_policy": "promote_independent_rule_type_domain_context_evidence_before_repair",
+      "domain_difference_divisor": 4.0,
+      "empty_carrier_fields": [
+        "probabilities",
+        "metadata"
+      ],
+      "fd_delta": "leave_one_out_candidate_conditional_support_minus_original",
+      "format_policy": "same_original_pattern_or_two_dirty_exemplars_no_controls",
+      "fresh_binding_policy": "dataset_dirty_packet_response_hashes_and_exact_response_body",
+      "fresh_rule_policy": "uniform_cached_plus_fresh_dirty_only_rule_union_for_all_six_no_fallback",
+      "minimum_dirty_pattern_exemplars": 2,
+      "rule_batch_rows": 1000,
+      "rule_delta_scope": "accepted_rules_targeting_proposed_column",
+      "rule_max_error_rate_exclusive": 0.05,
+      "seed_source": "source_sequential_repair_map_only",
+      "vicinity_difference_divisor": 4.0
+    }
+  },
+  "design_provenance": {
+    "design_origin": "user_directed_follow_up_informed_by_prior_aggregate_observations",
+    "evaluation_failure_reports_used": false,
+    "existing_cached_proposals_are_noisy_proposals": true,
+    "external_metadata_or_catalogs_used": false,
+    "fresh_blind_experiment": false,
+    "prior_reviewer_judgments_used": false,
+    "row_labels_used_for_design_or_inference": false
+  },
+  "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+  "frozen_before_evaluation": true,
+  "ground_truth_access": false,
+  "inference_inputs": {
+    "/home/steve/Desktop/ICDE3/artifacts/llm/flights/pass2.json": "e031188e337da807cb7054d5a54866b5c69f0645d4becdd0392b0f85433d18ea",
+    "/home/steve/Desktop/ICDE3/artifacts/llm/flights/proposals_cts_v2.json": "6dd565f1642486da466e23dded8dcf21342146197e59a01ead63753854a0278f",
+    "/home/steve/Desktop/ICDE3/artifacts/llm/unified_loop_v6/flights/pass2.json": "04da224e5b25696bb3d87205061c5c82c937483486a213b96fb7e3ad227123aa",
+    "/home/steve/Desktop/ICDE3/artifacts/unified_loop_v6_model/packets/flights.json": "edcdfd1bdf15bb95dac1f8fbb5dca6338eb020a4df081bb72e654836360f71e8",
+    "/home/steve/Desktop/ICDE3/artifacts/unified_loop_v6_model/responses/flights.json": "6f0828bd245ab2948c118fa57a5f5404185a8a50c11494ed5506cf43088e6a0d",
+    "/home/steve/Desktop/ICDE3/results/conservative_seed_v1/predictions/flights/empty_carry.json": "e6e1cfedb94099d157d312f6fe0be4eef65edcb52cc89c4fff4a3f4be5e78a44",
+    "/home/steve/Desktop/ICDE3/results/source_baselines_v1/predictions/flights/zeroed.json": "5cd71ff6175122a2fa009873f3417bf8121bee2b300ef9153e61153bdd554fff",
+    "/home/steve/Desktop/ICDE3/results/source_baselines_v1/predictions/flights/zeroed_zeroec_reconstruction.json": "12bb7d7e900c1982e563e91f6f0cb80847398fc43e5cb51d77cf665c951697a8",
+    "/home/steve/Desktop/ICDE3/vendor/ZeroED/data/flights_error-01.csv": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c"
+  },
+  "method_files": {
+    "unified_loop_v6": "zeroclean_loop.json"
+  },
+  "model": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh"
+  },
+  "plan_sha256": "ea0ec3fb57c75a2ad1cc17df5fa6cc7d5ed4574cce71cfe4c9291316e378410b",
+  "prediction_files": {
+    "zeroclean_loop.json": "ec27eed2cf02966214c7273e0af3f7600986df89905633b76fa5e2ad32aa9a29",
+    "zeroed.json": "5cd71ff6175122a2fa009873f3417bf8121bee2b300ef9153e61153bdd554fff",
+    "zeroed_zeroec_reconstruction.json": "12bb7d7e900c1982e563e91f6f0cb80847398fc43e5cb51d77cf665c951697a8"
+  },
+  "protocol_lock_sha256": "ea4fe11ea08e267e483da7c6154833dbfe0e304eaab31d8f1ae063a002944273",
+  "source_signature": "0f7c3d57b988ab06e635917af18147508ae6ceeb912bfbd28bd565c5148e2fd4",
+  "supporting_files": {
+    "results/unified_loop_v6/audit/flights.jsonl": "23af8776981f85d68ff1460101414d76412526d1e0ddee9ee9cc5725ac0ca21b",
+    "results/unified_loop_v6/diagnostics/flights.json": "45801c0b45eeb12468e5514e27c952b7697cd84557e869b67e3195ebff5a6536"
+  },
+  "time_unix": 1793454061.3505585
+}

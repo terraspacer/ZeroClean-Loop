@@ -1,0 +1,15 @@
+{
+  "status": "superseded before validation; not valid for evaluation",
+  "reason": "Synthetic default-tolerance test exposed incremental versus global tie resolution. Implementation corrected to match the preregistered global-maximum/fewest-positive rule; objective and tolerances unchanged.",
+  "archives": [
+    {
+      "original_path": "experimental/latent_consensus_model_average_v5",
+      "superseded_archive": "experimental/latent_consensus_model_average_v5_superseded_global_tie_fix"
+    },
+    {
+      "original_path": "experimental/latent_consensus_expected_f1_proxy_v5",
+      "superseded_archive": "experimental/latent_consensus_expected_f1_proxy_v5_superseded_global_tie_fix"
+    }
+  ],
+  "v3_v4_modified": false
+}

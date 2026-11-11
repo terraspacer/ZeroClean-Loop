@@ -1,0 +1,92 @@
+{
+  "study": "Dirty-only FORMAT-CONTRACT v1",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "xhigh",
+  "registered_at_utc": "2026-10-27T04:42:31.765452+00:00",
+  "datasets": [
+    "hospital",
+    "flights",
+    "beers",
+    "rayyan",
+    "billionaire",
+    "movies"
+  ],
+  "source_policy": {
+    "table_access": "zeroclean.data.load_dirty only",
+    "additional_reads": "Relevant inference code schemas and sandbox only",
+    "excluded": [
+      "reference/clean tables",
+      "error masks and labels",
+      "benchmark metrics/results/failure reports",
+      "other workers verdicts",
+      "prior predictions and candidate artifacts",
+      "external catalogs"
+    ],
+    "prior_context_disclosure": "This is the same agent with earlier research in conversation history; no earlier candidate, review, prediction or evaluation artifact is read for this study. Fresh decisions use the new uniform protocol and dirty-table evidence."
+  },
+  "uniform_contract_policy": {
+    "minimum_nonempty_evidence": 20,
+    "minimum_distinct_payloads_or_context_groups": 3,
+    "coherent_parse_family_minimum_coverage": 0.9,
+    "canonical_format_minimum_support": 0.9,
+    "denominator": "Nonempty values excluding explicitly declared unknown sentinels; unparseable values remain in the denominator. Distinct payload/context support is reported separately. No dataset-specific threshold changes.",
+    "header_unit_rule": "An explicit unit in a header can define a unitless numeric scalar contract, even when dirty values redundantly repeat that unit. A coherent numeric-payload rendering supported across distinct dirty peers may define the proposed scalar format. This is a declared format-contract hypothesis, not proof of the underlying value or corruption.",
+    "inferred_unit_rule": "When a header specifies a semantic type but not a unit, infer a unit only from strongly coherent explicit unit-bearing dirty evidence and compatible physical semantics. Annotated or contradictory conventions are separate strata.",
+    "canonical_rendering_rule": "Require a unique deterministic rendering supported by the column-wide numeric/identifier/language format class or same-value peers. Preserve rare payloads; no mode-to-value replacement, digit reversal, precision recovery, identity merge or numeric range inferred only from frequency.",
+    "numeric_policy": "Use exact rational/decimal arithmetic. Do not categorically reject unitless numbers when the unit is already carried by the schema. Opaque identifiers preserve digit strings and leading zeros; scalar counts/ordinals may use a supported canonical integer rendering.",
+    "metadata_policy": "Dates, weekdays, timezones, status text, identifier roles, packaging and presentation metadata cannot be silently removed. Joint field movement is proposed only as an atomic bundle preserving all text and roles.",
+    "ambiguity_policy": "Competing unit scales, decimal/grouping conventions, lossy rounding, missing digits, uncertain temporal context and unknown identity abstain. A semantically valid input can still fail a declared representation contract; that alone does not make it factually wrong.",
+    "unknown_policy": "Blank and explicitly documented unknown tokens preserve unknown meaning. Boolean/categorical constancy never authorizes factual filling."
+  },
+  "sampling": {
+    "seed": 610140,
+    "ordinary_rows_per_dataset": 12,
+    "most_common_and_tail_values_per_column": 4,
+    "shape_strata_per_column": 8,
+    "rows_per_contrast_stratum": 3,
+    "group_strategy": "Column semantic family, format shape, optional annotations, and cross-column role consistency. Same procedure and thresholds for all six; applicability differs by declared column semantics."
+  },
+  "planned_hypotheses": [
+    {
+      "id": "FC1",
+      "claim": "Explicit header units plus coherent numeric payloads support lossless unitless scalar formatting without modal-value truth assumptions."
+    },
+    {
+      "id": "FC2",
+      "claim": "Compatible explicit unit expressions can be converted exactly into a uniquely supported rendering; ratios and precision must be verified algebraically."
+    },
+    {
+      "id": "FC3",
+      "claim": "Opaque identifier and language-code formatting can be normalized only with identity/language membership preserved and no lost roles."
+    },
+    {
+      "id": "FC4",
+      "claim": "Clock/date/status-rich representations need separate strata; only unambiguous pure-clock conversions can be proposed, with no annotation loss."
+    },
+    {
+      "id": "FC5",
+      "claim": "Cross-column lexical decomposition or composite formatting can support atomic exact conversions while ambiguous dependencies remain advisory or abstained."
+    }
+  ],
+  "output_contract": {
+    "root": "experimental/format_contracts_v1",
+    "pass4": "<dataset>/pass4.json, schema-compatible and separate from active/frozen pass2/pass3",
+    "proposals": "At most three exact scalar candidates per cell; atomic multi-field bundles remain separate and cannot be flattened into lossy independent repairs. Zero candidates is an explicit abstention. Scores are uncalibrated format-contract confidence, not fitted error probabilities.",
+    "per_column": "Declared semantic type/unit, representation assumptions, competing hypotheses, evidence counts, applicable checkers and abstentions for every column.",
+    "reporting": "Return counts, hashes, paths and limitations only; no illustrative row/value examples. Machine-readable exact proposals necessarily contain the proposed strings."
+  },
+  "validation": {
+    "runtime": "Existing sandbox on every dirty row; retain strictly less than 5% syntax/runtime error. Report every generated rule, including rejection.",
+    "synthetic": [
+      "unit ratio preservation",
+      "exact reversible numeric formatting",
+      "identifier leading-zero preservation",
+      "ambiguous percent scale and rounding abstention",
+      "legitimate format variants and rare magnitudes",
+      "no lossy date/timezone/status/role/packaging removal",
+      "atomic joint-field conservation"
+    ],
+    "evaluation": "No classifier fitting, benchmark evaluation or live promotion. Freeze hashes before independent downstream evaluation."
+  },
+  "authorship": "One gpt-6.1-sol/xhigh agent performs grouped semantic review. Code counts, samples, executes reviewed conversion templates and validates runtime; no per-cell model/API claim."
+}

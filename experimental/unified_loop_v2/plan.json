@@ -1,0 +1,163 @@
+{
+  "allowed_inference_inputs": {
+    "beers": {
+      "cts": "artifacts/llm/beers/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/beers_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/beers/empty_carry.json",
+      "pass2": "artifacts/llm/beers/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/beers/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/beers/zeroed.json"
+    },
+    "billionaire": {
+      "cts": "artifacts/llm/billionaire/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/billionaire_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/billionaire/empty_carry.json",
+      "pass2": "artifacts/llm/billionaire/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/billionaire/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/billionaire/zeroed.json"
+    },
+    "flights": {
+      "cts": "artifacts/llm/flights/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/flights_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/flights/empty_carry.json",
+      "pass2": "artifacts/llm/flights/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/flights/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/flights/zeroed.json"
+    },
+    "hospital": {
+      "cts": "artifacts/llm/hospital/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/hospital_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/hospital/empty_carry.json",
+      "pass2": "artifacts/llm/hospital/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/hospital/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/hospital/zeroed.json"
+    },
+    "movies": {
+      "cts": "artifacts/llm/movies/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/movies_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/movies/empty_carry.json",
+      "pass2": "artifacts/llm/movies/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/movies/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/movies/zeroed.json"
+    },
+    "rayyan": {
+      "cts": "artifacts/llm/rayyan/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/rayyan_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/rayyan/empty_carry.json",
+      "pass2": "artifacts/llm/rayyan/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/rayyan/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/rayyan/zeroed.json"
+    }
+  },
+  "cohort": "local-unified-loop-v2-20261028",
+  "configuration": {
+    "consensus": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "detection": {
+      "demoted_score": 0.49,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "source_positive_fraction_threshold": 0.4
+    },
+    "repair": {
+      "candidate_cap": 3,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "runner": {
+      "address_space_bytes": 12884901888,
+      "blas_openmp_threads": 1,
+      "candidate_cap": 3,
+      "candidate_order": [
+        "actionable_key_source_consensus",
+        "seed",
+        "cts_existing_order"
+      ],
+      "combined_row_guard": "rollback_all_edits_on_new_violation_or_runtime_error",
+      "constant_false_rule_policy": "retain_as_counterfactual_guard",
+      "counterfactual_batch_rows": 1000,
+      "cts_witness_provenance": "complete_cell_cts_only_peer_union_before_candidate_filtering",
+      "decision_threshold": 0.5,
+      "decision_threshold_operator": ">",
+      "detection_all_true_rule_policy": "exclude_from_detection_keep_in_guard",
+      "domain_difference_divisor": 4.0,
+      "empty_carrier_fields": [
+        "probabilities",
+        "metadata"
+      ],
+      "fd_delta": "leave_one_out_candidate_conditional_support_minus_original",
+      "format_policy": "same_original_pattern_or_two_dirty_exemplars_no_controls",
+      "minimum_dirty_pattern_exemplars": 2,
+      "rule_batch_rows": 1000,
+      "rule_delta_scope": "accepted_rules_targeting_proposed_column",
+      "rule_max_error_rate_exclusive": 0.05,
+      "seed_source": "source_sequential_repair_map_only",
+      "vicinity_difference_divisor": 4.0
+    }
+  },
+  "datasets": [
+    "hospital",
+    "flights",
+    "beers",
+    "rayyan",
+    "billionaire",
+    "movies"
+  ],
+  "design_provenance": {
+    "design_origin": "user_directed_follow_up_informed_by_prior_aggregate_observations",
+    "evaluation_failure_reports_used": false,
+    "existing_cached_proposals_are_noisy_proposals": true,
+    "external_metadata_or_catalogs_used": false,
+    "fresh_blind_experiment": false,
+    "prior_reviewer_judgments_used": false,
+    "row_labels_used_for_design_or_inference": false
+  },
+  "evaluation_is_separate": true,
+  "ground_truth_access": false,
+  "method_files": {
+    "unified_loop_v2": "zeroclean_loop.json"
+  },
+  "model": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh"
+  },
+  "output_root": "results/unified_loop_v2",
+  "protocol_sha256": "46b63cf108759be3ed08a3ba750a83a3e98da317f7be6250048e60f71b6c6e99",
+  "schema_version": "unified-loop-v2-freeze-v1"
+}

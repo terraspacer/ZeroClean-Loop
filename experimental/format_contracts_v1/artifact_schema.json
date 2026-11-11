@@ -1,0 +1,123 @@
+{
+  "version": "format_contracts_v1",
+  "dataset_order": [
+    "hospital",
+    "flights",
+    "beers",
+    "rayyan",
+    "billionaire",
+    "movies"
+  ],
+  "application_contract": {
+    "mode": "source_v2_parent_overlay",
+    "author_has_read_parent": false,
+    "independent_review_required_before_application": true,
+    "preserve_parent_on_ambiguity": true,
+    "scalar_guard": "Apply only when reviewed candidate is approved and current parent cell exactly equals source_value; otherwise preserve parent. Equal proposed/parent values are no-ops.",
+    "joint_guard": "All source values must exactly match the current parent tuple and the whole bundle must be approved. Apply every update atomically, or preserve the full parent tuple. Never flatten a bundle into scalar candidates.",
+    "post_application": "Root performs parent-relative whole-tuple sandbox verification separately; author does not apply or evaluate."
+  },
+  "files_per_dataset": {
+    "pass4.json": "Framework schema {dataset,model,reasoning_effort,dirty_sha256,sample_row_ids,rules,dependencies,value_repairs,valid_values,notes}. New checkers; no automatic factual repair map. Rule IDs reference contract IDs.",
+    "column_contracts.json": "Every column: header, semantic type, declared/inferred unit, representation assumptions, competing hypotheses, evidence counts/coverage, canonical rendering, contract status, limitations and checker IDs.",
+    "proposals.json": {
+      "dataset": "string",
+      "dirty_sha256": "string",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh",
+      "max_candidates": 3,
+      "application_mode": "source_v2_parent_overlay",
+      "cells": [
+        {
+          "row": "int",
+          "column": "string",
+          "column_index": "int",
+          "source_value": "string",
+          "source_value_sha256": "string",
+          "original_valid_score": "uncalibrated format-conformance score, not factual validity probability",
+          "candidates": [
+            {
+              "candidate_id": "content hash",
+              "contract_id": "string",
+              "transform_id": "string",
+              "value": "exact output string",
+              "score": "uncalibrated lossless-format confidence",
+              "explanation": "short model-authored template rationale",
+              "preservation": "machine-checked exact semantic signature equality"
+            }
+          ],
+          "abstention_reason": "null or stable reason code",
+          "application_precondition": {
+            "parent_value_must_equal": "source_value"
+          }
+        }
+      ]
+    },
+    "joint_conversion_candidates.json": {
+      "bundles": [
+        {
+          "bundle_id": "content hash",
+          "row": "int",
+          "contract_id": "string",
+          "transform_id": "string",
+          "source_values": "column -> original dirty string",
+          "updates": [
+            {
+              "column": "string",
+              "value": "exact output string"
+            }
+          ],
+          "application_mode": "atomic_all_or_nothing",
+          "application_precondition": {
+            "parent_values_must_equal": "source_values"
+          },
+          "preservation_checks": "all meaningful text/roles retained",
+          "requires_independent_review": true
+        }
+      ]
+    },
+    "runtime_validation.json": "Every generated checker and full-dirty-row runtime acceptance/error count, separately from semantic support.",
+    "sampling_provenance.json": "Row IDs, hashes, deterministic format/context strata, and honest grouped model-review limits."
+  },
+  "root_files": [
+    "protocol.json",
+    "artifact_schema.json",
+    "profile_summary.json",
+    "synthetic_conversion_tests.json",
+    "manifest.json",
+    "independent_review_request.json"
+  ],
+  "review_response_schema": {
+    "protocol_sha256": "must match",
+    "author_manifest_sha256": "must match",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "contracts": [
+      {
+        "contract_id": "string",
+        "decision": "approve | abstain | reject",
+        "rationale": "concise evidence and limits",
+        "approved_transform_ids": "list"
+      }
+    ],
+    "scalar_candidates": [
+      {
+        "candidate_id": "string",
+        "decision": "approve | abstain | reject",
+        "rationale": "string"
+      }
+    ],
+    "atomic_bundles": [
+      {
+        "bundle_id": "string",
+        "decision": "approve | abstain | reject",
+        "rationale": "string",
+        "atomicity_confirmed": "bool"
+      }
+    ],
+    "default_for_unreviewed": "abstain_preserve_parent",
+    "benchmark_data_accessed": false
+  },
+  "authorship": "One model agent reviews groups and authors converter templates. Per-cell execution is deterministic code, not a per-cell LLM/API response.",
+  "immutability": "Author outputs freeze in manifest.json before independent review/application or any feedback. Review/application results go outside the author directory."
+}

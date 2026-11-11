@@ -1,0 +1,182 @@
+\documentclass[tikz,border=1pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{newtxtext,newtxmath}
+\usepackage{pifont}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,patterns,patterns.meta,shapes.geometric,shapes.misc}
+
+% Okabe-Ito colourblind-safe palette (one colour per method in every figure)
+\definecolor{oiBlue}{HTML}{0072B2}
+\definecolor{oiVermilion}{HTML}{D55E00}
+\definecolor{oiGreen}{HTML}{009E73}
+\definecolor{oiOrange}{HTML}{E69F00}
+\definecolor{oiPurple}{HTML}{CC79A7}
+\definecolor{oiSky}{HTML}{56B4E9}
+\definecolor{oiYellow}{HTML}{F0E442}
+\definecolor{oiGrey}{HTML}{8C8C8C}
+\definecolor{oiGrid}{HTML}{D9D9D9}
+\definecolor{oiInk}{HTML}{1A1A1A}
+
+\newcommand{\okmark}{\textcolor{oiGreen!70!black}{\ding{51}}}
+\newcommand{\badmark}{\textcolor{oiVermilion}{\ding{55}}}
+\newcommand{\cellfont}{\fontsize{6.5}{7.6}\selectfont}
+
+\tikzset{
+  >={Latex[length=1.7mm,width=1.4mm]},
+  flow/.style={->, line width=0.6pt, draw=oiInk},
+  hatch/.style={pattern={Lines[angle=45,distance=2.4pt,line width=0.35pt]}, pattern color=black!28},
+}
+
+\tikzset{subcap/.style={font=\footnotesize, anchor=north, inner sep=0pt}}
+\begin{document}
+\renewcommand{\cellfont}{\fontsize{8.5}{9.6}\selectfont}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[anchor=base west, inner sep=0pt] at (0,0.130) {\cellfont \textbf{(a)} Dirty input $T$, flight AA-404-MIA-MCO};
+\node[anchor=base east, inner sep=0pt] at (8.810,0.130) {\cellfont\itshape 10 erroneous cells};
+\fill[black!9] (0,-0.440) rectangle (8.810,0.000);
+\node[anchor=base west, inner sep=0pt] at (0.070,-0.305) {\cellfont \bfseries src};
+\node[anchor=base west, inner sep=0pt] at (1.470,-0.305) {\cellfont \bfseries sched\_dep};
+\node[anchor=base west, inner sep=0pt] at (3.940,-0.305) {\cellfont \bfseries act\_dep};
+\node[anchor=base west, inner sep=0pt] at (6.410,-0.305) {\cellfont \bfseries sched\_arr};
+\node[anchor=base west, inner sep=0pt] at (0.070,-0.745) {\cellfont travelocity};
+\node[anchor=base west, inner sep=0pt] at (1.470,-0.745) {\cellfont 6:45 a.m.};
+\node[anchor=base west, inner sep=0pt] at (3.940,-0.745) {\cellfont \bfseries\color{oiVermilion}6:41 a.m.};
+\node[anchor=base west, inner sep=0pt] at (6.410,-0.745) {\cellfont 7:45 a.m.};
+\node[anchor=base west, inner sep=0pt] at (0.070,-1.185) {\cellfont mco};
+\node[anchor=base west, inner sep=0pt] at (1.470,-1.185) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\node[anchor=base west, inner sep=0pt] at (3.940,-1.185) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\node[anchor=base west, inner sep=0pt] at (6.410,-1.185) {\cellfont \bfseries\color{oiVermilion}Thu ~7:45};
+\node[anchor=base west, inner sep=0pt] at (0.070,-1.625) {\cellfont orbitz};
+\node[anchor=base west, inner sep=0pt] at (1.470,-1.625) {\cellfont \bfseries\color{oiVermilion}6:45aDec 1};
+\node[anchor=base west, inner sep=0pt] at (3.940,-1.625) {\cellfont \bfseries\color{oiVermilion}6:41aDec 1};
+\node[anchor=base west, inner sep=0pt] at (6.410,-1.625) {\cellfont \bfseries\color{oiVermilion}7:45aDec 1};
+\node[anchor=base west, inner sep=0pt] at (0.070,-2.065) {\cellfont helloflight};
+\node[anchor=base west, inner sep=0pt] at (1.470,-2.065) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\node[anchor=base west, inner sep=0pt] at (3.940,-2.065) {\cellfont \bfseries\color{oiVermilion}6:58 a.m.};
+\node[anchor=base west, inner sep=0pt] at (6.410,-2.065) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\fill[oiGreen!10] (0,-2.640) rectangle (8.810,-2.200);
+\node[anchor=base west, inner sep=0pt] at (0.070,-2.505) {\cellfont \itshape truth $T^{\star}$};
+\node[anchor=base west, inner sep=0pt] at (1.470,-2.505) {\cellfont \itshape 6:45 a.m.};
+\node[anchor=base west, inner sep=0pt] at (3.940,-2.505) {\cellfont \itshape 6:57 a.m.};
+\node[anchor=base west, inner sep=0pt] at (6.410,-2.505) {\cellfont \itshape 7:45 a.m.};
+\draw[line width=0.6pt, draw=oiInk] (0,0.000) -- (8.810,0.000);
+\draw[line width=0.5pt, draw=oiInk] (0,-0.440) -- (8.810,-0.440);
+\draw[line width=0.25pt, draw=black!35] (0,-0.880) -- (8.810,-0.880);
+\draw[line width=0.25pt, draw=black!35] (0,-1.320) -- (8.810,-1.320);
+\draw[line width=0.25pt, draw=black!35] (0,-1.760) -- (8.810,-1.760);
+\draw[line width=0.25pt, draw=black!35] (0,-2.200) -- (8.810,-2.200);
+\draw[line width=0.6pt, draw=oiInk] (0,-2.640) -- (8.810,-2.640);
+\draw[line width=0.25pt, draw=black!35] (1.400,0.000) -- (1.400,-2.640);
+\draw[line width=0.25pt, draw=black!35] (3.870,0.000) -- (3.870,-2.640);
+\draw[line width=0.25pt, draw=black!35] (6.340,0.000) -- (6.340,-2.640);
+\draw[line width=0.6pt, draw=oiInk] (0,0.000) -- (0,-2.640) (8.810,0.000) -- (8.810,-2.640);
+\node[anchor=base west, inner sep=0pt] at (0,-3.110) {\cellfont \textbf{(b)} Open-loop ZeroED $\rightarrow$ ZeroEC};
+\node[anchor=base east, inner sep=0pt] at (8.810,-3.110) {\cellfont\itshape 16/16 cells flagged, 0/4 edits correct};
+\fill[black!9] (0,-3.680) rectangle (8.810,-3.240);
+\node[anchor=base west, inner sep=0pt] at (0.070,-3.545) {\cellfont \bfseries src};
+\node[anchor=base west, inner sep=0pt] at (1.470,-3.545) {\cellfont \bfseries sched\_dep};
+\node[anchor=base west, inner sep=0pt] at (3.940,-3.545) {\cellfont \bfseries act\_dep};
+\node[anchor=base west, inner sep=0pt] at (6.410,-3.545) {\cellfont \bfseries sched\_arr};
+\fill[hatch] (0.000,-4.120) rectangle (1.400,-3.680);
+\node[anchor=base west, inner sep=0pt] at (0.070,-3.985) {\cellfont travelocity};
+\fill[hatch] (1.400,-4.120) rectangle (3.870,-3.680);
+\node[anchor=base west, inner sep=0pt] at (1.470,-3.985) {\cellfont 6:45 a.m.};
+\fill[hatch] (3.870,-4.120) rectangle (6.340,-3.680);
+\node[anchor=base west, inner sep=0pt] at (3.940,-3.985) {\cellfont \bfseries\color{oiVermilion}6:41 a.m.};
+\fill[hatch] (6.340,-4.120) rectangle (8.810,-3.680);
+\node[anchor=base west, inner sep=0pt] at (6.410,-3.985) {\cellfont 7:45 a.m.};
+\fill[hatch] (0.000,-4.560) rectangle (1.400,-4.120);
+\node[anchor=base west, inner sep=0pt] at (0.070,-4.425) {\cellfont mco};
+\fill[hatch] (1.400,-4.560) rectangle (3.870,-4.120);
+\node[anchor=base west, inner sep=0pt] at (1.470,-4.425) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\fill[hatch] (3.870,-4.560) rectangle (6.340,-4.120);
+\node[anchor=base west, inner sep=0pt] at (3.940,-4.425) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\fill[oiVermilion!20] (6.340,-4.560) rectangle (8.810,-4.120);
+\node[anchor=base west, inner sep=0pt] at (6.410,-4.425) {\cellfont \bfseries\color{oiVermilion}Thu 7:45 a.m.};
+\node[anchor=base east, inner sep=0pt] at (8.750,-4.425) {\fontsize{7.5}{8}\selectfont \badmark};
+\fill[hatch] (0.000,-5.000) rectangle (1.400,-4.560);
+\node[anchor=base west, inner sep=0pt] at (0.070,-4.865) {\cellfont orbitz};
+\fill[oiVermilion!20] (1.400,-5.000) rectangle (3.870,-4.560);
+\node[anchor=base west, inner sep=0pt] at (1.470,-4.865) {\cellfont \bfseries\color{oiVermilion}6:45 a.m. Dec 1};
+\node[anchor=base east, inner sep=0pt] at (3.810,-4.865) {\fontsize{7.5}{8}\selectfont \badmark};
+\fill[oiVermilion!20] (3.870,-5.000) rectangle (6.340,-4.560);
+\node[anchor=base west, inner sep=0pt] at (3.940,-4.865) {\cellfont \bfseries\color{oiVermilion}6:41 a.m. Dec 1};
+\node[anchor=base east, inner sep=0pt] at (6.280,-4.865) {\fontsize{7.5}{8}\selectfont \badmark};
+\fill[oiVermilion!20] (6.340,-5.000) rectangle (8.810,-4.560);
+\node[anchor=base west, inner sep=0pt] at (6.410,-4.865) {\cellfont \bfseries\color{oiVermilion}7:45 a.m. Dec 1};
+\node[anchor=base east, inner sep=0pt] at (8.750,-4.865) {\fontsize{7.5}{8}\selectfont \badmark};
+\fill[hatch] (0.000,-5.440) rectangle (1.400,-5.000);
+\node[anchor=base west, inner sep=0pt] at (0.070,-5.305) {\cellfont helloflight};
+\fill[hatch] (1.400,-5.440) rectangle (3.870,-5.000);
+\node[anchor=base west, inner sep=0pt] at (1.470,-5.305) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\fill[hatch] (3.870,-5.440) rectangle (6.340,-5.000);
+\node[anchor=base west, inner sep=0pt] at (3.940,-5.305) {\cellfont \bfseries\color{oiVermilion}6:58 a.m.};
+\fill[hatch] (6.340,-5.440) rectangle (8.810,-5.000);
+\node[anchor=base west, inner sep=0pt] at (6.410,-5.305) {\cellfont \bfseries\color{oiVermilion}$\varnothing$};
+\draw[line width=0.6pt, draw=oiInk] (0,-3.240) -- (8.810,-3.240);
+\draw[line width=0.5pt, draw=oiInk] (0,-3.680) -- (8.810,-3.680);
+\draw[line width=0.25pt, draw=black!35] (0,-4.120) -- (8.810,-4.120);
+\draw[line width=0.25pt, draw=black!35] (0,-4.560) -- (8.810,-4.560);
+\draw[line width=0.25pt, draw=black!35] (0,-5.000) -- (8.810,-5.000);
+\draw[line width=0.6pt, draw=oiInk] (0,-5.440) -- (8.810,-5.440);
+\draw[line width=0.25pt, draw=black!35] (1.400,-3.240) -- (1.400,-5.440);
+\draw[line width=0.25pt, draw=black!35] (3.870,-3.240) -- (3.870,-5.440);
+\draw[line width=0.25pt, draw=black!35] (6.340,-3.240) -- (6.340,-5.440);
+\draw[line width=0.6pt, draw=oiInk] (0,-3.240) -- (0,-5.440) (8.810,-3.240) -- (8.810,-5.440);
+\node[anchor=base west, inner sep=0pt] at (0,-5.910) {\cellfont \textbf{(c)} ZeroClean-Loop};
+\node[anchor=base east, inner sep=0pt] at (8.810,-5.910) {\cellfont\itshape 9/16 cells flagged, 8/9 edits correct};
+\fill[black!9] (0,-6.480) rectangle (8.810,-6.040);
+\node[anchor=base west, inner sep=0pt] at (0.070,-6.345) {\cellfont \bfseries src};
+\node[anchor=base west, inner sep=0pt] at (1.470,-6.345) {\cellfont \bfseries sched\_dep};
+\node[anchor=base west, inner sep=0pt] at (3.940,-6.345) {\cellfont \bfseries act\_dep};
+\node[anchor=base west, inner sep=0pt] at (6.410,-6.345) {\cellfont \bfseries sched\_arr};
+\node[anchor=base west, inner sep=0pt] at (0.070,-6.785) {\cellfont travelocity};
+\node[anchor=base west, inner sep=0pt] at (1.470,-6.785) {\cellfont 6:45 a.m.};
+\fill[oiGreen!24] (3.870,-6.920) rectangle (6.340,-6.480);
+\node[anchor=base west, inner sep=0pt] at (3.940,-6.785) {\cellfont 6:57 a.m.};
+\node[anchor=base east, inner sep=0pt] at (6.280,-6.785) {\fontsize{7.5}{8}\selectfont \okmark};
+\node[anchor=base west, inner sep=0pt] at (6.410,-6.785) {\cellfont 7:45 a.m.};
+\node[anchor=base west, inner sep=0pt] at (0.070,-7.225) {\cellfont mco};
+\fill[oiGreen!24] (1.400,-7.360) rectangle (3.870,-6.920);
+\node[anchor=base west, inner sep=0pt] at (1.470,-7.225) {\cellfont 6:45 a.m.};
+\node[anchor=base east, inner sep=0pt] at (3.810,-7.225) {\fontsize{7.5}{8}\selectfont \okmark};
+\fill[oiGreen!24] (3.870,-7.360) rectangle (6.340,-6.920);
+\node[anchor=base west, inner sep=0pt] at (3.940,-7.225) {\cellfont 6:57 a.m.};
+\node[anchor=base east, inner sep=0pt] at (6.280,-7.225) {\fontsize{7.5}{8}\selectfont \okmark};
+\fill[oiGreen!24] (6.340,-7.360) rectangle (8.810,-6.920);
+\node[anchor=base west, inner sep=0pt] at (6.410,-7.225) {\cellfont 7:45 a.m.};
+\node[anchor=base east, inner sep=0pt] at (8.750,-7.225) {\fontsize{7.5}{8}\selectfont \okmark};
+\node[anchor=base west, inner sep=0pt] at (0.070,-7.665) {\cellfont orbitz};
+\fill[oiGreen!24] (1.400,-7.800) rectangle (3.870,-7.360);
+\node[anchor=base west, inner sep=0pt] at (1.470,-7.665) {\cellfont 6:45 a.m.};
+\node[anchor=base east, inner sep=0pt] at (3.810,-7.665) {\fontsize{7.5}{8}\selectfont \okmark};
+\fill[oiVermilion!20] (3.870,-7.800) rectangle (6.340,-7.360);
+\node[anchor=base west, inner sep=0pt] at (3.940,-7.665) {\cellfont \bfseries\color{oiVermilion}6:58 a.m.};
+\node[anchor=base east, inner sep=0pt] at (6.280,-7.665) {\fontsize{7.5}{8}\selectfont \badmark};
+\fill[oiGreen!24] (6.340,-7.800) rectangle (8.810,-7.360);
+\node[anchor=base west, inner sep=0pt] at (6.410,-7.665) {\cellfont 7:45 a.m.};
+\node[anchor=base east, inner sep=0pt] at (8.750,-7.665) {\fontsize{7.5}{8}\selectfont \okmark};
+\node[anchor=base west, inner sep=0pt] at (0.070,-8.105) {\cellfont helloflight};
+\fill[oiGreen!24] (1.400,-8.240) rectangle (3.870,-7.800);
+\node[anchor=base west, inner sep=0pt] at (1.470,-8.105) {\cellfont 6:45 a.m.};
+\node[anchor=base east, inner sep=0pt] at (3.810,-8.105) {\fontsize{7.5}{8}\selectfont \okmark};
+\node[anchor=base west, inner sep=0pt] at (3.940,-8.105) {\cellfont \bfseries\color{oiVermilion}6:58 a.m.};
+\fill[oiGreen!24] (6.340,-8.240) rectangle (8.810,-7.800);
+\node[anchor=base west, inner sep=0pt] at (6.410,-8.105) {\cellfont 7:45 a.m.};
+\node[anchor=base east, inner sep=0pt] at (8.750,-8.105) {\fontsize{7.5}{8}\selectfont \okmark};
+\draw[line width=0.6pt, draw=oiInk] (0,-6.040) -- (8.810,-6.040);
+\draw[line width=0.5pt, draw=oiInk] (0,-6.480) -- (8.810,-6.480);
+\draw[line width=0.25pt, draw=black!35] (0,-6.920) -- (8.810,-6.920);
+\draw[line width=0.25pt, draw=black!35] (0,-7.360) -- (8.810,-7.360);
+\draw[line width=0.25pt, draw=black!35] (0,-7.800) -- (8.810,-7.800);
+\draw[line width=0.6pt, draw=oiInk] (0,-8.240) -- (8.810,-8.240);
+\draw[line width=0.25pt, draw=black!35] (1.400,-6.040) -- (1.400,-8.240);
+\draw[line width=0.25pt, draw=black!35] (3.870,-6.040) -- (3.870,-8.240);
+\draw[line width=0.25pt, draw=black!35] (6.340,-6.040) -- (6.340,-8.240);
+\draw[line width=0.6pt, draw=oiInk] (0,-6.040) -- (0,-8.240) (8.810,-6.040) -- (8.810,-8.240);
+\begin{scope}[shift={(0.000,-8.660)}] \fill[hatch] (0,-0.11) rectangle (0.40,0.11); \draw[line width=0.3pt] (0,-0.11) rectangle (0.40,0.11); \node[anchor=base west, inner sep=0pt] at (0.5,-0.10) {\cellfont flagged}; \end{scope}
+\begin{scope}[shift={(1.830,-8.660)}] \fill[oiGreen!24] (0,-0.11) rectangle (0.40,0.11); \draw[line width=0.3pt] (0,-0.11) rectangle (0.40,0.11); \node[inner sep=0pt] at (0.20,0) {\fontsize{7.5}{8}\selectfont\okmark}; \node[anchor=base west, inner sep=0pt] at (0.5,-0.10) {\cellfont correct edit}; \end{scope}
+\begin{scope}[shift={(4.110,-8.660)}] \fill[oiVermilion!20] (0,-0.11) rectangle (0.40,0.11); \draw[line width=0.3pt] (0,-0.11) rectangle (0.40,0.11); \node[inner sep=0pt] at (0.20,0) {\fontsize{7.5}{8}\selectfont\badmark}; \node[anchor=base west, inner sep=0pt] at (0.5,-0.10) {\cellfont wrong edit}; \end{scope}
+\begin{scope}[shift={(6.300,-8.660)}] \node[inner sep=0pt, anchor=base west] at (0,-0.10) {\cellfont\bfseries\color{oiVermilion}6:41}; \node[anchor=base west, inner sep=0pt] at (0.7,-0.10) {\cellfont differs from $T^{\star}$}; \end{scope}
+\end{tikzpicture}
+\end{document}

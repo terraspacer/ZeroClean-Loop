@@ -1,0 +1,1635 @@
+{
+  "status": "measured_experiment_incomplete_baselines",
+  "official_target_assessment": {
+    "met": false,
+    "status": "unverified_missing_baselines_or_runs",
+    "missing": [
+      "hospital/zeroed",
+      "hospital/zeroed_zeroec",
+      "hospital/zeroclean_loop",
+      "flights/zeroed",
+      "flights/zeroed_zeroec",
+      "flights/zeroclean_loop",
+      "beers/zeroed",
+      "beers/zeroed_zeroec",
+      "beers/zeroclean_loop",
+      "rayyan/zeroed",
+      "rayyan/zeroed_zeroec",
+      "rayyan/zeroclean_loop",
+      "billionaire/zeroed",
+      "billionaire/zeroed_zeroec",
+      "billionaire/zeroclean_loop",
+      "movies/zeroed",
+      "movies/zeroed_zeroec",
+      "movies/zeroclean_loop"
+    ],
+    "targets": {
+      "ed_mean_absolute_gain": 0.035,
+      "repair_mean_absolute_gain": 0.08,
+      "flights_ed_f1_strictly_above": 0.76,
+      "rayyan_ed_f1_strictly_above": 0.77,
+      "ed_improves_each_dataset": true
+    }
+  },
+  "adapted_comparison_only": {
+    "met": false,
+    "status": "unverified_missing_baselines_or_runs",
+    "missing": [
+      "hospital/adapted_zeroed",
+      "hospital/adapted_zeroed_zeroec",
+      "hospital/zeroclean_loop",
+      "flights/adapted_zeroed",
+      "flights/adapted_zeroed_zeroec",
+      "flights/zeroclean_loop",
+      "beers/adapted_zeroed",
+      "beers/adapted_zeroed_zeroec",
+      "beers/zeroclean_loop",
+      "rayyan/adapted_zeroed",
+      "rayyan/adapted_zeroed_zeroec",
+      "rayyan/zeroclean_loop",
+      "billionaire/adapted_zeroed",
+      "billionaire/adapted_zeroed_zeroec",
+      "billionaire/zeroclean_loop",
+      "movies/adapted_zeroed",
+      "movies/adapted_zeroed_zeroec",
+      "movies/zeroclean_loop"
+    ],
+    "targets": {
+      "ed_mean_absolute_gain": 0.035,
+      "repair_mean_absolute_gain": 0.08,
+      "flights_ed_f1_strictly_above": 0.76,
+      "rayyan_ed_f1_strictly_above": 0.77,
+      "ed_improves_each_dataset": true
+    }
+  },
+  "qualified_source_reconstruction_comparison": {
+    "met": false,
+    "status": "unverified_missing_baselines_or_runs",
+    "missing": [
+      "hospital/zeroed",
+      "hospital/zeroed_zeroec_reconstruction",
+      "hospital/zeroclean_loop",
+      "flights/zeroed",
+      "flights/zeroed_zeroec_reconstruction",
+      "flights/zeroclean_loop",
+      "beers/zeroed",
+      "beers/zeroed_zeroec_reconstruction",
+      "beers/zeroclean_loop",
+      "rayyan/zeroed",
+      "rayyan/zeroed_zeroec_reconstruction",
+      "rayyan/zeroclean_loop",
+      "billionaire/zeroed",
+      "billionaire/zeroed_zeroec_reconstruction",
+      "billionaire/zeroclean_loop",
+      "movies/zeroed",
+      "movies/zeroed_zeroec_reconstruction",
+      "movies/zeroclean_loop"
+    ],
+    "targets": {
+      "ed_mean_absolute_gain": 0.035,
+      "repair_mean_absolute_gain": 0.08,
+      "flights_ed_f1_strictly_above": 0.76,
+      "rayyan_ed_f1_strictly_above": 0.77,
+      "ed_improves_each_dataset": true
+    },
+    "official_exact_baseline": false,
+    "fixed_example_count": 0,
+    "fidelity_caveat": "Author-recovered ZeroEC system prompt; historical identity unproven; zero fixed examples."
+  },
+  "targets_met": false,
+  "metric_units": "F1 in [0,1]; gains interpreted as absolute percentage points",
+  "aggregation": "unweighted macro average over 6 measured datasets; target checks require all six",
+  "measured_datasets": [
+    "hospital",
+    "flights",
+    "beers",
+    "rayyan",
+    "billionaire",
+    "movies"
+  ],
+  "six_dataset_benchmark_complete": true,
+  "strict_zero_shot": {
+    "benchmark_labels_used_for_inference_or_selection": false,
+    "labels_used_only_in_evaluation": true,
+    "failure_reports_must_not_feed_back_into_optimization": true,
+    "llm_prior_pretraining_contamination": "not measurable"
+  },
+  "metrics": {
+    "hospital": {
+      "without_counterfactual_first_pass": {
+        "detection": {
+          "precision": 1.0,
+          "recall": 0.6207317073170732,
+          "f1": 0.7659894657637322,
+          "tp": 509,
+          "fp": 0,
+          "fn": 311,
+          "predicted": 509,
+          "actual": 820
+        },
+        "repair": {
+          "precision": 0.9897959183673469,
+          "recall": 0.5914634146341463,
+          "f1": 0.7404580152671756,
+          "tp": 485,
+          "fp": 5,
+          "fn": 335,
+          "predicted": 490,
+          "actual": 820
+        },
+        "rows": 1000,
+        "columns": 17,
+        "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+        "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "without_multi_column_first_pass": {
+        "detection": {
+          "precision": 1.0,
+          "recall": 0.6207317073170732,
+          "f1": 0.7659894657637322,
+          "tp": 509,
+          "fp": 0,
+          "fn": 311,
+          "predicted": 509,
+          "actual": 820
+        },
+        "repair": {
+          "precision": 0.9897750511247444,
+          "recall": 0.5902439024390244,
+          "f1": 0.7394957983193278,
+          "tp": 484,
+          "fp": 5,
+          "fn": 336,
+          "predicted": 489,
+          "actual": 820
+        },
+        "rows": 1000,
+        "columns": 17,
+        "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+        "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "full_first_verified_round": {
+        "detection": {
+          "precision": 1.0,
+          "recall": 0.6207317073170732,
+          "f1": 0.7659894657637322,
+          "tp": 509,
+          "fp": 0,
+          "fn": 311,
+          "predicted": 509,
+          "actual": 820
+        },
+        "repair": {
+          "precision": 0.9898167006109979,
+          "recall": 0.5926829268292683,
+          "f1": 0.7414187643020596,
+          "tp": 486,
+          "fp": 5,
+          "fn": 334,
+          "predicted": 491,
+          "actual": 820
+        },
+        "rows": 1000,
+        "columns": 17,
+        "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+        "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+        "reference_policy": "exact strings; no normalization"
+      }
+    },
+    "flights": {
+      "without_counterfactual_first_pass": {
+        "detection": {
+          "precision": 0.9166666666666666,
+          "recall": 0.0022357723577235773,
+          "f1": 0.004460665044606651,
+          "tp": 11,
+          "fp": 1,
+          "fn": 4909,
+          "predicted": 12,
+          "actual": 4920
+        },
+        "repair": {
+          "precision": 0.75,
+          "recall": 0.001829268292682927,
+          "f1": 0.0036496350364963502,
+          "tp": 9,
+          "fp": 3,
+          "fn": 4911,
+          "predicted": 12,
+          "actual": 4920
+        },
+        "rows": 2376,
+        "columns": 6,
+        "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+        "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "without_multi_column_first_pass": {
+        "detection": {
+          "precision": 0.5,
+          "recall": 0.0004065040650406504,
+          "f1": 0.0008123476848090983,
+          "tp": 2,
+          "fp": 2,
+          "fn": 4918,
+          "predicted": 4,
+          "actual": 4920
+        },
+        "repair": {
+          "precision": 0.25,
+          "recall": 0.0002032520325203252,
+          "f1": 0.00040617384240454913,
+          "tp": 1,
+          "fp": 3,
+          "fn": 4919,
+          "predicted": 4,
+          "actual": 4920
+        },
+        "rows": 2376,
+        "columns": 6,
+        "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+        "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "full_first_verified_round": {
+        "detection": {
+          "precision": 0.9950549450549451,
+          "recall": 0.36808943089430896,
+          "f1": 0.5373887240356083,
+          "tp": 1811,
+          "fp": 9,
+          "fn": 3109,
+          "predicted": 1820,
+          "actual": 4920
+        },
+        "repair": {
+          "precision": 0.3333333333333333,
+          "recall": 0.0002032520325203252,
+          "f1": 0.0004062563477554337,
+          "tp": 1,
+          "fp": 2,
+          "fn": 4919,
+          "predicted": 3,
+          "actual": 4920
+        },
+        "rows": 2376,
+        "columns": 6,
+        "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+        "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+        "reference_policy": "exact strings; no normalization"
+      }
+    },
+    "beers": {
+      "without_counterfactual_first_pass": {
+        "detection": {
+          "precision": 0.7452907452907452,
+          "recall": 0.6465364120781527,
+          "f1": 0.6924101198402131,
+          "tp": 1820,
+          "fp": 622,
+          "fn": 995,
+          "predicted": 2442,
+          "actual": 2815
+        },
+        "repair": {
+          "precision": 0.1520501138952164,
+          "recall": 0.09484902309058614,
+          "f1": 0.11682345219864362,
+          "tp": 267,
+          "fp": 1489,
+          "fn": 2548,
+          "predicted": 1756,
+          "actual": 2815
+        },
+        "rows": 2410,
+        "columns": 9,
+        "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+        "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "without_multi_column_first_pass": {
+        "detection": {
+          "precision": 0.7457002457002457,
+          "recall": 0.6468916518650089,
+          "f1": 0.6927905649610043,
+          "tp": 1821,
+          "fp": 621,
+          "fn": 994,
+          "predicted": 2442,
+          "actual": 2815
+        },
+        "repair": {
+          "precision": 0.1644219977553311,
+          "recall": 0.10408525754884547,
+          "f1": 0.12747443985207743,
+          "tp": 293,
+          "fp": 1489,
+          "fn": 2522,
+          "predicted": 1782,
+          "actual": 2815
+        },
+        "rows": 2410,
+        "columns": 9,
+        "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+        "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "full_first_verified_round": {
+        "detection": {
+          "precision": 0.7452907452907452,
+          "recall": 0.6465364120781527,
+          "f1": 0.6924101198402131,
+          "tp": 1820,
+          "fp": 622,
+          "fn": 995,
+          "predicted": 2442,
+          "actual": 2815
+        },
+        "repair": {
+          "precision": 0.16554809843400448,
+          "recall": 0.10515097690941386,
+          "f1": 0.12861177492939388,
+          "tp": 296,
+          "fp": 1492,
+          "fn": 2519,
+          "predicted": 1788,
+          "actual": 2815
+        },
+        "rows": 2410,
+        "columns": 9,
+        "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+        "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+        "reference_policy": "exact strings; no normalization"
+      }
+    },
+    "rayyan": {
+      "without_counterfactual_first_pass": {
+        "detection": {
+          "precision": 0.8477905073649754,
+          "recall": 0.16132046091560262,
+          "f1": 0.27106227106227104,
+          "tp": 518,
+          "fp": 93,
+          "fn": 2693,
+          "predicted": 611,
+          "actual": 3211
+        },
+        "repair": {
+          "precision": 0.7190775681341719,
+          "recall": 0.106820305200872,
+          "f1": 0.18600867678958785,
+          "tp": 343,
+          "fp": 134,
+          "fn": 2868,
+          "predicted": 477,
+          "actual": 3211
+        },
+        "rows": 1000,
+        "columns": 11,
+        "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+        "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "without_multi_column_first_pass": {
+        "detection": {
+          "precision": 0.8477905073649754,
+          "recall": 0.16132046091560262,
+          "f1": 0.27106227106227104,
+          "tp": 518,
+          "fp": 93,
+          "fn": 2693,
+          "predicted": 611,
+          "actual": 3211
+        },
+        "repair": {
+          "precision": 0.7169811320754716,
+          "recall": 0.10650887573964497,
+          "f1": 0.18546637744034708,
+          "tp": 342,
+          "fp": 135,
+          "fn": 2869,
+          "predicted": 477,
+          "actual": 3211
+        },
+        "rows": 1000,
+        "columns": 11,
+        "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+        "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "full_first_verified_round": {
+        "detection": {
+          "precision": 0.8477905073649754,
+          "recall": 0.16132046091560262,
+          "f1": 0.27106227106227104,
+          "tp": 518,
+          "fp": 93,
+          "fn": 2693,
+          "predicted": 611,
+          "actual": 3211
+        },
+        "repair": {
+          "precision": 0.6946107784431138,
+          "recall": 0.10837745250700716,
+          "f1": 0.1875,
+          "tp": 348,
+          "fp": 153,
+          "fn": 2863,
+          "predicted": 501,
+          "actual": 3211
+        },
+        "rows": 1000,
+        "columns": 11,
+        "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+        "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+        "reference_policy": "exact strings; no normalization"
+      }
+    },
+    "billionaire": {
+      "without_counterfactual_first_pass": {
+        "detection": {
+          "precision": 0.9991967871485944,
+          "recall": 0.7086973034561337,
+          "f1": 0.8292411954227308,
+          "tp": 3732,
+          "fp": 3,
+          "fn": 1534,
+          "predicted": 3735,
+          "actual": 5266
+        },
+        "repair": {
+          "precision": 0.987335092348285,
+          "recall": 0.35529813900493734,
+          "f1": 0.5225527161011032,
+          "tp": 1871,
+          "fp": 24,
+          "fn": 3395,
+          "predicted": 1895,
+          "actual": 5266
+        },
+        "rows": 2614,
+        "columns": 22,
+        "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+        "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "without_multi_column_first_pass": {
+        "detection": {
+          "precision": 0.9991852254209669,
+          "recall": 0.6986327383213065,
+          "f1": 0.8223066607063031,
+          "tp": 3679,
+          "fp": 3,
+          "fn": 1587,
+          "predicted": 3682,
+          "actual": 5266
+        },
+        "repair": {
+          "precision": 0.9883466860888566,
+          "recall": 0.257690846942651,
+          "f1": 0.40879650549781593,
+          "tp": 1357,
+          "fp": 16,
+          "fn": 3909,
+          "predicted": 1373,
+          "actual": 5266
+        },
+        "rows": 2614,
+        "columns": 22,
+        "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+        "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "full_first_verified_round": {
+        "detection": {
+          "precision": 0.9952768302282865,
+          "recall": 0.7202810482339537,
+          "f1": 0.8357386801806764,
+          "tp": 3793,
+          "fp": 18,
+          "fn": 1473,
+          "predicted": 3811,
+          "actual": 5266
+        },
+        "repair": {
+          "precision": 0.9831430125067971,
+          "recall": 0.34333459931636917,
+          "f1": 0.5089373680506686,
+          "tp": 1808,
+          "fp": 31,
+          "fn": 3458,
+          "predicted": 1839,
+          "actual": 5266
+        },
+        "rows": 2614,
+        "columns": 22,
+        "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+        "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+        "reference_policy": "exact strings; no normalization"
+      }
+    },
+    "movies": {
+      "without_counterfactual_first_pass": {
+        "detection": {
+          "precision": 0.998256320836966,
+          "recall": 0.1833466773418735,
+          "f1": 0.3097943722943723,
+          "tp": 1145,
+          "fp": 2,
+          "fn": 5100,
+          "predicted": 1147,
+          "actual": 6245
+        },
+        "repair": {
+          "precision": 0.3111111111111111,
+          "recall": 0.01345076060848679,
+          "f1": 0.025786646201074445,
+          "tp": 84,
+          "fp": 186,
+          "fn": 6161,
+          "predicted": 270,
+          "actual": 6245
+        },
+        "rows": 7390,
+        "columns": 17,
+        "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+        "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "without_multi_column_first_pass": {
+        "detection": {
+          "precision": 0.999083409715857,
+          "recall": 0.1745396317053643,
+          "f1": 0.29716466739367503,
+          "tp": 1090,
+          "fp": 1,
+          "fn": 5155,
+          "predicted": 1091,
+          "actual": 6245
+        },
+        "repair": {
+          "precision": 0.2483221476510067,
+          "recall": 0.011849479583666934,
+          "f1": 0.02261959345865811,
+          "tp": 74,
+          "fp": 224,
+          "fn": 6171,
+          "predicted": 298,
+          "actual": 6245
+        },
+        "rows": 7390,
+        "columns": 17,
+        "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+        "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+        "reference_policy": "exact strings; no normalization"
+      },
+      "full_first_verified_round": {
+        "detection": {
+          "precision": 0.9975922953451043,
+          "recall": 0.1990392313851081,
+          "f1": 0.33186490455212925,
+          "tp": 1243,
+          "fp": 3,
+          "fn": 5002,
+          "predicted": 1246,
+          "actual": 6245
+        },
+        "repair": {
+          "precision": 0.21908127208480566,
+          "recall": 0.009927942353883107,
+          "f1": 0.018995098039215685,
+          "tp": 62,
+          "fp": 221,
+          "fn": 6183,
+          "predicted": 283,
+          "actual": 6245
+        },
+        "rows": 7390,
+        "columns": 17,
+        "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+        "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+        "reference_policy": "exact strings; no normalization"
+      }
+    }
+  },
+  "macro_f1": {
+    "without_counterfactual_first_pass": {
+      "detection": 0.4788263482379877,
+      "repair": 0.26587985693234684
+    },
+    "without_multi_column_first_pass": {
+      "detection": 0.4750209962619658,
+      "repair": 0.24737648140177182
+    },
+    "full_first_verified_round": {
+      "detection": 0.5724090275724384,
+      "repair": 0.2643115436115155
+    }
+  },
+  "model_info": {
+    "hospital": {
+      "without_counterfactual_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": false,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "c81d76df5ff838d60f86ae0232a3abe4a0e8ebd9658b6c9e103aa260e5a3df51",
+        "rules_accepted": 37,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "79675dca53f30cce7fd5505b8d6243029596662b9b3f08d14a8a4955cb1908f7"
+        },
+        "rules_proposed": 37,
+        "candidate_cells": 2497,
+        "verified_cells": 2497,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "b3dec211b9f5a2688183fe81d27eeadcde6458f8906c40b0ce7da64c6576dece",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 2497
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_counterfactual_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove supplied single-cell counterfactual features, scoring, and gates; retain independent verification and final tuple consistency checks.",
+          "reference_prediction_sha256": "baee7188578134cefa24c19156fe0e8b3ad37e16401042db35e09b25f3ea95d8",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "c93b1b936128f19758b97eb9b89cb36ad06f480054837ff283a03cc72e73f5c0",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "0add12a175f47e230ff546a7f1deb8361774053f056dd974805f9d7214623d7a"
+        }
+      },
+      "without_multi_column_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": false,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "49d4e6edca0d757e3ee4b3d8d8a13855a863d38c24713d18dfe4c6eaf39a63e3",
+        "rules_accepted": 17,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/hospital/zeroed.json",
+          "prediction_file_sha256": "c54ef260a5a0d0bc0465111e0b3307fefd54f0d73266c9138aa093941799034a",
+          "prediction_hash": "79675dca53f30cce7fd5505b8d6243029596662b9b3f08d14a8a4955cb1908f7",
+          "probabilities_hash": "6673535b4bf68cd8d50da8d8bfc7f34adcc587a688654d3cf3f4911fcae9c171",
+          "metadata_hash": "3ac0dcefd0ec31359af498d7810807e710e5fb432b5630e2ecea94ea743c7941"
+        },
+        "rules_proposed": 17,
+        "candidate_cells": 2497,
+        "verified_cells": 2497,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "b3dec211b9f5a2688183fe81d27eeadcde6458f8906c40b0ce7da64c6576dece",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 2497
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_multi_column_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove multi-column executable rules and functional dependencies; retain contextual tuple retrieval and independently verify this request.",
+          "reference_prediction_sha256": "baee7188578134cefa24c19156fe0e8b3ad37e16401042db35e09b25f3ea95d8",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "c93b1b936128f19758b97eb9b89cb36ad06f480054837ff283a03cc72e73f5c0",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "e1de5b37dd193f3858e473a54cf4fe57b99bd1139cdd5a19c908fa8170cbd835"
+        }
+      },
+      "full_first_verified_round": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "83f5f8634e787043d3c99f591307b42389b26832c6d4318f7044d867bb4cbb90",
+        "rules_accepted": 37,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "79675dca53f30cce7fd5505b8d6243029596662b9b3f08d14a8a4955cb1908f7"
+        },
+        "rules_proposed": 37,
+        "candidate_cells": 2497,
+        "verified_cells": 2497,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "b3dec211b9f5a2688183fe81d27eeadcde6458f8906c40b0ce7da64c6576dece",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 2497
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "closed_loop": {
+          "version": "external-verifier-feedback-v1",
+          "external_round": 1,
+          "protocol_hash": "4ade6ada135facaa7cb80947adddafa122cc92b07461c2857c584f94197be5ad",
+          "fresh_verification": true,
+          "tentative_context_trust": "untrusted_model_proposals",
+          "iterative_cts_requery": false
+        }
+      }
+    },
+    "flights": {
+      "without_counterfactual_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": false,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "767f9a33dac86455a7de1d211f57679c36742b7d0f1822c5d13e123898b9f93e",
+        "rules_accepted": 11,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "124ad0a75910f19d0d35ba47c04c06c82f5caef4afb02a88278345ec088a64d6"
+        },
+        "rules_proposed": 11,
+        "candidate_cells": 14256,
+        "verified_cells": 14256,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "c9e32b0f83999e66316b1dc828344cb0348db9b5f1a0c5401c6885b7bf11b907",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 14256
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_counterfactual_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove supplied single-cell counterfactual features, scoring, and gates; retain independent verification and final tuple consistency checks.",
+          "reference_prediction_sha256": "9b2615e212959d2536798f1d7282eb105ae49e7e25020c7a9f449887254f2cea",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "e2142cbbd5ce9ef93db0529f5bb5496a377f1e09e321fe77cc5dc6177b57d38f",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "99d53938ff6324671003d682d17d567b55a13862ba80e24f96ddf8cec0c6535e"
+        }
+      },
+      "without_multi_column_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": false,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "c626d21155e1a583cd6de936c16f7f4ef823fa6bc7014879234f290c1f58c6d9",
+        "rules_accepted": 6,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/flights/zeroed.json",
+          "prediction_file_sha256": "5cd71ff6175122a2fa009873f3417bf8121bee2b300ef9153e61153bdd554fff",
+          "prediction_hash": "124ad0a75910f19d0d35ba47c04c06c82f5caef4afb02a88278345ec088a64d6",
+          "probabilities_hash": "d1d1894099176229260ccff4cab341d9175762dded17c97d9a1f37cecda129a6",
+          "metadata_hash": "01a476c9bb9a68096f4dfc18896026c72c27510d50395f27c9ffcbfd73f367db"
+        },
+        "rules_proposed": 6,
+        "candidate_cells": 14256,
+        "verified_cells": 14256,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "c9e32b0f83999e66316b1dc828344cb0348db9b5f1a0c5401c6885b7bf11b907",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 14256
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_multi_column_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove multi-column executable rules and functional dependencies; retain contextual tuple retrieval and independently verify this request.",
+          "reference_prediction_sha256": "9b2615e212959d2536798f1d7282eb105ae49e7e25020c7a9f449887254f2cea",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "e2142cbbd5ce9ef93db0529f5bb5496a377f1e09e321fe77cc5dc6177b57d38f",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "fd193dafe477c30744194a5595d62c6fce3b36b495f6dddfe1cfda5bb9b5d8b1"
+        }
+      },
+      "full_first_verified_round": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "53ecbd96c11cfa078e507bc637769791cb1aee1bebad04c3ecd801c5c21503c3",
+        "rules_accepted": 11,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "124ad0a75910f19d0d35ba47c04c06c82f5caef4afb02a88278345ec088a64d6"
+        },
+        "rules_proposed": 11,
+        "candidate_cells": 14256,
+        "verified_cells": 14256,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "c9e32b0f83999e66316b1dc828344cb0348db9b5f1a0c5401c6885b7bf11b907",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 14256
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "closed_loop": {
+          "version": "external-verifier-feedback-v1",
+          "external_round": 1,
+          "protocol_hash": "4e0f4d0f82ada5f10a82bd9fb57a613dd8bf28110ef7ca66633ea38717c31247",
+          "fresh_verification": true,
+          "tentative_context_trust": "untrusted_model_proposals",
+          "iterative_cts_requery": false
+        }
+      }
+    },
+    "beers": {
+      "without_counterfactual_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": false,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "a4e1276b061fd69b01234ac50f03f8518035e857d541b255f18e0aa66bbcf86a",
+        "rules_accepted": 23,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "2ba7536b6feaaa2e22d2be03c37c1d248116d937e8628b80d059dc3064d0ffc5"
+        },
+        "rules_proposed": 23,
+        "candidate_cells": 17294,
+        "verified_cells": 17294,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "2d0714f123c7c14095bea7e0fe6f5bb76d32769c4afa723db6445ea93904e3cf",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 17294
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_counterfactual_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove supplied single-cell counterfactual features, scoring, and gates; retain independent verification and final tuple consistency checks.",
+          "reference_prediction_sha256": "db371bb237373152ea625d9f2e3991a5551edac71bbb048c785c4129a45f7ada",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "9f936e3268efcd7093e9d9178b611780525ebd2150636931d53580c40ac3d7db",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "84c6e38f6990f11c5098a2d817c09790bddd4ec4636ed017adc0ef388853e4df"
+        }
+      },
+      "without_multi_column_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": false,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "8307c0171616a72ae320319f9e851374cf7c6794db15d77b3731e91f5d73a547",
+        "rules_accepted": 10,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/beers/zeroed.json",
+          "prediction_file_sha256": "2543c9829b1d696a923144cdeda7ecd0d682850db87bcc9bb4b6d1f960ef077f",
+          "prediction_hash": "2ba7536b6feaaa2e22d2be03c37c1d248116d937e8628b80d059dc3064d0ffc5",
+          "probabilities_hash": "93c23c65d64a77a5f96ae7576c73b1482529df5c7bfd603217ee4f36878edeae",
+          "metadata_hash": "c0084b85f78b9ae6e9eb2adf58b6892bf7abbc8016423ac1143a935b1423a37c"
+        },
+        "rules_proposed": 10,
+        "candidate_cells": 17289,
+        "verified_cells": 17289,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "2d0714f123c7c14095bea7e0fe6f5bb76d32769c4afa723db6445ea93904e3cf",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 17294
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_multi_column_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove multi-column executable rules and functional dependencies; retain contextual tuple retrieval and independently verify this request.",
+          "reference_prediction_sha256": "db371bb237373152ea625d9f2e3991a5551edac71bbb048c785c4129a45f7ada",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "9f936e3268efcd7093e9d9178b611780525ebd2150636931d53580c40ac3d7db",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "23ad0a5ffb4203c44270ceffdcbf1bad0fcda5c5e469ad4f8ccb3a1dd9ab7086"
+        }
+      },
+      "full_first_verified_round": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "ba18222efc7a1485c51bb34661c57e2f1d86e0129365774327a08ff4bbf4c872",
+        "rules_accepted": 23,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "2ba7536b6feaaa2e22d2be03c37c1d248116d937e8628b80d059dc3064d0ffc5"
+        },
+        "rules_proposed": 23,
+        "candidate_cells": 17294,
+        "verified_cells": 17294,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "2d0714f123c7c14095bea7e0fe6f5bb76d32769c4afa723db6445ea93904e3cf",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 17294
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "closed_loop": {
+          "version": "external-verifier-feedback-v1",
+          "external_round": 1,
+          "protocol_hash": "e5338e71111280dd07308ec28ba585bdde90d25588a9a8ec28ea52d6a9f58b28",
+          "fresh_verification": true,
+          "tentative_context_trust": "untrusted_model_proposals",
+          "iterative_cts_requery": false
+        }
+      }
+    },
+    "rayyan": {
+      "without_counterfactual_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": false,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "54b261766f2978e7cb55acbc2f705158048b59ee938a152bdab2d19df9d1f851",
+        "rules_accepted": 18,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "a365732371ca4783c03dd81124260e8b28badf510cbaec757abdd033f9ab0de5"
+        },
+        "rules_proposed": 18,
+        "candidate_cells": 8299,
+        "verified_cells": 8299,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "c68031d9775399520e6bb712dec071e75004bcc5270398fa59518e4d96cd1138",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 8299
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_counterfactual_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove supplied single-cell counterfactual features, scoring, and gates; retain independent verification and final tuple consistency checks.",
+          "reference_prediction_sha256": "e22e02aaf9a78c62f152929c2d61959050f8f50d4fd1d1efabb03e4d84ff2399",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "3e3dee622b06634cc158a25a688d03ee7e98bbd9a96dbcacfab6d9f19d10b567",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "04b3310a40bc360cef3e008b2f67d311a8932edc01f9b391e8f9a4d21a1dbacf"
+        }
+      },
+      "without_multi_column_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": false,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "9fbdb0035e013fcc3661960b24d272592a72aa5f3b48e77c5faa80c378019680",
+        "rules_accepted": 14,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/rayyan/zeroed.json",
+          "prediction_file_sha256": "6487e845d362e10eac11daa129fde8aa8a105859b36d9f0281a007e71840641d",
+          "prediction_hash": "a365732371ca4783c03dd81124260e8b28badf510cbaec757abdd033f9ab0de5",
+          "probabilities_hash": "98bd044c19a79c67d3bf541bc57c29baed3eb47eb2a59cbef3d7c480c9da949d",
+          "metadata_hash": "3258c57953e52545b896134a6ed2d587ef6d72372a0f90f6023da79f46e9fbaf"
+        },
+        "rules_proposed": 14,
+        "candidate_cells": 8299,
+        "verified_cells": 8299,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "c68031d9775399520e6bb712dec071e75004bcc5270398fa59518e4d96cd1138",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 8299
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_multi_column_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove multi-column executable rules and functional dependencies; retain contextual tuple retrieval and independently verify this request.",
+          "reference_prediction_sha256": "e22e02aaf9a78c62f152929c2d61959050f8f50d4fd1d1efabb03e4d84ff2399",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "3e3dee622b06634cc158a25a688d03ee7e98bbd9a96dbcacfab6d9f19d10b567",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "8859b344c3bf0a281df072e16210c6310feb7312fa364228f4bac0cf4a681976"
+        }
+      },
+      "full_first_verified_round": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "b9e5d812dd2b143d96b09f00d6d4524c32b4d204afddb2a4fb75c0f7f495192e",
+        "rules_accepted": 18,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_hash": "a365732371ca4783c03dd81124260e8b28badf510cbaec757abdd033f9ab0de5"
+        },
+        "rules_proposed": 18,
+        "candidate_cells": 8299,
+        "verified_cells": 8299,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "c68031d9775399520e6bb712dec071e75004bcc5270398fa59518e4d96cd1138",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 8299
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "closed_loop": {
+          "version": "external-verifier-feedback-v1",
+          "external_round": 1,
+          "protocol_hash": "3e44cf08fb79376c652784c6f8aeb0681069b4d4c55151210d385f304162acfe",
+          "fresh_verification": true,
+          "tentative_context_trust": "untrusted_model_proposals",
+          "iterative_cts_requery": false
+        }
+      }
+    },
+    "billionaire": {
+      "without_counterfactual_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": false,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "dcd94c0e729307252125ec80b071616490da93a2e744d047101f9fb2bef3b28c",
+        "rules_accepted": 54,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/billionaire/zeroed.json",
+          "prediction_file_sha256": "70d7de54159dfac99535cc8a12877756ddf545dce39ba765079571ff650dbe80",
+          "prediction_hash": "b72ac426d5dce9d8096fee64b9bb6a6d3e9914b0bfd8c582715cf41a7a71ccfa",
+          "probabilities_hash": "6d35fc24cbcbe9d705eaea5c06573f68e8f44f3bd7b2d38b439813932d3d94a9",
+          "metadata_hash": "3f62c499d5601475091cfb563b684c7ed7a469f855927bc9971975e9af2b045d"
+        },
+        "rules_proposed": 54,
+        "candidate_cells": 4797,
+        "verified_cells": 4797,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "2cfe70eeb1bcbb4f49f4250d9ed79d661b39d9e4538820fbb56f18044dd8b4ca",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 4797
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_counterfactual_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove supplied single-cell counterfactual features, scoring, and gates; retain independent verification and final tuple consistency checks.",
+          "reference_prediction_sha256": "48a6ce58c9b824d5d4e3d36ad15dffc0b7a36df755e670c4d3da7842bac56956",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "fa20c91d0386f10a0ecac4e657775de6eadcbb32e01a4a2132795de626111ff5",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "4f4e4aa693ff180864d18e64a0d61d21636dcfea4a59e8a7a03fc4ff077a3ad3"
+        }
+      },
+      "without_multi_column_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": false,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "a44d194c0075910aa04af1c1b261613ecc4884c3be57ce6c43601c6fe1801943",
+        "rules_accepted": 44,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/billionaire/zeroed.json",
+          "prediction_file_sha256": "70d7de54159dfac99535cc8a12877756ddf545dce39ba765079571ff650dbe80",
+          "prediction_hash": "b72ac426d5dce9d8096fee64b9bb6a6d3e9914b0bfd8c582715cf41a7a71ccfa",
+          "probabilities_hash": "6d35fc24cbcbe9d705eaea5c06573f68e8f44f3bd7b2d38b439813932d3d94a9",
+          "metadata_hash": "3f62c499d5601475091cfb563b684c7ed7a469f855927bc9971975e9af2b045d"
+        },
+        "rules_proposed": 44,
+        "candidate_cells": 4530,
+        "verified_cells": 4530,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "2cfe70eeb1bcbb4f49f4250d9ed79d661b39d9e4538820fbb56f18044dd8b4ca",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 4797
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_multi_column_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove multi-column executable rules and functional dependencies; retain contextual tuple retrieval and independently verify this request.",
+          "reference_prediction_sha256": "48a6ce58c9b824d5d4e3d36ad15dffc0b7a36df755e670c4d3da7842bac56956",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "fa20c91d0386f10a0ecac4e657775de6eadcbb32e01a4a2132795de626111ff5",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "2ef00e27af7a66da36c74ae80a199e77880238adab27b580130cf871c2950760"
+        }
+      },
+      "full_first_verified_round": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "5536024092b7febdffbb91acbd8ede6d304efa0efbb5575a4c738328b5c5f3ed",
+        "rules_accepted": 54,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/billionaire/zeroed.json",
+          "prediction_file_sha256": "70d7de54159dfac99535cc8a12877756ddf545dce39ba765079571ff650dbe80",
+          "prediction_hash": "b72ac426d5dce9d8096fee64b9bb6a6d3e9914b0bfd8c582715cf41a7a71ccfa",
+          "probabilities_hash": "6d35fc24cbcbe9d705eaea5c06573f68e8f44f3bd7b2d38b439813932d3d94a9",
+          "metadata_hash": "3f62c499d5601475091cfb563b684c7ed7a469f855927bc9971975e9af2b045d"
+        },
+        "rules_proposed": 54,
+        "candidate_cells": 4797,
+        "verified_cells": 4797,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "2cfe70eeb1bcbb4f49f4250d9ed79d661b39d9e4538820fbb56f18044dd8b4ca",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 4797
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "closed_loop": {
+          "version": "external-verifier-feedback-v1",
+          "external_round": 1,
+          "protocol_hash": "497fcd8baea87aa9d4516c9e0091e9e8873951c678331c352a0c0fdf8d8e754c",
+          "fresh_verification": true,
+          "tentative_context_trust": "untrusted_model_proposals",
+          "iterative_cts_requery": false
+        }
+      }
+    },
+    "movies": {
+      "without_counterfactual_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": false,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "42fa574e294770cdbab3b8a065f67a50c660aebe629b850a110005ca0049c89d",
+        "rules_accepted": 38,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/movies/zeroed.json",
+          "prediction_file_sha256": "3a08a9010c4ed731f4c55c02144d1815fdedb5f19e83ffbe920499cc7bd25985",
+          "prediction_hash": "9b8a41229b6daf616012b38f67d215983918ea935247f1f13eac3a078314a702",
+          "probabilities_hash": "ed3b1d658e1c111959fe7cbf68fafc2596b54ad50ebc213cdfb4c24280b8e5a1",
+          "metadata_hash": "77e71f87d6d1a0da9f9dabb6c3f9f4b0fd0ade7d612bde0e1fc7da6463d295f0"
+        },
+        "rules_proposed": 38,
+        "candidate_cells": 111061,
+        "verified_cells": 111061,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "22814f829c9177a629f3da2fe7a41671905ffdd38134b033b5265ac39cc6fd8d",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 111061
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_counterfactual_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove supplied single-cell counterfactual features, scoring, and gates; retain independent verification and final tuple consistency checks.",
+          "reference_prediction_sha256": "7c5c9ae716022ae089425c3f4f9e1ae9a6de63baee219d377bb12788025823b1",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "b0a4bdbc31aff3df2775be8bc83c93839a9e2fa6da7eee26810071c092a34bbf",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "6e4722dda1d0b0f8a4fc2a20525df3011c584a09f4a9746205c26832a484ed4e"
+        }
+      },
+      "without_multi_column_first_pass": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": false,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "5422d1c9101b35686d88362d7275f7182a31d9963b0b7665dd9beef36a710d22",
+        "rules_accepted": 29,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/movies/zeroed.json",
+          "prediction_file_sha256": "3a08a9010c4ed731f4c55c02144d1815fdedb5f19e83ffbe920499cc7bd25985",
+          "prediction_hash": "9b8a41229b6daf616012b38f67d215983918ea935247f1f13eac3a078314a702",
+          "probabilities_hash": "ed3b1d658e1c111959fe7cbf68fafc2596b54ad50ebc213cdfb4c24280b8e5a1",
+          "metadata_hash": "77e71f87d6d1a0da9f9dabb6c3f9f4b0fd0ade7d612bde0e1fc7da6463d295f0"
+        },
+        "rules_proposed": 29,
+        "candidate_cells": 111001,
+        "verified_cells": 111001,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "22814f829c9177a629f3da2fe7a41671905ffdd38134b033b5265ac39cc6fd8d",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 111061
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "component_ablation": {
+          "version": "first-verified-pass-components-v1",
+          "variant": "without_multi_column_first_pass",
+          "scope": "components_of_first_verified_pass",
+          "definition": "Remove multi-column executable rules and functional dependencies; retain contextual tuple retrieval and independently verify this request.",
+          "reference_prediction_sha256": "7c5c9ae716022ae089425c3f4f9e1ae9a6de63baee219d377bb12788025823b1",
+          "initial_verifier_reused": false,
+          "independent_verification_required": true,
+          "iterative_no_component_experiment_claimed": false,
+          "protocol_hash": "b0a4bdbc31aff3df2775be8bc83c93839a9e2fa6da7eee26810071c092a34bbf",
+          "verification_mode": "independent_first_pass_variant",
+          "verification_sha256": "edd9cbd4ab43e9bf341bd17289be26bcf91a64dae4d0453b16ef4ab0fb2432d0"
+        }
+      },
+      "full_first_verified_round": {
+        "system": "zeroclean_loop",
+        "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+        "config": {
+          "threshold": 0.5,
+          "candidate_low": 0.25,
+          "candidate_high": 0.85,
+          "top_k": 3,
+          "rounds": 1,
+          "repair_confidence": 0.8,
+          "counterfactual": true,
+          "multi_column": true,
+          "iterative_verification": true,
+          "seed": 42,
+          "proposal_filename": "proposals_cts_v2.json"
+        },
+        "request_hash": "cb14b7f95b3341466b85b4c4445c733861b7391a6b4806688bcf1d90978a83e0",
+        "rules_accepted": 38,
+        "detector_provenance": {
+          "kind": "source",
+          "prediction_file": "/home/steve/Desktop/ICDE3/results/predictions/movies/zeroed.json",
+          "prediction_file_sha256": "3a08a9010c4ed731f4c55c02144d1815fdedb5f19e83ffbe920499cc7bd25985",
+          "prediction_hash": "9b8a41229b6daf616012b38f67d215983918ea935247f1f13eac3a078314a702",
+          "probabilities_hash": "ed3b1d658e1c111959fe7cbf68fafc2596b54ad50ebc213cdfb4c24280b8e5a1",
+          "metadata_hash": "77e71f87d6d1a0da9f9dabb6c3f9f4b0fd0ade7d612bde0e1fc7da6463d295f0"
+        },
+        "rules_proposed": 38,
+        "candidate_cells": 111061,
+        "verified_cells": 111061,
+        "verifier_coverage": 1.0,
+        "rounds_executed": 1,
+        "ground_truth_access": false,
+        "proposal_provenance": {
+          "method": "zeroec_source_cts",
+          "artifact_hash": "22814f829c9177a629f3da2fe7a41671905ffdd38134b033b5265ac39cc6fd8d",
+          "filename": "proposals_cts_v2.json",
+          "request_count": 111061
+        },
+        "fidelity": "Experimental ZeroClean-Loop; original-source ZeroEC CTS proposals with MiniLM and source-equivalent distance ranking; additional dirty-only NMI proposals.",
+        "closed_loop": {
+          "version": "external-verifier-feedback-v1",
+          "external_round": 1,
+          "protocol_hash": "1def2d7a85008b45c93f5bd1f277a11aafded6d1d71af74e2e5a365f8f9ea0d7",
+          "fresh_verification": true,
+          "tentative_context_trust": "untrusted_model_proposals",
+          "iterative_cts_requery": false
+        }
+      }
+    }
+  },
+  "baseline_status": {
+    "zeroed": {
+      "baseline": "zeroed_upstream",
+      "ready": true,
+      "blockers": [],
+      "missing_dependencies": [],
+      "fasttext_path": "/home/steve/Desktop/ICDE3/artifacts/models/cc.en.300.bin",
+      "fasttext_prepared_provenance": null,
+      "source_sha256": {
+        "main.py": "0708edab44f5747908592012d3139ed5d3a1fc239c8988653060e96dbc7d29bd",
+        "feature.py": "23b46f6ab4c4937e922aa1d314a0b11869ab8dfcceb8524d88a295f0dde7269a",
+        "utility.py": "a08326b2d5ccc16de778d3bb98e98f70dd937142d4b037cfdd2049c6d325670d",
+        "prompt_gen.py": "620642d377fffbecd3c8f106592f8d61389cbac14731bcd32b3eda2259e08e00",
+        "get_rel_attrs.py": "f35f24170698870146b91a5ac0829c3e2d507e33b3f28863508a3e82ff021225",
+        "distri_analys.py": "9b179d62bdb1271c071be8a2bdf06c6357b11395a39df906d935fd9f473c8917"
+      },
+      "runtime_source_repairs": [
+        "Alias upstream kb_gen_prompt as guide_gen_prompt (upstream import defect)"
+      ],
+      "inference_inputs": [
+        "dirty_table",
+        "fresh_dirty_only_llm_responses",
+        "fasttext_model"
+      ],
+      "uses_ground_truth": false,
+      "cached_results_reused": false
+    },
+    "zeroec": {
+      "baseline": "zeroec_upstream_zero_shot",
+      "ready": false,
+      "blockers": [
+        "Missing upstream sources/templates: prompt_templates/SystemMessage_EC.txt, prompt_templates/HumanMessage_EC.txt, prompt_templates/general_examples_EC.txt",
+        "Missing runtime modules: fast_sentence_transformers, langchain, langchain_openai, langchain_core, langchain_community, faiss"
+      ],
+      "source_sha256": {
+        "correction_zero_shot.py": "69c37c1f81bc509e5363a3dd0b5b20f04e705ba422b5dac7389d1df2169dd3e9"
+      },
+      "missing_dependencies": [
+        "fast_sentence_transformers",
+        "langchain",
+        "langchain_openai",
+        "langchain_core",
+        "langchain_community",
+        "faiss"
+      ],
+      "embedding_path": "/home/steve/Desktop/ICDE3/vendor/ZeroEC/all-MiniLM-L6-v2",
+      "uses_ground_truth": false,
+      "entrypoint": "correction_zero_shot.py",
+      "excluded_entrypoint": "correction.py (human-repair/clean-data supervision path)",
+      "reconstruction": {
+        "baseline": "zeroec_reconstruction",
+        "ready": true,
+        "blockers": [],
+        "reproduced_upstream": false,
+        "fidelity": "source_derived_reconstruction",
+        "prompt_profile": "committed_zeroec",
+        "prompt_provenance": {
+          "profile": "committed_zeroec",
+          "repository": "https://github.com/YangChen32768/ZeroEC",
+          "commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+          "historical_identity_established": false,
+          "fidelity_note": "Different committed correction templates substitute for missing EC paths",
+          "uses_general_examples": true,
+          "prompt_sha256": {
+            "prompt_templates/SystemMessage.txt": "cd85a3cebf9d7d19f02311304471d00768e73fa4792c5cb72e072a03dfd689d5",
+            "prompt_templates/HumanMessage.txt": "3695f49cb835a0d2d931cccd91f1a1ebdceeb91b9be5ac5e6eb6ca7ca0b8d3f4",
+            "prompt_templates/examples.txt": "b420e6160f2a8d92c56930f1d08bb4d7d94fefd05f5cf73d9bb727d7e23b4ee6"
+          }
+        },
+        "strict_zero_shot": false,
+        "uses_ground_truth": false,
+        "uses_general_examples": true,
+        "missing_dependencies": [],
+        "source_sha256": {
+          "correction_zero_shot.py": "69c37c1f81bc509e5363a3dd0b5b20f04e705ba422b5dac7389d1df2169dd3e9",
+          "prompt_templates/SystemMessage.txt": "cd85a3cebf9d7d19f02311304471d00768e73fa4792c5cb72e072a03dfd689d5",
+          "prompt_templates/HumanMessage.txt": "3695f49cb835a0d2d931cccd91f1a1ebdceeb91b9be5ac5e6eb6ca7ca0b8d3f4",
+          "prompt_templates/examples.txt": "b420e6160f2a8d92c56930f1d08bb4d7d94fefd05f5cf73d9bb727d7e23b4ee6"
+        },
+        "embedding_path": "/home/steve/Desktop/ICDE3/vendor/ZeroEC/all-MiniLM-L6-v2"
+      }
+    },
+    "sources": {
+      "ZeroED": {
+        "url": "https://github.com/WelkinNi/ZeroED",
+        "commit": "49678b8470180ab17e9c40bcedd2c00ac49de6ff"
+      },
+      "ZeroEC": {
+        "url": "https://github.com/YangChen32768/ZeroEC",
+        "commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c"
+      }
+    },
+    "python": "3.12.3",
+    "experiment_llm": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "status": "incomplete superseded run; not valid for evaluation",
+  "reason": "Strict audit JSON serialization rejected a NumPy boolean. Explicit native bool conversion and a new failing-then-passing synthetic serialization regression correct this output bug without changing policy, gates or weights.",
+  "archive": "experimental/latent_consensus_mean_repairs_v6_superseded_json_scalar",
+  "v3_v4_v5_modified": false
+}

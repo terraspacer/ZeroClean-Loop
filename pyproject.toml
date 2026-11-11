@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zeroclean-loop"
+version = "0.1.0"
+description = "Closed-loop counterfactual error detection and repair for autonomous tabular data ingestion"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "scipy>=1.11",
+  "scikit-learn>=1.3",
+  "rapidfuzz>=3.0",
+  "PyYAML>=6.0",
+  "matplotlib>=3.9",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["zeroclean*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "experimental/unified_loop_v6"]
+pythonpath = [".", "tests"]
+addopts = "--ignore=experimental/unified_loop_v6/test_repair.py --ignore=experimental/unified_loop_v6/test_v3_policy.py"

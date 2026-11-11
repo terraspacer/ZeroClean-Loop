@@ -1,0 +1,15 @@
+{
+  "status": "superseded and not valid for evaluation",
+  "reason": "The attempted v5 run bound the expanded live frozen-v4 test module. The live frozen module has been restored byte-exact; v5 tests moved to a new module. Rerun uses new manifests binding only the new v5 test module. No decision parameters changed.",
+  "archives": [
+    {
+      "original_path": "experimental/latent_consensus_model_average_v5",
+      "superseded_archive": "experimental/latent_consensus_model_average_v5_superseded_test_binding"
+    },
+    {
+      "original_path": "experimental/latent_consensus_expected_f1_proxy_v5",
+      "superseded_archive": "experimental/latent_consensus_expected_f1_proxy_v5_superseded_test_binding"
+    }
+  ],
+  "v3_v4_modified": false
+}

@@ -1,0 +1,38 @@
+{"time_utc": "2026-10-31T13:39:56.140401+00:00", "event": "run_started", "cohort": "local-unified-loop-v6-20261031", "datasets": ["hospital", "flights", "beers", "rayyan", "billionaire", "movies"], "protocol_lock_sha256": "ea4fe11ea08e267e483da7c6154833dbfe0e304eaab31d8f1ae063a002944273"}
+{"time_utc": "2026-10-31T13:39:56.146901+00:00", "event": "dataset_started", "cohort": "local-unified-loop-v6-20261031", "dataset": "hospital"}
+{"time_utc": "2026-10-31T13:39:56.968760+00:00", "event": "validate_rules", "cohort": "local-unified-loop-v6-20261031", "dataset": "hospital"}
+{"time_utc": "2026-10-31T13:40:00.465522+00:00", "event": "discover_consensus", "cohort": "local-unified-loop-v6-20261031", "dataset": "hospital"}
+{"time_utc": "2026-10-31T13:40:05.746054+00:00", "event": "build_candidates", "cohort": "local-unified-loop-v6-20261031", "dataset": "hospital", "detected_cells": 666}
+{"time_utc": "2026-10-31T13:40:09.426632+00:00", "event": "select_repairs", "cohort": "local-unified-loop-v6-20261031", "dataset": "hospital", "candidate_cells": 496}
+{"time_utc": "2026-10-31T13:40:16.843953+00:00", "event": "dataset_frozen", "cohort": "local-unified-loop-v6-20261031", "dataset": "hospital", "detected_cells": 666, "repaired_cells": 495}
+{"time_utc": "2026-10-31T13:40:16.857797+00:00", "event": "dataset_started", "cohort": "local-unified-loop-v6-20261031", "dataset": "flights"}
+{"time_utc": "2026-10-31T13:40:21.535893+00:00", "event": "validate_rules", "cohort": "local-unified-loop-v6-20261031", "dataset": "flights"}
+{"time_utc": "2026-10-31T13:40:23.391904+00:00", "event": "discover_consensus", "cohort": "local-unified-loop-v6-20261031", "dataset": "flights"}
+{"time_utc": "2026-10-31T13:40:29.823231+00:00", "event": "build_candidates", "cohort": "local-unified-loop-v6-20261031", "dataset": "flights", "detected_cells": 3476}
+{"time_utc": "2026-10-31T13:40:47.246282+00:00", "event": "select_repairs", "cohort": "local-unified-loop-v6-20261031", "dataset": "flights", "candidate_cells": 7858}
+{"time_utc": "2026-10-31T13:41:01.357698+00:00", "event": "dataset_frozen", "cohort": "local-unified-loop-v6-20261031", "dataset": "flights", "detected_cells": 3476, "repaired_cells": 2989}
+{"time_utc": "2026-10-31T13:41:01.370899+00:00", "event": "dataset_started", "cohort": "local-unified-loop-v6-20261031", "dataset": "beers"}
+{"time_utc": "2026-10-31T13:41:04.598489+00:00", "event": "validate_rules", "cohort": "local-unified-loop-v6-20261031", "dataset": "beers"}
+{"time_utc": "2026-10-31T13:41:08.239906+00:00", "event": "discover_consensus", "cohort": "local-unified-loop-v6-20261031", "dataset": "beers"}
+{"time_utc": "2026-10-31T13:41:09.634279+00:00", "event": "build_candidates", "cohort": "local-unified-loop-v6-20261031", "dataset": "beers", "detected_cells": 2661}
+{"time_utc": "2026-10-31T13:41:14.743490+00:00", "event": "select_repairs", "cohort": "local-unified-loop-v6-20261031", "dataset": "beers", "candidate_cells": 2450}
+{"time_utc": "2026-10-31T13:41:35.723003+00:00", "event": "dataset_frozen", "cohort": "local-unified-loop-v6-20261031", "dataset": "beers", "detected_cells": 2661, "repaired_cells": 2446}
+{"time_utc": "2026-10-31T13:41:35.756041+00:00", "event": "dataset_started", "cohort": "local-unified-loop-v6-20261031", "dataset": "rayyan"}
+{"time_utc": "2026-10-31T13:41:36.193577+00:00", "event": "validate_rules", "cohort": "local-unified-loop-v6-20261031", "dataset": "rayyan"}
+{"time_utc": "2026-10-31T13:41:38.318629+00:00", "event": "discover_consensus", "cohort": "local-unified-loop-v6-20261031", "dataset": "rayyan"}
+{"time_utc": "2026-10-31T13:41:39.758423+00:00", "event": "build_candidates", "cohort": "local-unified-loop-v6-20261031", "dataset": "rayyan", "detected_cells": 1175}
+{"time_utc": "2026-10-31T13:41:43.130901+00:00", "event": "select_repairs", "cohort": "local-unified-loop-v6-20261031", "dataset": "rayyan", "candidate_cells": 534}
+{"time_utc": "2026-10-31T13:41:51.010380+00:00", "event": "dataset_frozen", "cohort": "local-unified-loop-v6-20261031", "dataset": "rayyan", "detected_cells": 1175, "repaired_cells": 402}
+{"time_utc": "2026-10-31T13:41:51.053035+00:00", "event": "dataset_started", "cohort": "local-unified-loop-v6-20261031", "dataset": "billionaire"}
+{"time_utc": "2026-10-31T13:41:51.934001+00:00", "event": "validate_rules", "cohort": "local-unified-loop-v6-20261031", "dataset": "billionaire"}
+{"time_utc": "2026-10-31T13:42:02.873338+00:00", "event": "discover_consensus", "cohort": "local-unified-loop-v6-20261031", "dataset": "billionaire"}
+{"time_utc": "2026-10-31T13:42:09.529265+00:00", "event": "build_candidates", "cohort": "local-unified-loop-v6-20261031", "dataset": "billionaire", "detected_cells": 4810}
+{"time_utc": "2026-10-31T13:42:28.417278+00:00", "event": "select_repairs", "cohort": "local-unified-loop-v6-20261031", "dataset": "billionaire", "candidate_cells": 3109}
+{"time_utc": "2026-10-31T13:42:46.324327+00:00", "event": "dataset_frozen", "cohort": "local-unified-loop-v6-20261031", "dataset": "billionaire", "detected_cells": 4810, "repaired_cells": 3088}
+{"time_utc": "2026-10-31T13:42:46.337731+00:00", "event": "dataset_started", "cohort": "local-unified-loop-v6-20261031", "dataset": "movies"}
+{"time_utc": "2026-10-31T13:43:03.074604+00:00", "event": "validate_rules", "cohort": "local-unified-loop-v6-20261031", "dataset": "movies"}
+{"time_utc": "2026-10-31T13:43:18.458250+00:00", "event": "discover_consensus", "cohort": "local-unified-loop-v6-20261031", "dataset": "movies"}
+{"time_utc": "2026-10-31T13:43:56.535899+00:00", "event": "build_candidates", "cohort": "local-unified-loop-v6-20261031", "dataset": "movies", "detected_cells": 4413}
+{"time_utc": "2026-10-31T13:44:22.830563+00:00", "event": "select_repairs", "cohort": "local-unified-loop-v6-20261031", "dataset": "movies", "candidate_cells": 808}
+{"time_utc": "2026-10-31T13:44:41.802392+00:00", "event": "dataset_frozen", "cohort": "local-unified-loop-v6-20261031", "dataset": "movies", "detected_cells": 4413, "repaired_cells": 460}
+{"time_utc": "2026-10-31T13:44:44.276984+00:00", "event": "cohort_complete", "cohort": "local-unified-loop-v6-20261031", "dataset_count": 6}

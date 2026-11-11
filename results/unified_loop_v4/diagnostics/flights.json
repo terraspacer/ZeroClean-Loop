@@ -1,0 +1,1251 @@
+{
+  "candidate_pool": {
+    "candidate_cells": 3420,
+    "distinct_candidates": 7745,
+    "distinct_proposals_over_cap": 100,
+    "exact_duplicate_records_merged": 2450,
+    "proposal_records_seen": 10295
+  },
+  "cohort": "local-unified-loop-v4-20261029",
+  "consensus": {
+    "candidate_cell_count": 4465,
+    "config": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "dataset_name_used": false,
+    "exact_peer_strings_only": true,
+    "key_columns": [
+      {
+        "index": 1,
+        "name": "flight"
+      }
+    ],
+    "key_discovery": {
+      "entity_count": 100,
+      "multisource_coverage": 1.0,
+      "repeated_entity_count": 100,
+      "slot_uniqueness": 1.0
+    },
+    "max_distinct_nonoriginal_candidates_per_cell": 1,
+    "policy_version": "intrinsic-key-source-consensus-v1",
+    "proposal_reason_counts": {
+      "actionable_proposal": 2436,
+      "conditional_proposal_below_policy": 2029,
+      "no_unique_source_count_and_weight_winner": 442
+    },
+    "proposals_are_conditional_on_separate_detection": true,
+    "safe_temporal_schema_pairs": [
+      [
+        "act_dep_time",
+        "act_arr_time"
+      ],
+      [
+        "sched_dep_time",
+        "sched_arr_time"
+      ]
+    ],
+    "score_semantics": "heuristic_evidence_strength_not_calibrated_correctness",
+    "source_column": {
+      "index": 0,
+      "name": "src"
+    },
+    "source_votes_capped": true,
+    "status": "applicable",
+    "supported_role_choices": 1,
+    "temporal_columns": [
+      {
+        "index": 2,
+        "name": "sched_dep_time",
+        "nonempty_count": 1592,
+        "parseable_count": 1490,
+        "schema_hint": true
+      },
+      {
+        "index": 3,
+        "name": "act_dep_time",
+        "nonempty_count": 2000,
+        "parseable_count": 1856,
+        "schema_hint": true
+      },
+      {
+        "index": 4,
+        "name": "sched_arr_time",
+        "nonempty_count": 1606,
+        "parseable_count": 1441,
+        "schema_hint": true
+      },
+      {
+        "index": 5,
+        "name": "act_arr_time",
+        "nonempty_count": 1994,
+        "parseable_count": 1850,
+        "schema_hint": true
+      }
+    ],
+    "temporal_role_discovery_observation_unit": "distinct_exact_dirty_row"
+  },
+  "detection": {
+    "aggregate": {
+      "changed_cell_count": 4532,
+      "final_positive_count": 3421,
+      "gated_column_count": 6,
+      "inherited_positive_count": 7765,
+      "promoted_cell_count": 94,
+      "promoted_inherited_negative_count": 94,
+      "unknown_fallback_column_count": 6
+    },
+    "columns": [
+      {
+        "column": 0,
+        "column_name": "src",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.015993265993265993,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 38,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.9768518518518519,
+          "nonempty_observations": 2376,
+          "observations": 2376,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "src"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 0,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 0,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2376,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 1,
+          "promoted_cells": 1,
+          "promoted_inherited_negatives": 1
+        },
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 1,
+        "column_name": "flight",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.04208754208754209,
+          "distinct_nonempty_formats": 1,
+          "distinct_nonempty_values": 100,
+          "dominant_format": "A-9-A-A",
+          "dominant_format_fraction": 1.0,
+          "nonempty_observations": 2376,
+          "observations": 2376,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "flight"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 0,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 0,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2376,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {},
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 2,
+        "column_name": "sched_dep_time",
+        "contextual_low_support_count": 833,
+        "demoted_positive_count": 98,
+        "dirty_profile": {
+          "distinct_fraction": 0.08605527638190955,
+          "distinct_nonempty_formats": 8,
+          "distinct_nonempty_values": 137,
+          "dominant_format": "9:9 A.A.",
+          "dominant_format_fraction": 0.9353015075376885,
+          "nonempty_observations": 1592,
+          "observations": 2376,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "dep",
+              "sched",
+              "time"
+            ]
+          },
+          "structured_fraction": 0.9918341708542714
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 974,
+        "retained_by_contextual_low_support_count": 821,
+        "retained_by_intrinsic_low_support_count": 851,
+        "retained_by_rule_count": 718,
+        "retained_positive_count": 876,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2376,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 854,
+          "independent_source_consensus_contradiction": 833,
+          "promoted_cells": 16,
+          "promoted_inherited_negatives": 16,
+          "validated_target_specific_rule_violation": 731
+        },
+        "validated_rule_violation_count": 731
+      },
+      {
+        "column": 3,
+        "column_name": "act_dep_time",
+        "contextual_low_support_count": 253,
+        "demoted_positive_count": 1622,
+        "dirty_profile": {
+          "distinct_fraction": 0.145,
+          "distinct_nonempty_formats": 10,
+          "distinct_nonempty_values": 290,
+          "dominant_format": "9:9 A.A.",
+          "dominant_format_fraction": 0.9275,
+          "nonempty_observations": 2000,
+          "observations": 2376,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "act",
+              "dep",
+              "time"
+            ]
+          },
+          "structured_fraction": 0.984
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2344,
+        "retained_by_contextual_low_support_count": 251,
+        "retained_by_intrinsic_low_support_count": 532,
+        "retained_by_rule_count": 38,
+        "retained_positive_count": 722,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2376,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 532,
+          "independent_source_consensus_contradiction": 253,
+          "promoted_cells": 32,
+          "promoted_inherited_negatives": 32,
+          "validated_target_specific_rule_violation": 70
+        },
+        "validated_rule_violation_count": 70
+      },
+      {
+        "column": 4,
+        "column_name": "sched_arr_time",
+        "contextual_low_support_count": 887,
+        "demoted_positive_count": 1172,
+        "dirty_profile": {
+          "distinct_fraction": 0.14881693648816938,
+          "distinct_nonempty_formats": 12,
+          "distinct_nonempty_values": 239,
+          "dominant_format": "9:9 A.A.",
+          "dominant_format_fraction": 0.8972602739726028,
+          "nonempty_observations": 1606,
+          "observations": 2376,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "arr",
+              "sched",
+              "time"
+            ]
+          },
+          "structured_fraction": 0.9919053549190535
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2103,
+        "retained_by_contextual_low_support_count": 876,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 395,
+        "retained_positive_count": 931,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2376,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "independent_source_consensus_contradiction": 887,
+          "promoted_cells": 13,
+          "promoted_inherited_negatives": 13,
+          "validated_target_specific_rule_violation": 408
+        },
+        "validated_rule_violation_count": 408
+      },
+      {
+        "column": 5,
+        "column_name": "act_arr_time",
+        "contextual_low_support_count": 463,
+        "demoted_positive_count": 1546,
+        "dirty_profile": {
+          "distinct_fraction": 0.16449348044132397,
+          "distinct_nonempty_formats": 12,
+          "distinct_nonempty_values": 328,
+          "dominant_format": "9:9 A.A.",
+          "dominant_format_fraction": 0.9277833500501504,
+          "nonempty_observations": 1994,
+          "observations": 2376,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "act",
+              "arr",
+              "time"
+            ]
+          },
+          "structured_fraction": 0.9864593781344032
+        },
+        "gate_triggers": [
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 2344,
+        "retained_by_contextual_low_support_count": 459,
+        "retained_by_intrinsic_low_support_count": 544,
+        "retained_by_rule_count": 42,
+        "retained_positive_count": 798,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": null,
+          "evidence": [],
+          "malformed_fields": [],
+          "status": "unknown_incomplete_column_diagnostics"
+        },
+        "source_positive_count": 2376,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 545,
+          "independent_source_consensus_contradiction": 463,
+          "promoted_cells": 32,
+          "promoted_inherited_negatives": 32,
+          "validated_target_specific_rule_violation": 74
+        },
+        "validated_rule_violation_count": 74
+      }
+    ],
+    "config": {
+      "canonical_min_agreement": 0.9,
+      "canonical_min_support": 5,
+      "context_global_min_agreement": 0.97,
+      "context_min_agreement": 0.95,
+      "context_min_coverage": 0.15,
+      "context_min_gain_over_marginal": 0.1,
+      "context_min_groups": 2,
+      "context_min_peers": 3,
+      "demoted_score": 0.49,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_missing_fraction": 0.02,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "missing_min_observations": 30,
+      "promoted_score": 0.75,
+      "source_positive_fraction_threshold": 0.4,
+      "type_min_fraction": 0.95
+    },
+    "decision_threshold": 0.5,
+    "decision_threshold_operator": ">",
+    "input_fingerprint": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "intrinsic_context": {
+      "conflicting_cell_count": 0,
+      "contradicting_cell_count": 0,
+      "qualified_relations": []
+    },
+    "observation_source": "immutable_original_dirty_strings",
+    "protocol": "unified_loop_v4_dirty_intrinsic_promotions_v1",
+    "score_semantics": "policy_scores_not_calibrated_probabilities",
+    "shape": [
+      2376,
+      6
+    ],
+    "starting_scores": "completed_empty_carry",
+    "v4_structural_promotion": {
+      "candidate_count": 0,
+      "column_semantics": [
+        "abbreviation",
+        "author",
+        "authors",
+        "created",
+        "date",
+        "issn",
+        "issue",
+        "journal",
+        "language",
+        "page",
+        "pagination",
+        "volume",
+        "volumn"
+      ],
+      "policy": "semantic_metadata_missing_and_closed_grammar_v1",
+      "promoted_count": 0,
+      "retained_count": 0
+    }
+  },
+  "detection_mask_sha256": "9b1dcc015cc5677908ced8b233e9accce5550746fa66289248c95e98bc67d81d",
+  "elapsed_local_seconds": 66.93707200299832,
+  "fresh_rule_input": {
+    "dependency_count": 2,
+    "model": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh"
+    },
+    "provenance": {
+      "clean_reference_access": false,
+      "dirty_only": true,
+      "evaluation_feedback_access": false,
+      "external_metadata_access": false,
+      "input_packet_sha256": "cccb2bc6a0b31a2c31164cb39f9f81fdd64e4ffa108a73a7d6ec16f4d63949cd",
+      "request_hash": "68dac1e1a09e0b7889867d567333487d56008791ebeb1adf5e731e4c00d2160b",
+      "response_sha256": "62211dffb06e8aa27a297c44a838a48f043a8cebedd0c87558baf365d70a4604",
+      "study_version": "unified_loop_v4",
+      "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+    },
+    "rule_count": 15,
+    "rule_union": {
+      "input_dependency_counts": {
+        "cached": 2,
+        "fresh": 2
+      },
+      "input_rule_counts": {
+        "cached": 11,
+        "fresh": 15
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 3,
+      "union_rule_count": 26
+    },
+    "schema_version": "unified-loop-v4-dirty-rules-v1"
+  },
+  "probabilities_sha256": "c848175ff8233260f18e100ed3389fd9ccc9104bb96b21f845e95786fc08d401",
+  "repair": {
+    "catalog_roles": null,
+    "catalog_safeguard": false,
+    "config": {
+      "candidate_cap": 3,
+      "catalog_min_exact_peers": 2,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "numeric_min_canonical_agreement": 0.95,
+      "numeric_min_exact_peers": 3,
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "counts": {
+      "abstained_cells": 1297,
+      "budget_pruned_strings": 0,
+      "candidate_cells_outside_detection": 0,
+      "detection_positive_cells": 3421,
+      "guarded_candidate_selection": 2123,
+      "noisy_seeded_carry": 1,
+      "null_abstention_records": 0,
+      "selected_cells": 2124
+    },
+    "detection_mask_modified": false,
+    "method": "unified_loop_v4",
+    "requires_combined_row_guard": true
+  },
+  "row_guard": {
+    "checked_rows": 1264,
+    "rolled_back_rows": 0
+  },
+  "rules": {
+    "accepted_rule_count": 26,
+    "applicability": [
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:src_syntax_refined",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:flight_syntax",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:sched_dep_time_syntax_refined",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:act_dep_time_syntax_refined",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:sched_arr_time_syntax_refined",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:act_arr_time_syntax_refined",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:sched_dep_time_strong_flight_clock_conflict",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:sched_dep_time_strong_flight_missing",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 725
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:sched_arr_time_strong_flight_clock_conflict",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 10
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:sched_arr_time_strong_flight_missing",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 396
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:ua2945_departure_context_outlier",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:flight_identifier_structure",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:airline_source_carrier_contradiction",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:airport_source_route_contradiction",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:sched_dep_time_clock_bounds",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:sched_dep_time_availability_message",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 13
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:act_dep_time_clock_bounds",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:act_dep_time_availability_message",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:sched_arr_time_clock_bounds",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:sched_arr_time_availability_message",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 13
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:act_arr_time_clock_bounds",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:act_arr_time_availability_message",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:actual_arrival_html_residue",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:act_dep_time_explicit_estimate",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 31
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:act_arr_time_explicit_estimate",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 42
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:actual_departure_appended_status",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 2376,
+        "violation_rows": 6
+      }
+    ],
+    "input_union": {
+      "input_dependency_counts": {
+        "cached": 2,
+        "fresh": 2
+      },
+      "input_rule_counts": {
+        "cached": 11,
+        "fresh": 15
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 3,
+      "union_rule_count": 26
+    },
+    "raw_row_count": 2376,
+    "validation": [
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:src_syntax_refined",
+        "source_sha256": "96f421ecf3a2be2c9db7948e21baf2258e3eba2220298b995f8f44bcffeb36e9",
+        "target": "src"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:flight_syntax",
+        "source_sha256": "b5815e3747d6956886937f5e8aa27b7ff83f9de361546663ebc46a7b1b9bb780",
+        "target": "flight"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:sched_dep_time_syntax_refined",
+        "source_sha256": "7e02258e2176b1680fbd917a525f126374c2db0f1e87e5cf8e4eb5f76d2e4c76",
+        "target": "sched_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:act_dep_time_syntax_refined",
+        "source_sha256": "315d8acff1fa87f8c374ee0119019a4465699784a19bd29ae8f37034ea7d55b8",
+        "target": "act_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:sched_arr_time_syntax_refined",
+        "source_sha256": "1821db2a52476ffe72f7156a158c6db44438610be726e815ada725212de56279",
+        "target": "sched_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:act_arr_time_syntax_refined",
+        "source_sha256": "5ead4fbbcdbd3875a3333fc26329d7dd26c39bc586ebf99e491ba08b1722343f",
+        "target": "act_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:sched_dep_time_strong_flight_clock_conflict",
+        "source_sha256": "b658321d8a152a3afdeac7f07f8287bffd156419a943872e2d4ebb73a50c6257",
+        "target": "sched_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:sched_dep_time_strong_flight_missing",
+        "source_sha256": "ef1913f099ee7996354c30a7fada336e07468927572e307de7e73c33e1df305a",
+        "target": "sched_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:sched_arr_time_strong_flight_clock_conflict",
+        "source_sha256": "bd873efd9c7f6bf9fa8ee3802df2938530893d6a2b24a5bed7f18cd9aab9bed4",
+        "target": "sched_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:sched_arr_time_strong_flight_missing",
+        "source_sha256": "462e506e4890c6eebfbe2940bce078a484d0d08e4fae5987bc57db80a90b0ef7",
+        "target": "sched_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "cached:ua2945_departure_context_outlier",
+        "source_sha256": "836f1c9f77b5b0cb45545f6683831b1169f412f380281109bc3affdff6e4e974",
+        "target": "act_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:flight_identifier_structure",
+        "source_sha256": "7b8fe01570f204c5e8d3616aff07788011e344c64894493db436bd0730cf2b7b",
+        "target": "flight"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:airline_source_carrier_contradiction",
+        "source_sha256": "2c5fa659d3fecf25c6c279fa31f5b15ca8edd158b34743878fa907b5e63c12cc",
+        "target": "flight"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:airport_source_route_contradiction",
+        "source_sha256": "f16bfcde790b1ba21cbccca1fde96cf4d5ab3bee0216d634fad77c43a1fcd64a",
+        "target": "flight"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:sched_dep_time_clock_bounds",
+        "source_sha256": "ab9609a7e15f525b5547f583f29f2710ca4712daa73b2ad6e90ea02c3e14216d",
+        "target": "sched_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:sched_dep_time_availability_message",
+        "source_sha256": "2004d9cf7d57f73dce22b5af09dd7cfff662e325db7206a77113726e6919108b",
+        "target": "sched_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:act_dep_time_clock_bounds",
+        "source_sha256": "35b5ae1afec10d2ec505980c78a1f8fac6d81cef034268e7447a8ed093e1d4a1",
+        "target": "act_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:act_dep_time_availability_message",
+        "source_sha256": "3eb118e3a897ec416fba60c3a6bc6227eb6ddf6aca1e5354e0a4f63134cc4a12",
+        "target": "act_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:sched_arr_time_clock_bounds",
+        "source_sha256": "aa477a276e39a288dd3703f6efd339a547ca1b68217a3f638bb03f20bafb30ee",
+        "target": "sched_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:sched_arr_time_availability_message",
+        "source_sha256": "4b498872c732e1df6861fba1cf848f0fa56fa9dc7ed1d8037b8117693a955a2f",
+        "target": "sched_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:act_arr_time_clock_bounds",
+        "source_sha256": "09ff5b3cbd01c298c4e000320867032e6312b4f1ee6aae5a234da314f1cbcbfe",
+        "target": "act_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:act_arr_time_availability_message",
+        "source_sha256": "e6d0cf6f555d3dd4fb911de405adec19dac80773b083e3979753726a672639f9",
+        "target": "act_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:actual_arrival_html_residue",
+        "source_sha256": "4059864a4d7713cf8471ac5d5e077254081066dbb714c63890807fc7da873292",
+        "target": "act_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:act_dep_time_explicit_estimate",
+        "source_sha256": "952282ab4cbd1be53c4b9cb0aec46b43b14c9ffcc442be9b52fba78328e3c5b1",
+        "target": "act_dep_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:act_arr_time_explicit_estimate",
+        "source_sha256": "f06d8cfb7305129a14fa64b8fee2f843216383d48a9c485da54e1d966a2c6d99",
+        "target": "act_arr_time"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 3
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 2376,
+        "id": "fresh:actual_departure_appended_status",
+        "source_sha256": "dac7ed70f238d5edfd67e314a44a8aab08ada5628c14ccc973ba01585db0c019",
+        "target": "act_dep_time"
+      }
+    ]
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "allowed_inference_inputs": {
+    "beers": {
+      "cts": "artifacts/llm/beers/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/beers_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/beers/empty_carry.json",
+      "fresh_packet": "artifacts/unified_loop_v4_model/packets/beers.json",
+      "fresh_response": "artifacts/unified_loop_v4_model/responses/beers.json",
+      "old_pass2": "artifacts/llm/beers/pass2.json",
+      "pass2": "artifacts/llm/unified_loop_v4/beers/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/beers/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/beers/zeroed.json"
+    },
+    "billionaire": {
+      "cts": "artifacts/llm/billionaire/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/billionaire_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/billionaire/empty_carry.json",
+      "fresh_packet": "artifacts/unified_loop_v4_model/packets/billionaire.json",
+      "fresh_response": "artifacts/unified_loop_v4_model/responses/billionaire.json",
+      "old_pass2": "artifacts/llm/billionaire/pass2.json",
+      "pass2": "artifacts/llm/unified_loop_v4/billionaire/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/billionaire/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/billionaire/zeroed.json"
+    },
+    "flights": {
+      "cts": "artifacts/llm/flights/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/flights_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/flights/empty_carry.json",
+      "fresh_packet": "artifacts/unified_loop_v4_model/packets/flights.json",
+      "fresh_response": "artifacts/unified_loop_v4_model/responses/flights.json",
+      "old_pass2": "artifacts/llm/flights/pass2.json",
+      "pass2": "artifacts/llm/unified_loop_v4/flights/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/flights/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/flights/zeroed.json"
+    },
+    "hospital": {
+      "cts": "artifacts/llm/hospital/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/hospital_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/hospital/empty_carry.json",
+      "fresh_packet": "artifacts/unified_loop_v4_model/packets/hospital.json",
+      "fresh_response": "artifacts/unified_loop_v4_model/responses/hospital.json",
+      "old_pass2": "artifacts/llm/hospital/pass2.json",
+      "pass2": "artifacts/llm/unified_loop_v4/hospital/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/hospital/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/hospital/zeroed.json"
+    },
+    "movies": {
+      "cts": "artifacts/llm/movies/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/movies_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/movies/empty_carry.json",
+      "fresh_packet": "artifacts/unified_loop_v4_model/packets/movies.json",
+      "fresh_response": "artifacts/unified_loop_v4_model/responses/movies.json",
+      "old_pass2": "artifacts/llm/movies/pass2.json",
+      "pass2": "artifacts/llm/unified_loop_v4/movies/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/movies/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/movies/zeroed.json"
+    },
+    "rayyan": {
+      "cts": "artifacts/llm/rayyan/proposals_cts_v2.json",
+      "dirty": "vendor/ZeroED/data/rayyan_error-01.csv",
+      "empty": "results/conservative_seed_v1/predictions/rayyan/empty_carry.json",
+      "fresh_packet": "artifacts/unified_loop_v4_model/packets/rayyan.json",
+      "fresh_response": "artifacts/unified_loop_v4_model/responses/rayyan.json",
+      "old_pass2": "artifacts/llm/rayyan/pass2.json",
+      "pass2": "artifacts/llm/unified_loop_v4/rayyan/pass2.json",
+      "sequential": "results/source_baselines_v1/predictions/rayyan/zeroed_zeroec_reconstruction.json",
+      "source": "results/source_baselines_v1/predictions/rayyan/zeroed.json"
+    }
+  },
+  "cohort": "local-unified-loop-v4-20261029",
+  "configuration": {
+    "consensus": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "detection": {
+      "canonical_min_agreement": 0.9,
+      "canonical_min_support": 5,
+      "context_global_min_agreement": 0.97,
+      "context_min_agreement": 0.95,
+      "context_min_coverage": 0.15,
+      "context_min_gain_over_marginal": 0.1,
+      "context_min_groups": 2,
+      "context_min_peers": 3,
+      "demoted_score": 0.49,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_missing_fraction": 0.02,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "missing_min_observations": 30,
+      "promoted_score": 0.75,
+      "source_positive_fraction_threshold": 0.4,
+      "type_min_fraction": 0.95
+    },
+    "repair": {
+      "candidate_cap": 3,
+      "catalog_min_exact_peers": 2,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "numeric_min_canonical_agreement": 0.95,
+      "numeric_min_exact_peers": 3,
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "runner": {
+      "address_space_bytes": 12884901888,
+      "blas_openmp_threads": 1,
+      "candidate_cap": 3,
+      "candidate_order": [
+        "actionable_key_source_consensus",
+        "seed",
+        "cts_existing_order"
+      ],
+      "catalog_repair_policy": "entity_fd_or_observed_numeric_canonical_form_and_exact_dirty_peers",
+      "combined_row_guard": "rollback_all_edits_on_new_violation_or_runtime_error",
+      "constant_false_rule_policy": "retain_as_counterfactual_guard",
+      "counterfactual_batch_rows": 1000,
+      "cts_witness_provenance": "complete_cell_cts_only_peer_union_before_candidate_filtering",
+      "decision_threshold": 0.5,
+      "decision_threshold_operator": ">",
+      "detection_all_true_rule_policy": "exclude_from_detection_keep_in_guard",
+      "detection_negative_policy": "promote_independent_rule_type_domain_context_evidence_before_repair",
+      "domain_difference_divisor": 4.0,
+      "empty_carrier_fields": [
+        "probabilities",
+        "metadata"
+      ],
+      "fd_delta": "leave_one_out_candidate_conditional_support_minus_original",
+      "format_policy": "same_original_pattern_or_two_dirty_exemplars_no_controls",
+      "fresh_binding_policy": "dataset_dirty_packet_response_hashes_and_exact_response_body",
+      "fresh_rule_policy": "uniform_cached_plus_fresh_dirty_only_rule_union_for_all_six_no_fallback",
+      "minimum_dirty_pattern_exemplars": 2,
+      "rule_batch_rows": 1000,
+      "rule_delta_scope": "accepted_rules_targeting_proposed_column",
+      "rule_max_error_rate_exclusive": 0.05,
+      "seed_source": "source_sequential_repair_map_only",
+      "vicinity_difference_divisor": 4.0
+    }
+  },
+  "datasets": [
+    "hospital",
+    "flights",
+    "beers",
+    "rayyan",
+    "billionaire",
+    "movies"
+  ],
+  "design_provenance": {
+    "design_origin": "user_directed_follow_up_informed_by_prior_aggregate_observations",
+    "evaluation_failure_reports_used": false,
+    "existing_cached_proposals_are_noisy_proposals": true,
+    "external_metadata_or_catalogs_used": false,
+    "fresh_blind_experiment": false,
+    "prior_reviewer_judgments_used": false,
+    "row_labels_used_for_design_or_inference": false
+  },
+  "evaluation_is_separate": true,
+  "fresh_rule_inputs": {
+    "beers": {
+      "dependency_count": 5,
+      "model": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "xhigh"
+      },
+      "provenance": {
+        "clean_reference_access": false,
+        "dirty_only": true,
+        "evaluation_feedback_access": false,
+        "external_metadata_access": false,
+        "input_packet_sha256": "29660dd4b63e2bf17c39555a64a78ef516ea6e0bd70b8486a1504ac1d019493a",
+        "request_hash": "d42940dc58278479fbadd4870d0c54c76b2abff176d52d09fd2ac357ed1a9672",
+        "response_sha256": "2be3e6850deaa6edc88c9684b4f53b9f49608384d087a27848cf7054faed7a3c",
+        "study_version": "unified_loop_v4",
+        "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+      },
+      "rule_count": 8,
+      "rule_union": {
+        "input_dependency_counts": {
+          "cached": 3,
+          "fresh": 5
+        },
+        "input_rule_counts": {
+          "cached": 23,
+          "fresh": 8
+        },
+        "policy": "stable_cached_then_fresh_exact_executable_union",
+        "union_dependency_count": 7,
+        "union_rule_count": 31
+      },
+      "schema_version": "unified-loop-v4-dirty-rules-v1"
+    },
+    "billionaire": {
+      "dependency_count": 9,
+      "model": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "xhigh"
+      },
+      "provenance": {
+        "clean_reference_access": false,
+        "dirty_only": true,
+        "evaluation_feedback_access": false,
+        "external_metadata_access": false,
+        "input_packet_sha256": "14da6b5dfae883863d9137676753c6b1fc3ac056053bf24b775a73ff929c6c24",
+        "request_hash": "35bdcae9919631f8ba2636a2c826dad2630daea5095ce37cf38063cc3c0fece3",
+        "response_sha256": "2e3da6d7a76b181aab6afc7b8c803d87d67fe45698b230ada57a64a171b32047",
+        "study_version": "unified_loop_v4",
+        "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+      },
+      "rule_count": 24,
+      "rule_union": {
+        "input_dependency_counts": {
+          "cached": 10,
+          "fresh": 9
+        },
+        "input_rule_counts": {
+          "cached": 54,
+          "fresh": 24
+        },
+        "policy": "stable_cached_then_fresh_exact_executable_union",
+        "union_dependency_count": 19,
+        "union_rule_count": 78
+      },
+      "schema_version": "unified-loop-v4-dirty-rules-v1"
+    },
+    "flights": {
+      "dependency_count": 2,
+      "model": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "xhigh"
+      },
+      "provenance": {
+        "clean_reference_access": false,
+        "dirty_only": true,
+        "evaluation_feedback_access": false,
+        "external_metadata_access": false,
+        "input_packet_sha256": "cccb2bc6a0b31a2c31164cb39f9f81fdd64e4ffa108a73a7d6ec16f4d63949cd",
+        "request_hash": "68dac1e1a09e0b7889867d567333487d56008791ebeb1adf5e731e4c00d2160b",
+        "response_sha256": "62211dffb06e8aa27a297c44a838a48f043a8cebedd0c87558baf365d70a4604",
+        "study_version": "unified_loop_v4",
+        "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+      },
+      "rule_count": 15,
+      "rule_union": {
+        "input_dependency_counts": {
+          "cached": 2,
+          "fresh": 2
+        },
+        "input_rule_counts": {
+          "cached": 11,
+          "fresh": 15
+        },
+        "policy": "stable_cached_then_fresh_exact_executable_union",
+        "union_dependency_count": 3,
+        "union_rule_count": 26
+      },
+      "schema_version": "unified-loop-v4-dirty-rules-v1"
+    },
+    "hospital": {
+      "dependency_count": 12,
+      "model": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "xhigh"
+      },
+      "provenance": {
+        "clean_reference_access": false,
+        "dirty_only": true,
+        "evaluation_feedback_access": false,
+        "external_metadata_access": false,
+        "input_packet_sha256": "7ff59cf497e637aab0b4af22fd4e671807c07facea2253e001a28e194dc2e4ad",
+        "request_hash": "6ced46b3ea29953951328036047ec32a0f3bccb47b7a7853bd2f0e1ad5cf2f7d",
+        "response_sha256": "bb7a511eda1028c552777786e16114c4f1a9d68b31c9021e0d63247fa555a2e8",
+        "study_version": "unified_loop_v4",
+        "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+      },
+      "rule_count": 22,
+      "rule_union": {
+        "input_dependency_counts": {
+          "cached": 25,
+          "fresh": 12
+        },
+        "input_rule_counts": {
+          "cached": 37,
+          "fresh": 22
+        },
+        "policy": "stable_cached_then_fresh_exact_executable_union",
+        "union_dependency_count": 37,
+        "union_rule_count": 59
+      },
+      "schema_version": "unified-loop-v4-dirty-rules-v1"
+    },
+    "movies": {
+      "dependency_count": 0,
+      "model": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "xhigh"
+      },
+      "provenance": {
+        "clean_reference_access": false,
+        "dirty_only": true,
+        "evaluation_feedback_access": false,
+        "external_metadata_access": false,
+        "input_packet_sha256": "ef274186ed1272948b9b549159c8adfb0cb01df2d9165375f9ad14fa2312730f",
+        "request_hash": "0c2978249c9c811ddf9e80e812a85fca9c631a1796e3d3f211ecbefa2f83112b",
+        "response_sha256": "674fb483020c5f87a228dc00ea1f9a1cc2cfdc77bbf6b51aa406949ad424b6f6",
+        "study_version": "unified_loop_v4",
+        "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+      },
+      "rule_count": 13,
+      "rule_union": {
+        "input_dependency_counts": {
+          "cached": 3,
+          "fresh": 0
+        },
+        "input_rule_counts": {
+          "cached": 38,
+          "fresh": 13
+        },
+        "policy": "stable_cached_then_fresh_exact_executable_union",
+        "union_dependency_count": 3,
+        "union_rule_count": 51
+      },
+      "schema_version": "unified-loop-v4-dirty-rules-v1"
+    },
+    "rayyan": {
+      "dependency_count": 2,
+      "model": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "xhigh"
+      },
+      "provenance": {
+        "clean_reference_access": false,
+        "dirty_only": true,
+        "evaluation_feedback_access": false,
+        "external_metadata_access": false,
+        "input_packet_sha256": "b8e4ae3d918208891901784875f0a30abc904802b1cb47d156c014cf21c41430",
+        "request_hash": "6f062974a3ef972edc0eaa23f75ddcf0754e2eb73ccb86dced4935b118c2bbe4",
+        "response_sha256": "9f78c9541d47164deb93ddf1dafc7d9880634c9ab2b67c070969348397627030",
+        "study_version": "unified_loop_v4",
+        "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+      },
+      "rule_count": 19,
+      "rule_union": {
+        "input_dependency_counts": {
+          "cached": 3,
+          "fresh": 2
+        },
+        "input_rule_counts": {
+          "cached": 18,
+          "fresh": 19
+        },
+        "policy": "stable_cached_then_fresh_exact_executable_union",
+        "union_dependency_count": 5,
+        "union_rule_count": 37
+      },
+      "schema_version": "unified-loop-v4-dirty-rules-v1"
+    }
+  },
+  "ground_truth_access": false,
+  "method_files": {
+    "unified_loop_v4": "zeroclean_loop.json"
+  },
+  "model": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh"
+  },
+  "output_root": "results/unified_loop_v4",
+  "protocol_sha256": "432a34cbdd23eb45b99788e851a4a383fdf3135b822233e062caeb82eade107c",
+  "schema_version": "unified-loop-v4-freeze-v1"
+}

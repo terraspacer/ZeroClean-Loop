@@ -1,0 +1,98 @@
+{
+  "zeroed": {
+    "baseline": "zeroed_upstream",
+    "ready": true,
+    "blockers": [],
+    "missing_dependencies": [],
+    "fasttext_path": "/home/steve/Desktop/ICDE3/artifacts/models/cc.en.300.bin",
+    "fasttext_prepared_provenance": null,
+    "source_sha256": {
+      "main.py": "0708edab44f5747908592012d3139ed5d3a1fc239c8988653060e96dbc7d29bd",
+      "feature.py": "23b46f6ab4c4937e922aa1d314a0b11869ab8dfcceb8524d88a295f0dde7269a",
+      "utility.py": "a08326b2d5ccc16de778d3bb98e98f70dd937142d4b037cfdd2049c6d325670d",
+      "prompt_gen.py": "620642d377fffbecd3c8f106592f8d61389cbac14731bcd32b3eda2259e08e00",
+      "get_rel_attrs.py": "f35f24170698870146b91a5ac0829c3e2d507e33b3f28863508a3e82ff021225",
+      "distri_analys.py": "9b179d62bdb1271c071be8a2bdf06c6357b11395a39df906d935fd9f473c8917"
+    },
+    "runtime_source_repairs": [
+      "Alias upstream kb_gen_prompt as guide_gen_prompt (upstream import defect)"
+    ],
+    "inference_inputs": [
+      "dirty_table",
+      "fresh_dirty_only_llm_responses",
+      "fasttext_model"
+    ],
+    "uses_ground_truth": false,
+    "cached_results_reused": false
+  },
+  "zeroec": {
+    "baseline": "zeroec_upstream_zero_shot",
+    "ready": false,
+    "blockers": [
+      "Missing upstream sources/templates: prompt_templates/SystemMessage_EC.txt, prompt_templates/HumanMessage_EC.txt, prompt_templates/general_examples_EC.txt",
+      "Missing runtime modules: fast_sentence_transformers, langchain, langchain_openai, langchain_core, langchain_community, faiss"
+    ],
+    "source_sha256": {
+      "correction_zero_shot.py": "69c37c1f81bc509e5363a3dd0b5b20f04e705ba422b5dac7389d1df2169dd3e9"
+    },
+    "missing_dependencies": [
+      "fast_sentence_transformers",
+      "langchain",
+      "langchain_openai",
+      "langchain_core",
+      "langchain_community",
+      "faiss"
+    ],
+    "embedding_path": "/home/steve/Desktop/ICDE3/vendor/ZeroEC/all-MiniLM-L6-v2",
+    "uses_ground_truth": false,
+    "entrypoint": "correction_zero_shot.py",
+    "excluded_entrypoint": "correction.py (human-repair/clean-data supervision path)",
+    "reconstruction": {
+      "baseline": "zeroec_reconstruction",
+      "ready": true,
+      "blockers": [],
+      "reproduced_upstream": false,
+      "fidelity": "source_derived_reconstruction",
+      "prompt_profile": "committed_zeroec",
+      "prompt_provenance": {
+        "profile": "committed_zeroec",
+        "repository": "https://github.com/YangChen32768/ZeroEC",
+        "commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+        "historical_identity_established": false,
+        "fidelity_note": "Different committed correction templates substitute for missing EC paths",
+        "uses_general_examples": true,
+        "prompt_sha256": {
+          "prompt_templates/SystemMessage.txt": "cd85a3cebf9d7d19f02311304471d00768e73fa4792c5cb72e072a03dfd689d5",
+          "prompt_templates/HumanMessage.txt": "3695f49cb835a0d2d931cccd91f1a1ebdceeb91b9be5ac5e6eb6ca7ca0b8d3f4",
+          "prompt_templates/examples.txt": "b420e6160f2a8d92c56930f1d08bb4d7d94fefd05f5cf73d9bb727d7e23b4ee6"
+        }
+      },
+      "strict_zero_shot": false,
+      "uses_ground_truth": false,
+      "uses_general_examples": true,
+      "missing_dependencies": [],
+      "source_sha256": {
+        "correction_zero_shot.py": "69c37c1f81bc509e5363a3dd0b5b20f04e705ba422b5dac7389d1df2169dd3e9",
+        "prompt_templates/SystemMessage.txt": "cd85a3cebf9d7d19f02311304471d00768e73fa4792c5cb72e072a03dfd689d5",
+        "prompt_templates/HumanMessage.txt": "3695f49cb835a0d2d931cccd91f1a1ebdceeb91b9be5ac5e6eb6ca7ca0b8d3f4",
+        "prompt_templates/examples.txt": "b420e6160f2a8d92c56930f1d08bb4d7d94fefd05f5cf73d9bb727d7e23b4ee6"
+      },
+      "embedding_path": "/home/steve/Desktop/ICDE3/vendor/ZeroEC/all-MiniLM-L6-v2"
+    }
+  },
+  "sources": {
+    "ZeroED": {
+      "url": "https://github.com/WelkinNi/ZeroED",
+      "commit": "49678b8470180ab17e9c40bcedd2c00ac49de6ff"
+    },
+    "ZeroEC": {
+      "url": "https://github.com/YangChen32768/ZeroEC",
+      "commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c"
+    }
+  },
+  "python": "3.12.3",
+  "experiment_llm": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh"
+  }
+}

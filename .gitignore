@@ -1,0 +1,13 @@
+.venv/
+vendor/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.npz
+*.npy
+*.pkl
+.env
+results/*/audit/*.jsonl
+artifacts/*
+!artifacts/recovered_prompts/

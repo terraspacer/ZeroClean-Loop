@@ -1,0 +1,126 @@
+{
+  "audit_date": "2026-10-26T18:21:58.473592+00:00",
+  "checks": [
+    {
+      "kind": "branches",
+      "source": "https://api.github.com/repos/YangChen32768/ZeroEC/branches?per_page=100",
+      "result": [
+        {
+          "name": "main",
+          "sha": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c"
+        }
+      ]
+    },
+    {
+      "kind": "tags",
+      "source": "https://api.github.com/repos/YangChen32768/ZeroEC/tags?per_page=100",
+      "result": []
+    },
+    {
+      "kind": "releases",
+      "source": "https://api.github.com/repos/YangChen32768/ZeroEC/releases?per_page=100",
+      "result": []
+    },
+    {
+      "kind": "pull_requests",
+      "source": "https://api.github.com/repos/YangChen32768/ZeroEC/pulls?state=all&per_page=100",
+      "result": []
+    },
+    {
+      "kind": "prompt_directory",
+      "source": "https://api.github.com/repos/YangChen32768/ZeroEC/contents/prompt_templates?ref=d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+      "result": [
+        {
+          "name": "HumanMessage.txt",
+          "sha": "c568e17d237052fd5269ae8bb0922de4d9bbabb8",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/HumanMessage.txt"
+        },
+        {
+          "name": "HumanMessage_code_generation.txt",
+          "sha": "21e34f28640fc481511d70e17e9ba939fe472eee",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/HumanMessage_code_generation.txt"
+        },
+        {
+          "name": "HumanMessage_data_augmentation.txt",
+          "sha": "6bed9a8a48d3620a06a30b16344545fed1599710",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/HumanMessage_data_augmentation.txt"
+        },
+        {
+          "name": "HumanMessage_fd_generation.txt",
+          "sha": "84b6605c4eb72836c0bd112d6134a0cd089800bb",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/HumanMessage_fd_generation.txt"
+        },
+        {
+          "name": "HumanMessage_for_AutoCoT_large-o1.txt",
+          "sha": "f6d2e7d850abc02947c907f8d086734243f31d2c",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/HumanMessage_for_AutoCoT_large-o1.txt"
+        },
+        {
+          "name": "HumanMessage_for_AutoCoT_large.txt",
+          "sha": "d98452a236b72e4c59a111d745e7d862c266dda9",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/HumanMessage_for_AutoCoT_large.txt"
+        },
+        {
+          "name": "HumanMessage_for_AutoCoT_small.txt",
+          "sha": "a1e42c7f9c64d84aa1f118cd044d9e3067286113",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/HumanMessage_for_AutoCoT_small.txt"
+        },
+        {
+          "name": "SystemMessage-2.txt",
+          "sha": "75a13a5f46296cd2b809fcbe78e21f35461d1bc7",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/SystemMessage-2.txt"
+        },
+        {
+          "name": "SystemMessage.txt",
+          "sha": "8a5dcc3c8afa85f43ae5f1e7aa3b15f7b265154c",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/SystemMessage.txt"
+        },
+        {
+          "name": "SystemMessage_code_generation.txt",
+          "sha": "fea52d9da56e52212a64a3b1a3bd435572b2d7d9",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/SystemMessage_code_generation.txt"
+        },
+        {
+          "name": "SystemMessage_data_augmentation.txt",
+          "sha": "9216d2be18bfc43ad5c65c703ad69f29b68f9e32",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/SystemMessage_data_augmentation.txt"
+        },
+        {
+          "name": "SystemMessage_fd_generation.txt",
+          "sha": "698fab611bd53c982fd2d4a9ed896cf91a4b0870",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/SystemMessage_fd_generation.txt"
+        },
+        {
+          "name": "SystemMessage_for_AutoCoT.txt",
+          "sha": "a00557f310da8d3bd3b60b3d18a6e8c02fe53594",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/SystemMessage_for_AutoCoT.txt"
+        },
+        {
+          "name": "SystemMessage_for_AutoCoT_with_error_type.txt",
+          "sha": "8035cae5d0919010d07af2d6256c357e2cb1aed8",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/SystemMessage_for_AutoCoT_with_error_type.txt"
+        },
+        {
+          "name": "code_generatoin_2.txt",
+          "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/code_generatoin_2.txt"
+        },
+        {
+          "name": "examples.txt",
+          "sha": "c5f21f2c0f7f203c36b2c3e975215a3ec2f72f32",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/examples.txt"
+        },
+        {
+          "name": "examples_for_AutoCoT.txt",
+          "sha": "2681e6d7a71d73b959e70714cfcf27e59d7b858d",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/examples_for_AutoCoT.txt"
+        },
+        {
+          "name": "examples_for_AutoCoT_with_error_type.txt",
+          "sha": "72e757eb2529a1ee926c5cfe73d256ff3890d422",
+          "html_url": "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/prompt_templates/examples_for_AutoCoT_with_error_type.txt"
+        }
+      ]
+    }
+  ]
+}

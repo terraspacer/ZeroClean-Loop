@@ -1,0 +1,277 @@
+{
+  "cohort": "local-unified-loop-v3-20261028",
+  "datasets": [
+    "hospital",
+    "flights",
+    "beers",
+    "rayyan",
+    "billionaire",
+    "movies"
+  ],
+  "frozen_before_inference": true,
+  "ground_truth_access": false,
+  "input_files": {
+    "beers": {
+      "cts": {
+        "path": "artifacts/llm/beers/proposals_cts_v2.json",
+        "sha256": "cf629d8dae13c03da8478354efa2f3ff448f3b916fe926f572da3b13878c3b49"
+      },
+      "dirty": {
+        "path": "vendor/ZeroED/data/beers_error-01.csv",
+        "sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f"
+      },
+      "empty": {
+        "path": "results/conservative_seed_v1/predictions/beers/empty_carry.json",
+        "sha256": "f7ace3f5dd524ddf0f41b0ebf8a619e85cec4382ff8008af95e8fbf6769d8772"
+      },
+      "fresh_packet": {
+        "path": "artifacts/unified_loop_v3_model/packets/beers.json",
+        "sha256": "29660dd4b63e2bf17c39555a64a78ef516ea6e0bd70b8486a1504ac1d019493a"
+      },
+      "fresh_response": {
+        "path": "artifacts/unified_loop_v3_model/responses/beers.json",
+        "sha256": "2be3e6850deaa6edc88c9684b4f53b9f49608384d087a27848cf7054faed7a3c"
+      },
+      "old_pass2": {
+        "path": "artifacts/llm/beers/pass2.json",
+        "sha256": "99f2b59753effeca0807f51a18bddbc9c8a218d83c8e4cf39cd8cca7102f58d6"
+      },
+      "pass2": {
+        "path": "artifacts/llm/unified_loop_v3/beers/pass2.json",
+        "sha256": "991a22f682b091e9c93f729a25298e4341b41bbd3a8298898f1a7ce67144d08a"
+      },
+      "sequential": {
+        "path": "results/source_baselines_v1/predictions/beers/zeroed_zeroec_reconstruction.json",
+        "sha256": "b04a5753bf930485c975627185cd7dcbfbbd0f72faef4c264423fc3a2a630fae"
+      },
+      "source": {
+        "path": "results/source_baselines_v1/predictions/beers/zeroed.json",
+        "sha256": "2543c9829b1d696a923144cdeda7ecd0d682850db87bcc9bb4b6d1f960ef077f"
+      }
+    },
+    "billionaire": {
+      "cts": {
+        "path": "artifacts/llm/billionaire/proposals_cts_v2.json",
+        "sha256": "b27098dff4b1ddbb4c38046d5b6b81f0751996b86e2e24de40ea8e5fcf7a6501"
+      },
+      "dirty": {
+        "path": "vendor/ZeroED/data/billionaire_error-01.csv",
+        "sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7"
+      },
+      "empty": {
+        "path": "results/conservative_seed_v1/predictions/billionaire/empty_carry.json",
+        "sha256": "2eb7b54db4f2469204e67e441a2fa2072e220f38e8c5c4dd1bc8c9273819af48"
+      },
+      "fresh_packet": {
+        "path": "artifacts/unified_loop_v3_model/packets/billionaire.json",
+        "sha256": "14da6b5dfae883863d9137676753c6b1fc3ac056053bf24b775a73ff929c6c24"
+      },
+      "fresh_response": {
+        "path": "artifacts/unified_loop_v3_model/responses/billionaire.json",
+        "sha256": "2e3da6d7a76b181aab6afc7b8c803d87d67fe45698b230ada57a64a171b32047"
+      },
+      "old_pass2": {
+        "path": "artifacts/llm/billionaire/pass2.json",
+        "sha256": "062bd4795ee04a7a27410386a2ca33723fa737ab97613c7213d5a16e0e7d213f"
+      },
+      "pass2": {
+        "path": "artifacts/llm/unified_loop_v3/billionaire/pass2.json",
+        "sha256": "fe9d241cd555abc4e16fdc4147819f405959d4e8afa9cc90bbfa7bd621219713"
+      },
+      "sequential": {
+        "path": "results/source_baselines_v1/predictions/billionaire/zeroed_zeroec_reconstruction.json",
+        "sha256": "d513d72e5b3dfc169b7908ec128b00e81331d9d10e25ff257ff11db6275fd43a"
+      },
+      "source": {
+        "path": "results/source_baselines_v1/predictions/billionaire/zeroed.json",
+        "sha256": "70d7de54159dfac99535cc8a12877756ddf545dce39ba765079571ff650dbe80"
+      }
+    },
+    "flights": {
+      "cts": {
+        "path": "artifacts/llm/flights/proposals_cts_v2.json",
+        "sha256": "6dd565f1642486da466e23dded8dcf21342146197e59a01ead63753854a0278f"
+      },
+      "dirty": {
+        "path": "vendor/ZeroED/data/flights_error-01.csv",
+        "sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c"
+      },
+      "empty": {
+        "path": "results/conservative_seed_v1/predictions/flights/empty_carry.json",
+        "sha256": "e6e1cfedb94099d157d312f6fe0be4eef65edcb52cc89c4fff4a3f4be5e78a44"
+      },
+      "fresh_packet": {
+        "path": "artifacts/unified_loop_v3_model/packets/flights.json",
+        "sha256": "cccb2bc6a0b31a2c31164cb39f9f81fdd64e4ffa108a73a7d6ec16f4d63949cd"
+      },
+      "fresh_response": {
+        "path": "artifacts/unified_loop_v3_model/responses/flights.json",
+        "sha256": "62211dffb06e8aa27a297c44a838a48f043a8cebedd0c87558baf365d70a4604"
+      },
+      "old_pass2": {
+        "path": "artifacts/llm/flights/pass2.json",
+        "sha256": "e031188e337da807cb7054d5a54866b5c69f0645d4becdd0392b0f85433d18ea"
+      },
+      "pass2": {
+        "path": "artifacts/llm/unified_loop_v3/flights/pass2.json",
+        "sha256": "e27f32aa56a52e386a231d87820665acfc9109e0cb0dc2a59175bdbf5e8c2d8b"
+      },
+      "sequential": {
+        "path": "results/source_baselines_v1/predictions/flights/zeroed_zeroec_reconstruction.json",
+        "sha256": "12bb7d7e900c1982e563e91f6f0cb80847398fc43e5cb51d77cf665c951697a8"
+      },
+      "source": {
+        "path": "results/source_baselines_v1/predictions/flights/zeroed.json",
+        "sha256": "5cd71ff6175122a2fa009873f3417bf8121bee2b300ef9153e61153bdd554fff"
+      }
+    },
+    "hospital": {
+      "cts": {
+        "path": "artifacts/llm/hospital/proposals_cts_v2.json",
+        "sha256": "4345b1053f11e44ef9fac94f080cd9855b86b8bae9cf6c5f9bf3902b22095a4e"
+      },
+      "dirty": {
+        "path": "vendor/ZeroED/data/hospital_error-01.csv",
+        "sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5"
+      },
+      "empty": {
+        "path": "results/conservative_seed_v1/predictions/hospital/empty_carry.json",
+        "sha256": "743bc800df8ee65550903475c93c56bcfaf1b61219e625384732e2e67859ed5e"
+      },
+      "fresh_packet": {
+        "path": "artifacts/unified_loop_v3_model/packets/hospital.json",
+        "sha256": "7ff59cf497e637aab0b4af22fd4e671807c07facea2253e001a28e194dc2e4ad"
+      },
+      "fresh_response": {
+        "path": "artifacts/unified_loop_v3_model/responses/hospital.json",
+        "sha256": "bb7a511eda1028c552777786e16114c4f1a9d68b31c9021e0d63247fa555a2e8"
+      },
+      "old_pass2": {
+        "path": "artifacts/llm/hospital/pass2.json",
+        "sha256": "ccdd3999aaf941a82078551b9b1d55127b2e5d9f78b8ce1ff9a47001f318b845"
+      },
+      "pass2": {
+        "path": "artifacts/llm/unified_loop_v3/hospital/pass2.json",
+        "sha256": "0149b52be27a5ea7262fab28afbc5c6974d3bcb0ff305e20701144787e4e8aea"
+      },
+      "sequential": {
+        "path": "results/source_baselines_v1/predictions/hospital/zeroed_zeroec_reconstruction.json",
+        "sha256": "a0112bdd158c25dc24617a5b2338bd8b28b7774e521c2c291af11685d3222bc1"
+      },
+      "source": {
+        "path": "results/source_baselines_v1/predictions/hospital/zeroed.json",
+        "sha256": "c54ef260a5a0d0bc0465111e0b3307fefd54f0d73266c9138aa093941799034a"
+      }
+    },
+    "movies": {
+      "cts": {
+        "path": "artifacts/llm/movies/proposals_cts_v2.json",
+        "sha256": "63f31bacbef1b8ef3f0f3132f5a1425267510e1cfd483bbeaf7519c9009dcaa6"
+      },
+      "dirty": {
+        "path": "vendor/ZeroED/data/movies_error-01.csv",
+        "sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052"
+      },
+      "empty": {
+        "path": "results/conservative_seed_v1/predictions/movies/empty_carry.json",
+        "sha256": "cb44b48de9ebf4d5dd2d49854f829b6bbf2e049aacae4f4143adf8db03f7afca"
+      },
+      "fresh_packet": {
+        "path": "artifacts/unified_loop_v3_model/packets/movies.json",
+        "sha256": "ef274186ed1272948b9b549159c8adfb0cb01df2d9165375f9ad14fa2312730f"
+      },
+      "fresh_response": {
+        "path": "artifacts/unified_loop_v3_model/responses/movies.json",
+        "sha256": "674fb483020c5f87a228dc00ea1f9a1cc2cfdc77bbf6b51aa406949ad424b6f6"
+      },
+      "old_pass2": {
+        "path": "artifacts/llm/movies/pass2.json",
+        "sha256": "50b85add2de046e48fdd6262ec7f569ed32494592faaad319ddc95db21a4c8c2"
+      },
+      "pass2": {
+        "path": "artifacts/llm/unified_loop_v3/movies/pass2.json",
+        "sha256": "7ddc177257362a16e2d9e73dfb4eebe2348c6890b6a6f8a447b52320d8687e92"
+      },
+      "sequential": {
+        "path": "results/source_baselines_v1/predictions/movies/zeroed_zeroec_reconstruction.json",
+        "sha256": "f899e7ca2c09f99414f390c0ceac7edf20ab507683344985b391bb373ab6f9a3"
+      },
+      "source": {
+        "path": "results/source_baselines_v1/predictions/movies/zeroed.json",
+        "sha256": "3a08a9010c4ed731f4c55c02144d1815fdedb5f19e83ffbe920499cc7bd25985"
+      }
+    },
+    "rayyan": {
+      "cts": {
+        "path": "artifacts/llm/rayyan/proposals_cts_v2.json",
+        "sha256": "506aaa584b268a3a663d231d920f413c053abdc7c8905fab3a3b82b76598a185"
+      },
+      "dirty": {
+        "path": "vendor/ZeroED/data/rayyan_error-01.csv",
+        "sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592"
+      },
+      "empty": {
+        "path": "results/conservative_seed_v1/predictions/rayyan/empty_carry.json",
+        "sha256": "77e07bb1f6b2dab3403a8ddc09fd3372b99abde687f8fef75b6a826a81b975fb"
+      },
+      "fresh_packet": {
+        "path": "artifacts/unified_loop_v3_model/packets/rayyan.json",
+        "sha256": "b8e4ae3d918208891901784875f0a30abc904802b1cb47d156c014cf21c41430"
+      },
+      "fresh_response": {
+        "path": "artifacts/unified_loop_v3_model/responses/rayyan.json",
+        "sha256": "9f78c9541d47164deb93ddf1dafc7d9880634c9ab2b67c070969348397627030"
+      },
+      "old_pass2": {
+        "path": "artifacts/llm/rayyan/pass2.json",
+        "sha256": "11b7aa43a2e45805be43044b3ad0d6181d28ebe8f8be7c5f71099e459aef8e51"
+      },
+      "pass2": {
+        "path": "artifacts/llm/unified_loop_v3/rayyan/pass2.json",
+        "sha256": "59ad1cedc8ce9a24c4c75bad60e611e7f9db0a4efa35c1f02ea4103da859b2eb"
+      },
+      "sequential": {
+        "path": "results/source_baselines_v1/predictions/rayyan/zeroed_zeroec_reconstruction.json",
+        "sha256": "af2187282db765722d4ba1f31239b89a08a572d4b7a74102f30525305e933bbe"
+      },
+      "source": {
+        "path": "results/source_baselines_v1/predictions/rayyan/zeroed.json",
+        "sha256": "6487e845d362e10eac11daa129fde8aa8a105859b36d9f0281a007e71840641d"
+      }
+    }
+  },
+  "method_files": {
+    "unified_loop_v3": "zeroclean_loop.json"
+  },
+  "model": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh"
+  },
+  "plan_sha256": "d4cbafd22361fe138d8c703ac6bc6c99baf17bfd931bc79cda38d3f9baf2e167",
+  "schema_version": "unified-loop-v3-freeze-v1",
+  "source_files": {
+    "experimental/__init__.py": "ABSENT:package-initializer",
+    "experimental/unified_loop_v3/__init__.py": "ABSENT:package-initializer",
+    "experimental/unified_loop_v3/consensus.py": "476aa6b782d9e50fb3f05c242d8204bd1f7a7ecdfaf57788b868e1ed2e4836b4",
+    "experimental/unified_loop_v3/detection.py": "be99357d4357e6fb4250d382adb169338d2939eabeb776569d07c0a8e9bff0b0",
+    "experimental/unified_loop_v3/execute_cohort.py": "7bdd1dd65727e52c1d30a84b7092e61aadceb54b6d2a6a2d53b6177cd78abfa6",
+    "experimental/unified_loop_v3/independent_code_review.md": "10568a7e024aed06031ab0e0fb332052481f3ffc4f8b305fc1c33a342114afd2",
+    "experimental/unified_loop_v3/protocol.md": "c6734a2e5480262f811d5d7720cf9e85b00727e80f94e79a199cdfb48e6507c9",
+    "experimental/unified_loop_v3/repair.py": "ac95a39a0e9d3c62d2f3f6ed089b31dd36c8fcd8a5d45f6c0e8aab4617792071",
+    "experimental/unified_loop_v3/run_study.py": "1068859b905da35838b8d899b24897ed9f11fb70ce16c711efb1db5c4cf778da",
+    "experimental/unified_loop_v3/runner_design.md": "299cef7bbcb3e11bc55f9cd19819c9bb5ee27df9c6e8c0e7b0d9ffb8250bf884",
+    "experimental/unified_loop_v3/source_freeze_plan.md": "4b1e3223bedaf7f06a909de3b7299c0336e77ca894bedb29b992a0d00181e8e4",
+    "experimental/unified_loop_v3/test_consensus.py": "3470ac0b2f9411c5ed13d02883675eba924411a3099c1eb4cc321c68cbfcdcb3",
+    "experimental/unified_loop_v3/test_controller.py": "c8410b08f618f6ce4f13348d9231a28168ef210b055ee6233b628da9137e8924",
+    "experimental/unified_loop_v3/test_detection.py": "9c5bf87fceb98deda3c4194bc7a094346185ec688008f956d792c40cb367b606",
+    "experimental/unified_loop_v3/test_independent_code_review.py": "eb308579d2d5d4d937fbed35ec2ace130a7b0d110d7ebd9654f493d4ca70ad57",
+    "experimental/unified_loop_v3/test_integration.py": "9344a266adbc5669b9ec4ce8734590f782a93f0f587105c6e540aa5123dfd5f7",
+    "experimental/unified_loop_v3/test_repair.py": "611a0b7c90d9ec44531382cfc74ae2722ae3e12802473ebf0872ddf2b4bf53c3",
+    "experimental/unified_loop_v3/test_v3_policy.py": "2bad17ba2f0c9ada9db79539deae72c133f01e3f2aee4c8b52f54921fcd26af5",
+    "zeroclean/__init__.py": "d5ff83fa023332da935ed2e87eb185c44210c97c3785571da9a4e7d4e6e1c0d9",
+    "zeroclean/data.py": "ef4e60fd6474f0ff2855970b0bdd3622dd57fba7939e70b2b64fb88f1a4c6e00",
+    "zeroclean/sandbox.py": "ca12fc9d5b3d467b176e83fa3670c4a6b04ca87f8d2d766c3ddadc382aaa3297",
+    "zeroclean/statistics.py": "6f92ee5df16e83f7f4e10c33b7091468ef6af16b9d8a6bd245702fafc2e03612",
+    "zeroclean/types.py": "2de6ea34d40767eace0a95b7723389b791220a607b7ba382b2b8ba09b369c3c1"
+  }
+}

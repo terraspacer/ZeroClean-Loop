@@ -1,0 +1,2859 @@
+{
+  "candidate_pool": {
+    "candidate_cells": 496,
+    "distinct_candidates": 497,
+    "exact_duplicate_records_merged": 483,
+    "proposal_records_seen": 980
+  },
+  "cohort": "local-unified-loop-v4-20261029",
+  "consensus": {
+    "config": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "exact_peer_strings_only": true,
+    "policy_version": "intrinsic-key-source-consensus-v1",
+    "proposals_are_conditional_on_separate_detection": true,
+    "reason": "no_temporal_columns",
+    "score_semantics": "heuristic_evidence_strength_not_calibrated_correctness",
+    "source_votes_capped": true,
+    "status": "not_applicable",
+    "temporal_columns": [],
+    "temporal_role_discovery_observation_unit": "distinct_exact_dirty_row"
+  },
+  "detection": {
+    "aggregate": {
+      "changed_cell_count": 49,
+      "final_positive_count": 561,
+      "gated_column_count": 2,
+      "inherited_positive_count": 512,
+      "promoted_cell_count": 49,
+      "promoted_inherited_negative_count": 49,
+      "unknown_fallback_column_count": 0
+    },
+    "columns": [
+      {
+        "column": 0,
+        "column_name": "ProviderNumber",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.072,
+          "distinct_nonempty_formats": 6,
+          "distinct_nonempty_values": 72,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.972,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "number",
+              "provider"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 29,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 29,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 33,
+        "source_positive_fraction": 0.033,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 3,
+          "inferred_type_contradiction": 28,
+          "intrinsic_dirty_fd": 75,
+          "validated_target_specific_rule_violation": 28
+        },
+        "validated_rule_violation_count": 28
+      },
+      {
+        "column": 1,
+        "column_name": "HospitalName",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.069,
+          "distinct_nonempty_formats": 6,
+          "distinct_nonempty_values": 69,
+          "dominant_format": "A A A",
+          "dominant_format_fraction": 0.417,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "hospital",
+              "name"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 24,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 24,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 28,
+        "source_positive_fraction": 0.028,
+        "v3_evidence_counts": {
+          "intrinsic_dirty_fd": 57,
+          "validated_target_specific_rule_violation": 24
+        },
+        "validated_rule_violation_count": 24
+      },
+      {
+        "column": 2,
+        "column_name": "Address",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.076,
+          "distinct_nonempty_formats": 18,
+          "distinct_nonempty_values": 76,
+          "dominant_format": "9 A A A",
+          "dominant_format_fraction": 0.382,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "address"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 32,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 32,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 39,
+        "source_positive_fraction": 0.039,
+        "v3_evidence_counts": {
+          "intrinsic_dirty_fd": 45,
+          "validated_target_specific_rule_violation": 31
+        },
+        "validated_rule_violation_count": 31
+      },
+      {
+        "column": 3,
+        "column_name": "City",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.072,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 72,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.975,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "city"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 33,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 33,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 30,
+        "source_positive_fraction": 0.03,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 38,
+          "promoted_cells": 5,
+          "promoted_inherited_negatives": 5,
+          "validated_target_specific_rule_violation": 33
+        },
+        "validated_rule_violation_count": 33
+      },
+      {
+        "column": 4,
+        "column_name": "State",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.004,
+          "distinct_nonempty_formats": 1,
+          "distinct_nonempty_values": 4,
+          "dominant_format": "A",
+          "dominant_format_fraction": 1.0,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "state"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 26,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 26,
+        "retained_positive_count": 26,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 1000,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 26
+        },
+        "validated_rule_violation_count": 26
+      },
+      {
+        "column": 5,
+        "column_name": "ZipCode",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.071,
+          "distinct_nonempty_formats": 8,
+          "distinct_nonempty_values": 71,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.97,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": true,
+            "tokens": [
+              "code",
+              "zip"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 31,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 31,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 35,
+        "source_positive_fraction": 0.035,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 8,
+          "inferred_type_contradiction": 30,
+          "intrinsic_dirty_fd": 25,
+          "validated_target_specific_rule_violation": 30
+        },
+        "validated_rule_violation_count": 30
+      },
+      {
+        "column": 6,
+        "column_name": "CountyName",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.065,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 65,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.975,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "county",
+              "name"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 39,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 39,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 56,
+        "source_positive_fraction": 0.056,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 39
+        },
+        "validated_rule_violation_count": 39
+      },
+      {
+        "column": 7,
+        "column_name": "PhoneNumber",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.074,
+          "distinct_nonempty_formats": 7,
+          "distinct_nonempty_values": 74,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.966,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "number",
+              "phone"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 34,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 34,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 34,
+        "source_positive_fraction": 0.034,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 1,
+          "inferred_type_contradiction": 34,
+          "validated_target_specific_rule_violation": 34
+        },
+        "validated_rule_violation_count": 34
+      },
+      {
+        "column": 8,
+        "column_name": "HospitalType",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.013,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 13,
+          "dominant_format": "A A A",
+          "dominant_format_fraction": 0.993,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "hospital",
+              "type"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 32,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 12,
+        "retained_by_rule_count": 32,
+        "retained_positive_count": 32,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 1000,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 12,
+          "validated_target_specific_rule_violation": 32
+        },
+        "validated_rule_violation_count": 32
+      },
+      {
+        "column": 9,
+        "column_name": "HospitalOwner",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.027,
+          "distinct_nonempty_formats": 6,
+          "distinct_nonempty_values": 27,
+          "dominant_format": "A A-A - A",
+          "dominant_format_fraction": 0.46,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "hospital",
+              "owner"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 27,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 27,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 29,
+        "source_positive_fraction": 0.029,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 21,
+          "intrinsic_dirty_fd": 74,
+          "validated_target_specific_rule_violation": 27
+        },
+        "validated_rule_violation_count": 27
+      },
+      {
+        "column": 10,
+        "column_name": "EmergencyService",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.006,
+          "distinct_nonempty_formats": 1,
+          "distinct_nonempty_values": 6,
+          "dominant_format": "A",
+          "dominant_format_fraction": 1.0,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "emergency",
+              "service"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 27,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 27,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 27,
+        "source_positive_fraction": 0.027,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 2,
+          "intrinsic_dirty_fd": 184,
+          "validated_target_specific_rule_violation": 27
+        },
+        "validated_rule_violation_count": 27
+      },
+      {
+        "column": 11,
+        "column_name": "Condition",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.028,
+          "distinct_nonempty_formats": 4,
+          "distinct_nonempty_values": 28,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.441,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "condition"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 32,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 32,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 32,
+        "source_positive_fraction": 0.032,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 26,
+          "validated_target_specific_rule_violation": 32
+        },
+        "validated_rule_violation_count": 32
+      },
+      {
+        "column": 12,
+        "column_name": "MeasureCode",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.054,
+          "distinct_nonempty_formats": 6,
+          "distinct_nonempty_values": 54,
+          "dominant_format": "A-9",
+          "dominant_format_fraction": 0.524,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": true,
+            "tokens": [
+              "code",
+              "measure"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 29,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 29,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 29,
+        "source_positive_fraction": 0.029,
+        "v3_evidence_counts": {
+          "intrinsic_dirty_fd": 47,
+          "validated_target_specific_rule_violation": 29
+        },
+        "validated_rule_violation_count": 29
+      },
+      {
+        "column": 13,
+        "column_name": "MeasureName",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.064,
+          "distinct_nonempty_formats": 27,
+          "distinct_nonempty_values": 64,
+          "dominant_format": "A A A A A A A",
+          "dominant_format_fraction": 0.16,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "measure",
+              "name"
+            ]
+          },
+          "structured_fraction": 0.195
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 36,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 36,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 36,
+        "source_positive_fraction": 0.036,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 36
+        },
+        "validated_rule_violation_count": 36
+      },
+      {
+        "column": 14,
+        "column_name": "Score",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.069,
+          "distinct_nonempty_formats": 6,
+          "distinct_nonempty_values": 69,
+          "dominant_format": "9%",
+          "dominant_format_fraction": 0.81,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "score"
+            ]
+          },
+          "structured_fraction": 0.831
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 23,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 23,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 23,
+        "source_positive_fraction": 0.023,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 37,
+          "promoted_cells": 24,
+          "promoted_inherited_negatives": 24,
+          "validated_target_specific_rule_violation": 23
+        },
+        "validated_rule_violation_count": 23
+      },
+      {
+        "column": 15,
+        "column_name": "Sample",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.334,
+          "distinct_nonempty_formats": 5,
+          "distinct_nonempty_values": 334,
+          "dominant_format": "9 A",
+          "dominant_format_fraction": 0.933,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "sample"
+            ]
+          },
+          "structured_fraction": 0.937
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 31,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 31,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 31,
+        "source_positive_fraction": 0.031,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 1,
+          "validated_target_specific_rule_violation": 31
+        },
+        "validated_rule_violation_count": 31
+      },
+      {
+        "column": 16,
+        "column_name": "Stateavg",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.074,
+          "distinct_nonempty_formats": 8,
+          "distinct_nonempty_values": 74,
+          "dominant_format": "A_A-9",
+          "dominant_format_fraction": 0.529,
+          "nonempty_observations": 1000,
+          "observations": 1000,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "stateavg"
+            ]
+          },
+          "structured_fraction": 0.998
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 27,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 27,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 27,
+        "source_positive_fraction": 0.027,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 47,
+          "promoted_cells": 20,
+          "promoted_inherited_negatives": 20,
+          "validated_target_specific_rule_violation": 27
+        },
+        "validated_rule_violation_count": 27
+      }
+    ],
+    "config": {
+      "canonical_min_agreement": 0.9,
+      "canonical_min_support": 5,
+      "context_global_min_agreement": 0.97,
+      "context_min_agreement": 0.95,
+      "context_min_coverage": 0.15,
+      "context_min_gain_over_marginal": 0.1,
+      "context_min_groups": 2,
+      "context_min_peers": 3,
+      "demoted_score": 0.49,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_missing_fraction": 0.02,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "missing_min_observations": 30,
+      "promoted_score": 0.75,
+      "source_positive_fraction_threshold": 0.4,
+      "type_min_fraction": 0.95
+    },
+    "decision_threshold": 0.5,
+    "decision_threshold_operator": ">",
+    "input_fingerprint": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "intrinsic_context": {
+      "conflicting_cell_count": 0,
+      "contradicting_cell_count": 164,
+      "qualified_relations": [
+        {
+          "coverage": 0.967,
+          "dependent": "HospitalName",
+          "determinants": [
+            "ProviderNumber"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9472595656670113,
+          "global_purity": 0.9751809720785936,
+          "marginal_purity": 0.027921406411582212,
+          "observations": 967,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.967,
+          "dependent": "HospitalOwner",
+          "determinants": [
+            "ProviderNumber"
+          ],
+          "distinct_group_modes": 8,
+          "gain_over_marginal": 0.7114788004136504,
+          "global_purity": 0.9720785935884177,
+          "marginal_purity": 0.26059979317476734,
+          "observations": 967,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.967,
+          "dependent": "EmergencyService",
+          "determinants": [
+            "ProviderNumber"
+          ],
+          "distinct_group_modes": 2,
+          "gain_over_marginal": 0.14064115822130296,
+          "global_purity": 0.9720785935884177,
+          "marginal_purity": 0.8314374353671148,
+          "observations": 967,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.971,
+          "dependent": "ProviderNumber",
+          "determinants": [
+            "HospitalName"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9433573635427394,
+          "global_purity": 0.9711637487126673,
+          "marginal_purity": 0.027806385169927908,
+          "observations": 971,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.971,
+          "dependent": "Address",
+          "determinants": [
+            "HospitalName"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9423274974253346,
+          "global_purity": 0.9701338825952626,
+          "marginal_purity": 0.027806385169927908,
+          "observations": 971,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.971,
+          "dependent": "ZipCode",
+          "determinants": [
+            "HospitalName"
+          ],
+          "distinct_group_modes": 41,
+          "gain_over_marginal": 0.9207003089598351,
+          "global_purity": 0.9701338825952626,
+          "marginal_purity": 0.04943357363542739,
+          "observations": 971,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.971,
+          "dependent": "HospitalOwner",
+          "determinants": [
+            "HospitalName"
+          ],
+          "distinct_group_modes": 8,
+          "gain_over_marginal": 0.7116374871266735,
+          "global_purity": 0.972193614830072,
+          "marginal_purity": 0.26055612770339853,
+          "observations": 971,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.971,
+          "dependent": "EmergencyService",
+          "determinants": [
+            "HospitalName"
+          ],
+          "distinct_group_modes": 2,
+          "gain_over_marginal": 0.13903192584963953,
+          "global_purity": 0.9732234809474768,
+          "marginal_purity": 0.8341915550978373,
+          "observations": 971,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.965,
+          "dependent": "ProviderNumber",
+          "determinants": [
+            "Address"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9430051813471503,
+          "global_purity": 0.9709844559585492,
+          "marginal_purity": 0.027979274611398965,
+          "observations": 965,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.965,
+          "dependent": "HospitalName",
+          "determinants": [
+            "Address"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9481865284974094,
+          "global_purity": 0.9761658031088083,
+          "marginal_purity": 0.027979274611398965,
+          "observations": 965,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.965,
+          "dependent": "HospitalOwner",
+          "determinants": [
+            "Address"
+          ],
+          "distinct_group_modes": 8,
+          "gain_over_marginal": 0.7160621761658031,
+          "global_purity": 0.9720207253886011,
+          "marginal_purity": 0.2559585492227979,
+          "observations": 965,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.965,
+          "dependent": "EmergencyService",
+          "determinants": [
+            "Address"
+          ],
+          "distinct_group_modes": 2,
+          "gain_over_marginal": 0.13782383419689115,
+          "global_purity": 0.9730569948186528,
+          "marginal_purity": 0.8352331606217617,
+          "observations": 965,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.962,
+          "dependent": "EmergencyService",
+          "determinants": [
+            "City"
+          ],
+          "distinct_group_modes": 2,
+          "gain_over_marginal": 0.1424116424116424,
+          "global_purity": 0.9719334719334719,
+          "marginal_purity": 0.8295218295218295,
+          "observations": 962,
+          "repeated_groups": 36
+        },
+        {
+          "coverage": 0.965,
+          "dependent": "EmergencyService",
+          "determinants": [
+            "ZipCode"
+          ],
+          "distinct_group_modes": 2,
+          "gain_over_marginal": 0.14196891191709848,
+          "global_purity": 0.9740932642487047,
+          "marginal_purity": 0.8321243523316062,
+          "observations": 965,
+          "repeated_groups": 41
+        },
+        {
+          "coverage": 0.957,
+          "dependent": "EmergencyService",
+          "determinants": [
+            "CountyName"
+          ],
+          "distinct_group_modes": 2,
+          "gain_over_marginal": 0.1421107628004179,
+          "global_purity": 0.9717868338557993,
+          "marginal_purity": 0.8296760710553814,
+          "observations": 957,
+          "repeated_groups": 31
+        },
+        {
+          "coverage": 0.961,
+          "dependent": "ProviderNumber",
+          "determinants": [
+            "PhoneNumber"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9427679500520292,
+          "global_purity": 0.9708636836628513,
+          "marginal_purity": 0.02809573361082206,
+          "observations": 961,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.961,
+          "dependent": "HospitalName",
+          "determinants": [
+            "PhoneNumber"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9479708636836628,
+          "global_purity": 0.9760665972944849,
+          "marginal_purity": 0.02809573361082206,
+          "observations": 961,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.961,
+          "dependent": "Address",
+          "determinants": [
+            "PhoneNumber"
+          ],
+          "distinct_group_modes": 42,
+          "gain_over_marginal": 0.9417273673257025,
+          "global_purity": 0.9708636836628513,
+          "marginal_purity": 0.029136316337148804,
+          "observations": 961,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.961,
+          "dependent": "HospitalOwner",
+          "determinants": [
+            "PhoneNumber"
+          ],
+          "distinct_group_modes": 8,
+          "gain_over_marginal": 0.7159209157127991,
+          "global_purity": 0.9739854318418314,
+          "marginal_purity": 0.25806451612903225,
+          "observations": 961,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.961,
+          "dependent": "EmergencyService",
+          "determinants": [
+            "PhoneNumber"
+          ],
+          "distinct_group_modes": 2,
+          "gain_over_marginal": 0.14151925078043703,
+          "global_purity": 0.9729448491155047,
+          "marginal_purity": 0.8314255983350677,
+          "observations": 961,
+          "repeated_groups": 42
+        },
+        {
+          "coverage": 0.956,
+          "dependent": "MeasureCode",
+          "determinants": [
+            "MeasureName"
+          ],
+          "distinct_group_modes": 25,
+          "gain_over_marginal": 0.9288702928870293,
+          "global_purity": 0.9707112970711297,
+          "marginal_purity": 0.04184100418410042,
+          "observations": 956,
+          "repeated_groups": 25
+        },
+        {
+          "coverage": 0.944,
+          "dependent": "MeasureCode",
+          "determinants": [
+            "Stateavg"
+          ],
+          "distinct_group_modes": 25,
+          "gain_over_marginal": 0.9290254237288136,
+          "global_purity": 0.9713983050847458,
+          "marginal_purity": 0.0423728813559322,
+          "observations": 944,
+          "repeated_groups": 25
+        }
+      ]
+    },
+    "observation_source": "immutable_original_dirty_strings",
+    "protocol": "unified_loop_v4_dirty_intrinsic_promotions_v1",
+    "score_semantics": "policy_scores_not_calibrated_probabilities",
+    "shape": [
+      1000,
+      17
+    ],
+    "starting_scores": "completed_empty_carry",
+    "v4_structural_promotion": {
+      "candidate_count": 0,
+      "column_semantics": [
+        "abbreviation",
+        "author",
+        "authors",
+        "created",
+        "date",
+        "issn",
+        "issue",
+        "journal",
+        "language",
+        "page",
+        "pagination",
+        "volume",
+        "volumn"
+      ],
+      "policy": "semantic_metadata_missing_and_closed_grammar_v1",
+      "promoted_count": 0,
+      "retained_count": 0
+    }
+  },
+  "detection_mask_sha256": "c1b4dbefe9d3a7fbd2790db0a8db3b53622cc3ad1055b7b3a5acdb47d35de02e",
+  "elapsed_local_seconds": 17.58071682300215,
+  "fresh_rule_input": {
+    "dependency_count": 12,
+    "model": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh"
+    },
+    "provenance": {
+      "clean_reference_access": false,
+      "dirty_only": true,
+      "evaluation_feedback_access": false,
+      "external_metadata_access": false,
+      "input_packet_sha256": "7ff59cf497e637aab0b4af22fd4e671807c07facea2253e001a28e194dc2e4ad",
+      "request_hash": "6ced46b3ea29953951328036047ec32a0f3bccb47b7a7853bd2f0e1ad5cf2f7d",
+      "response_sha256": "bb7a511eda1028c552777786e16114c4f1a9d68b31c9021e0d63247fa555a2e8",
+      "study_version": "unified_loop_v4",
+      "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+    },
+    "rule_count": 22,
+    "rule_union": {
+      "input_dependency_counts": {
+        "cached": 25,
+        "fresh": 12
+      },
+      "input_rule_counts": {
+        "cached": 37,
+        "fresh": 22
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 37,
+      "union_rule_count": 59
+    },
+    "schema_version": "unified-loop-v4-dirty-rules-v1"
+  },
+  "probabilities_sha256": "79dc80af07ca9ca350ebc1e3fa737e26292f1acde83051318b0932e307bfeaf3",
+  "repair": {
+    "catalog_roles": null,
+    "catalog_safeguard": false,
+    "config": {
+      "candidate_cap": 3,
+      "catalog_min_exact_peers": 2,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "numeric_min_canonical_agreement": 0.95,
+      "numeric_min_exact_peers": 3,
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "counts": {
+      "abstained_cells": 74,
+      "budget_pruned_strings": 0,
+      "candidate_cells_outside_detection": 0,
+      "detection_positive_cells": 561,
+      "guarded_candidate_selection": 487,
+      "null_abstention_records": 0,
+      "selected_cells": 487
+    },
+    "detection_mask_modified": false,
+    "method": "unified_loop_v4",
+    "requires_combined_row_guard": true
+  },
+  "row_guard": {
+    "checked_rows": 391,
+    "rolled_back_rows": 0
+  },
+  "rules": {
+    "accepted_rule_count": 59,
+    "applicability": [
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_providernumber_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 28
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_hospitalname_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 24
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_address_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 31
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_city_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 33
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_state_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 26
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_zipcode_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 30
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_countyname_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 39
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_phonenumber_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 34
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_hospitaltype_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_hospitalowner_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 27
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_emergencyservice_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 27
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_condition_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_measurecode_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 29
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_measurename_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 36
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_score_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 23
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_sample_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          15
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 31
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_stateavg_domain",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 26
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_hospitalname",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 24
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_address",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 30
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_city",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 33
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_state",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 25
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_zipcode",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 30
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_countyname",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 39
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_phonenumber",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 34
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_hospitalowner",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 27
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_provider_to_emergencyservice",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 27
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_hospitalname_to_provider",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 28
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_address_to_provider",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 28
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_phonenumber_to_provider",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 28
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_code_to_measurename",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 36
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_code_to_condition",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_name_to_code",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 29
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_state_code_to_stateavg",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 24
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_stateavg_to_state",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 24
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_stateavg_to_measurecode",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 28
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_stateavg_to_measurename",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 36
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:h_p2_stateavg_to_condition",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 31
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r01",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 28
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r02",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 30
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r03",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 34
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r04",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 23
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r05",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          15
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 31
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r06",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 26
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r07",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r08",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 27
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r09",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 27
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r10",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 32
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r11",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 28
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r12",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 27
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r13",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 19
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r14",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 25
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r15",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 33
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r16",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 15
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r17",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 35
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r18",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 24
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r19",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r20",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r21",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:hospital_r22",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 1000,
+        "violation_rows": 0
+      }
+    ],
+    "input_union": {
+      "input_dependency_counts": {
+        "cached": 25,
+        "fresh": 12
+      },
+      "input_rule_counts": {
+        "cached": 37,
+        "fresh": 22
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 37,
+      "union_rule_count": 59
+    },
+    "raw_row_count": 1000,
+    "validation": [
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_providernumber_domain",
+        "source_sha256": "63c5858cfeb58781603896c93141fb77fd14f02f08ed333262011dcb8212ea4a",
+        "target": "ProviderNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_hospitalname_domain",
+        "source_sha256": "c31182d0c75b10208e0f0425c1081bbfb44abbab7a364a92e2b08b8c491bcb89",
+        "target": "HospitalName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_address_domain",
+        "source_sha256": "5b41b58d32d44ba134f569bd2d1aea05ff7821a482c25037bdce8c2d5514f274",
+        "target": "Address"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_city_domain",
+        "source_sha256": "f8aff517104244f01cf3a00aff42fb3d3d4027a6e7015c0d8ab1d070777259bf",
+        "target": "City"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_state_domain",
+        "source_sha256": "d1c2c9bd112b6a7ea89a48bacd2acd1b286199d187a5a2bf4be8d73cd5d8de15",
+        "target": "State"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_zipcode_domain",
+        "source_sha256": "a0a9de3c444bc06af261ce4f0a4b7090e150b84695428cdd4719e4ce9d73d766",
+        "target": "ZipCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_countyname_domain",
+        "source_sha256": "24b9d5b087ea55b8e16d80734232a472f49e272ec070a8ad7b43747b9f92dba0",
+        "target": "CountyName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_phonenumber_domain",
+        "source_sha256": "a5915a3e3f6ac77f02c9beb5e4a8f65a6d3e3e481401bbfbf2f63a867d12121d",
+        "target": "PhoneNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_hospitaltype_domain",
+        "source_sha256": "964d1308d2f1ac4a2b6d1da817d37e972580d9ce7fb416fecd4253bf8c8c502e",
+        "target": "HospitalType"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_hospitalowner_domain",
+        "source_sha256": "c9b41d3edda06ecc339ad5a925f4d2359797a8a286789dd35ba6b58cef79eda2",
+        "target": "HospitalOwner"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_emergencyservice_domain",
+        "source_sha256": "15610ac24faaa8d1f118fce4ed4431ef94e449d25da1f961da774a8c5c03c932",
+        "target": "EmergencyService"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_condition_domain",
+        "source_sha256": "d8270befede6d51c4d3994d52255ac5a2a7e711a549de0475be482c3f216cac5",
+        "target": "Condition"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_measurecode_domain",
+        "source_sha256": "db0d4fa5d02a551d2786be3ce68e468fdad01013cbb029e333bcfedcd7d0af89",
+        "target": "MeasureCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_measurename_domain",
+        "source_sha256": "9b982400b30dcc07351cb7627cca8813bd0efd5249442c953bede43b0a2b8e1b",
+        "target": "MeasureName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_score_domain",
+        "source_sha256": "5d0eca2eb2e94a4d697805f1c4550c8dcba852beeb7a4339df81390ea3c07b1b",
+        "target": "Score"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_sample_domain",
+        "source_sha256": "d01c11b9382bbe6c9d529afc9317861c6ec26befbd10635f6d0977265402393b",
+        "target": "Sample"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_stateavg_domain",
+        "source_sha256": "0b515d93b4fa5398f361c51654d436518bc831931a895af15cf1c7f78c3c718b",
+        "target": "Stateavg"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_hospitalname",
+        "source_sha256": "5a93be39c0b7860fb30d53884627d0525ebe675de3e6c2d9a4b515d2760a8060",
+        "target": "HospitalName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_address",
+        "source_sha256": "85f6c0074f64c0c94200793da510a40bf19741c45b3d22f22de96f5c54ff039f",
+        "target": "Address"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_city",
+        "source_sha256": "28483edf1eea648cf34b1a448cee6b45bafee6be3c3948463e2d607d708ba704",
+        "target": "City"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_state",
+        "source_sha256": "e6247725bb08cb75e4cefb0c7f039303ebad9f6716c834079f446e632c35b4d9",
+        "target": "State"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_zipcode",
+        "source_sha256": "54fef234f134b615fff1bf9491e148f390b582685e4e702889d53115cd86ef08",
+        "target": "ZipCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_countyname",
+        "source_sha256": "a92ccd0465978d34e7d5bda2f1c772282ff7af08cb827c2a63333da8eb1f0e2d",
+        "target": "CountyName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_phonenumber",
+        "source_sha256": "f0247b88fd5f2a4e89d7c2adb27be1b37c58735e395dc50c38a14bf17950a7b8",
+        "target": "PhoneNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_hospitalowner",
+        "source_sha256": "c9335f5317e0f3cbd7401ec0bfb139301f7f72ef3bf1695a586a17b5ab2706c7",
+        "target": "HospitalOwner"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_provider_to_emergencyservice",
+        "source_sha256": "44024b96afe940ab76f1c4edb9fefa5e5c19f89435e4ff426ca72b959ef976a8",
+        "target": "EmergencyService"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_hospitalname_to_provider",
+        "source_sha256": "8a4e0e367172e43168c9713f760541d492e14125cd93965a8adbf3ee2ced7b5c",
+        "target": "ProviderNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_address_to_provider",
+        "source_sha256": "367900d0713e65816036c6877f30fb71540d98f99c36b61ff0d8752eb99f18a3",
+        "target": "ProviderNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_phonenumber_to_provider",
+        "source_sha256": "1e46b240072f14c341eda9cec2709f6aeddecb49b793c79b26cbd525ebf6a8ac",
+        "target": "ProviderNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_code_to_measurename",
+        "source_sha256": "46984126de032dcdcb92f8356c5afe76c5304de15461b9518678616689561f22",
+        "target": "MeasureName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_code_to_condition",
+        "source_sha256": "2afb17afbaf722c7aa1b60ceb68e12a748b5dbb790f6ea59112f561515396e84",
+        "target": "Condition"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_name_to_code",
+        "source_sha256": "1d91e6a1e7f2fa3aa274c7243c0b8d3f62383e04e2afe7b020f9995bef423349",
+        "target": "MeasureCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_state_code_to_stateavg",
+        "source_sha256": "3f3028cb58db84b778fda277bc187c9caefc9fe306c326bebc4c959867c2213c",
+        "target": "Stateavg"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_stateavg_to_state",
+        "source_sha256": "a634087ece6d171083eb50fbb2a1ebd063747a6f6f1cfc215945e6f7d08ee327",
+        "target": "State"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_stateavg_to_measurecode",
+        "source_sha256": "81c2df884749e453348d690d9804ce77490c8ad55955d7929f9c07ea00e25f85",
+        "target": "MeasureCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_stateavg_to_measurename",
+        "source_sha256": "c47a221375f21ec76fddf7f3fddb5498e3354380ae2c7ba95f721e9b89d8ee3a",
+        "target": "MeasureName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "cached:h_p2_stateavg_to_condition",
+        "source_sha256": "11855b016c4d3fe49402ab29de1c3208eb25700545a2a3f255721c697dc87c93",
+        "target": "Condition"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r01",
+        "source_sha256": "deb325b4ef52ff4b7350dab8a547b9367b7ac06ed952edd569ff3cdad16aeca5",
+        "target": "ProviderNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r02",
+        "source_sha256": "a7f8f4cb30efa65e37204b20b9a34bfed2737f3ff9b9e2cde612ac4b583acada",
+        "target": "ZipCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r03",
+        "source_sha256": "0fb16ef193507fd5aeabe8e037559e1e28b7e444073342e590084a4b5f7f31f1",
+        "target": "PhoneNumber"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r04",
+        "source_sha256": "3267217fedf1e0d774cf96dd8098d267e5c322ad176cebaa69140bf9f765106c",
+        "target": "Score"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r05",
+        "source_sha256": "d8d477534a5334cc76011d227389e1eb3c88185451d456da6072b37690bb6e05",
+        "target": "Sample"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r06",
+        "source_sha256": "773b00b481df8db460414e012373a354c778e06fd2b4c8f99cfbe789a447c3c2",
+        "target": "State"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r07",
+        "source_sha256": "42e17a4107928df91a8c1282cac483367255c5209ad68f370d6dd57032218c3a",
+        "target": "HospitalType"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r08",
+        "source_sha256": "574ec44678982dafe6140686e068f6e200954b8a12a5a370077459f31ff77aba",
+        "target": "HospitalOwner"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r09",
+        "source_sha256": "75752d0001d42d81ce519c02e33fd37bd164f5076b99ae9deba9ed0a421e72dc",
+        "target": "EmergencyService"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r10",
+        "source_sha256": "e3b7f924134634ed027b7a1015b1a18a939c1cd283544b93dffb1367d8e83b9d",
+        "target": "Condition"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r11",
+        "source_sha256": "5f9a1b93cd7b8ca56338d778f4ef10064b6c5b2dc4f33361051810e12292cede",
+        "target": "MeasureCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r12",
+        "source_sha256": "24f3ce642eda8213f579e3860ce3400409415b6a525291346a82e930b2846d12",
+        "target": "Stateavg"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r13",
+        "source_sha256": "6bc4e998b4c2b469f0fd95edf38fbc1747ee029ea5451bfbca4fb7b9499135db",
+        "target": "HospitalName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r14",
+        "source_sha256": "bde26dac7557976832965cbe376f50c23677a73c5e63a0286c0a794fe3a8cf7c",
+        "target": "City"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r15",
+        "source_sha256": "652f3fa30bc61151823d90affd4aeb76dd0f9d7eefeaa73cea91062471c1e01e",
+        "target": "CountyName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r16",
+        "source_sha256": "c90c876f4b7c70c145ce08e157ae758252d4cfc2326197d234b1b75102a3b283",
+        "target": "Address"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r17",
+        "source_sha256": "c85b207138681cca80004d98064dee6f720e6df9a2a650bbee9c5db85fae9c62",
+        "target": "MeasureName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r18",
+        "source_sha256": "a49b74ca77c493330d811bb02e524ed54c66789d0b3a7e7ed46a518b89e82067",
+        "target": "Stateavg"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r19",
+        "source_sha256": "cdaec7171f78d81b27464c569022c00db14ef56d535eb731caad81b8fdaa69c4",
+        "target": "Condition"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r20",
+        "source_sha256": "945d5772e6d80f294eb2e70397edc85cf41bdeff89688abb6c0a8a3d481eadcd",
+        "target": "MeasureName"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r21",
+        "source_sha256": "d9157368ca86e323295e29c0da7063c8f5aa5b8cbbd0291f2539596b333b4eda",
+        "target": "MeasureCode"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 1
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 1000,
+        "id": "fresh:hospital_r22",
+        "source_sha256": "58d1786f3d291f3ba222acb02d134063701461d1d574f4b82c1606105a45d50a",
+        "target": "Score"
+      }
+    ]
+  }
+}

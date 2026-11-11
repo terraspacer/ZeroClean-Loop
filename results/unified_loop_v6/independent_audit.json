@@ -1,0 +1,1063 @@
+{
+  "comparison": {
+    "integer_fields_checked": 219,
+    "macro_and_target_arithmetic": "exact rational",
+    "ratio_absolute_tolerance": 1e-12,
+    "ratio_fields_checked": 128
+  },
+  "evaluated_output_count": 18,
+  "expected_output_count": 18,
+  "hash_verification": {
+    "file_or_absence_count": 146,
+    "post_recount_stability_checked": true,
+    "receipt": {
+      "artifacts/llm/beers/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "99f2b59753effeca0807f51a18bddbc9c8a218d83c8e4cf39cd8cca7102f58d6"
+      },
+      "artifacts/llm/beers/proposals_cts_v2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "cf629d8dae13c03da8478354efa2f3ff448f3b916fe926f572da3b13878c3b49"
+      },
+      "artifacts/llm/billionaire/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "062bd4795ee04a7a27410386a2ca33723fa737ab97613c7213d5a16e0e7d213f"
+      },
+      "artifacts/llm/billionaire/proposals_cts_v2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "b27098dff4b1ddbb4c38046d5b6b81f0751996b86e2e24de40ea8e5fcf7a6501"
+      },
+      "artifacts/llm/flights/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "e031188e337da807cb7054d5a54866b5c69f0645d4becdd0392b0f85433d18ea"
+      },
+      "artifacts/llm/flights/proposals_cts_v2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "6dd565f1642486da466e23dded8dcf21342146197e59a01ead63753854a0278f"
+      },
+      "artifacts/llm/hospital/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "ccdd3999aaf941a82078551b9b1d55127b2e5d9f78b8ce1ff9a47001f318b845"
+      },
+      "artifacts/llm/hospital/proposals_cts_v2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "4345b1053f11e44ef9fac94f080cd9855b86b8bae9cf6c5f9bf3902b22095a4e"
+      },
+      "artifacts/llm/movies/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "50b85add2de046e48fdd6262ec7f569ed32494592faaad319ddc95db21a4c8c2"
+      },
+      "artifacts/llm/movies/proposals_cts_v2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "63f31bacbef1b8ef3f0f3132f5a1425267510e1cfd483bbeaf7519c9009dcaa6"
+      },
+      "artifacts/llm/rayyan/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "11b7aa43a2e45805be43044b3ad0d6181d28ebe8f8be7c5f71099e459aef8e51"
+      },
+      "artifacts/llm/rayyan/proposals_cts_v2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "506aaa584b268a3a663d231d920f413c053abdc7c8905fab3a3b82b76598a185"
+      },
+      "artifacts/llm/unified_loop_v6/beers/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "c029316e9ea51ac7bd1d31360c43129b4faca112d892a84a3480f1d5c70837f8"
+      },
+      "artifacts/llm/unified_loop_v6/billionaire/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "dd50030d45083cbfe06d89f3983321507c2563cabcd51f6f42486c4c48a53c27"
+      },
+      "artifacts/llm/unified_loop_v6/flights/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "04da224e5b25696bb3d87205061c5c82c937483486a213b96fb7e3ad227123aa"
+      },
+      "artifacts/llm/unified_loop_v6/hospital/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "60d2984e9109032b6cd258dd543e456f335f3da4db9b0fa482f9b53c00e07918"
+      },
+      "artifacts/llm/unified_loop_v6/movies/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "94d4385db66f0c86d158d4564d5c90a6020b0e3e87aae4a78e8784b2c9365d5e"
+      },
+      "artifacts/llm/unified_loop_v6/rayyan/pass2.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "5913b31cb1b9ef53688ade8d3c84bff0a5dc9df40eee1cb3a9f51c7ad22b7aad"
+      },
+      "artifacts/unified_loop_v6_execution/evaluation_plan.md": {
+        "bindings": [
+          "observed",
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "17d5866ddb556b81bbd24ec95690984733b9134bbd27adb5d568c9dd5833eb14"
+      },
+      "artifacts/unified_loop_v6_model/packets/beers.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "3c138f92797f2db8767efeb011c7c9391f3f258072b105b96d0eb49d86af9cb8"
+      },
+      "artifacts/unified_loop_v6_model/packets/billionaire.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "b42a6800b6d55daeabb9ee0e0953749112b49253cbaf9f82d33b30523bfdf8f5"
+      },
+      "artifacts/unified_loop_v6_model/packets/flights.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "edcdfd1bdf15bb95dac1f8fbb5dca6338eb020a4df081bb72e654836360f71e8"
+      },
+      "artifacts/unified_loop_v6_model/packets/hospital.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "5522cbdfa4e31ec1768de6291421c2ef2b59d5df766276fa79e363fff3cfa160"
+      },
+      "artifacts/unified_loop_v6_model/packets/movies.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "0e9bd60b17c7a6b479ea8ba2e1c4ef38d6246af111f3549aa70db7c0a617dd4f"
+      },
+      "artifacts/unified_loop_v6_model/packets/rayyan.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "d3c12fe48e6d5188b591902bc409affbac64c8477eb2e42d4fb13b992964892a"
+      },
+      "artifacts/unified_loop_v6_model/responses/beers.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "f6fad042149217d136d0f155611a15c5b5247ff1acdcd39cc04ccedeb17439cc"
+      },
+      "artifacts/unified_loop_v6_model/responses/billionaire.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "4d5ff472006ff3205a2f983e41d5d87e1ea46b682f8894f096cfa33690988dc5"
+      },
+      "artifacts/unified_loop_v6_model/responses/flights.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "6f0828bd245ab2948c118fa57a5f5404185a8a50c11494ed5506cf43088e6a0d"
+      },
+      "artifacts/unified_loop_v6_model/responses/hospital.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "c2fee0660432769d87b3e8a032f516f7a6c224f364c77db2723979dcebc4a43f"
+      },
+      "artifacts/unified_loop_v6_model/responses/movies.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "113318fdacf6f275384273adee31793cf8dd247fcd615b33c82b1806adb1be8f"
+      },
+      "artifacts/unified_loop_v6_model/responses/rayyan.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "ea621fa440bbe02d0332fd8c810bd24636427b462e65d08bc804669d33c29de7"
+      },
+      "evaluate_e2e.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "c82b590001311237b584dd54fc3f9e1935298ba67b6bdfef392dd7b6230d911d"
+      },
+      "experimental/__init__.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "ABSENT:package-initializer"
+      },
+      "experimental/unified_loop_v6/__init__.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "ABSENT:package-initializer"
+      },
+      "experimental/unified_loop_v6/consensus.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "476aa6b782d9e50fb3f05c242d8204bd1f7a7ecdfaf57788b868e1ed2e4836b4"
+      },
+      "experimental/unified_loop_v6/detection.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "b45eb3372043dc8c138280ed32a8871dc08e4d2972073d8b9fda4244e5b51129"
+      },
+      "experimental/unified_loop_v6/execute_cohort.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "c0bf1a73916069e04369cdc62801c73abef09376492fd778bbef96e855b1f48c"
+      },
+      "experimental/unified_loop_v6/independent_code_review.md": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "ca6d2cc991312329350d1dc68f69bfda82f3adb86d6bee153d5455ed1a560755"
+      },
+      "experimental/unified_loop_v6/plan.json": {
+        "bindings": [
+          "protocol_lock.plan_sha256"
+        ],
+        "sha256": "ea0ec3fb57c75a2ad1cc17df5fa6cc7d5ed4574cce71cfe4c9291316e378410b"
+      },
+      "experimental/unified_loop_v6/protocol.md": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "f1d61b1e0cae82b9de6a6072b6ad6dafadf3908fce6f47c072a14ba49b8e2cc2"
+      },
+      "experimental/unified_loop_v6/protocol_lock.json": {
+        "bindings": [
+          "observed"
+        ],
+        "sha256": "ea4fe11ea08e267e483da7c6154833dbfe0e304eaab31d8f1ae063a002944273"
+      },
+      "experimental/unified_loop_v6/repair.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "27904a5b3beb4a4e903a93cfc2e595ee7b68fd8d9a4871e633842669fd133d0b"
+      },
+      "experimental/unified_loop_v6/run_study.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "48f6a35ff0d3ade647c296216c055d1f329a2b9d0b140e2e6cf00261bc9405a1"
+      },
+      "experimental/unified_loop_v6/runner_design.md": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "335da51b91722afc741d395ece0e862d921dee9ab8bc71c3a4b11205e870bdad"
+      },
+      "experimental/unified_loop_v6/source_freeze_plan.md": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "d357762e2ecde259745ba39de63b1aafada8571bc8843cb7c3edaceda92c9369"
+      },
+      "experimental/unified_loop_v6/test_consensus.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "fd8b95b273558f0b1787016ea54d3ebb7af96ce2038991847d0fcae75116af72"
+      },
+      "experimental/unified_loop_v6/test_controller.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "d3d70f6c9d4c0c8baa5d032b5158aa7fc975f03dc58123239ce4342e420dd181"
+      },
+      "experimental/unified_loop_v6/test_detection.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "d647ee8c766f9da46a73d7b1d57de92607550b509733cb4caef68a0086839a7f"
+      },
+      "experimental/unified_loop_v6/test_independent_code_review.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "b59a03e47d68e1a60ceff2ad1a2f0d667cc498d6c01ea570345e3ce9744cd8aa"
+      },
+      "experimental/unified_loop_v6/test_integration.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "67e42d2b6baaa7137894d7361f38841f96aa2a96efd3a6a6d1159f0f868e432e"
+      },
+      "experimental/unified_loop_v6/test_repair.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "f8f887e448f99fdf60e248f7997ee01c3ae644adce6286b1e5f4b49384e6d3a6"
+      },
+      "experimental/unified_loop_v6/test_v3_policy.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "cd16543b70c27d4ee8b4ae0bebf970f3de6261ee6f5f50c6fdced39ea631cd60"
+      },
+      "experimental/unified_loop_v6/test_v5_generic.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "3bcfbd4a0efe8ca54f2a77468c62955f627d89239f4dc92afd1f8cbd31c899d2"
+      },
+      "experimental/unified_loop_v6/test_v6_generic.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "3bcfbd4a0efe8ca54f2a77468c62955f627d89239f4dc92afd1f8cbd31c899d2"
+      },
+      "experimental/unified_loop_v6/test_v6_structural.py": {
+        "bindings": [
+          "protocol_lock.source_files"
+        ],
+        "sha256": "4e05227b9dcf4ea6e19add7764608bf3c1516e647865373ca7ee3b505275e285"
+      },
+      "results/conservative_seed_v1/predictions/beers/empty_carry.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "f7ace3f5dd524ddf0f41b0ebf8a619e85cec4382ff8008af95e8fbf6769d8772"
+      },
+      "results/conservative_seed_v1/predictions/billionaire/empty_carry.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "2eb7b54db4f2469204e67e441a2fa2072e220f38e8c5c4dd1bc8c9273819af48"
+      },
+      "results/conservative_seed_v1/predictions/flights/empty_carry.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "e6e1cfedb94099d157d312f6fe0be4eef65edcb52cc89c4fff4a3f4be5e78a44"
+      },
+      "results/conservative_seed_v1/predictions/hospital/empty_carry.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "743bc800df8ee65550903475c93c56bcfaf1b61219e625384732e2e67859ed5e"
+      },
+      "results/conservative_seed_v1/predictions/movies/empty_carry.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "cb44b48de9ebf4d5dd2d49854f829b6bbf2e049aacae4f4143adf8db03f7afca"
+      },
+      "results/conservative_seed_v1/predictions/rayyan/empty_carry.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "77e07bb1f6b2dab3403a8ddc09fd3372b99abde687f8fef75b6a826a81b975fb"
+      },
+      "results/source_baselines_v1/baseline_preflight.json": {
+        "bindings": [
+          "evaluation_receipt.baseline_status"
+        ],
+        "sha256": "f78ccf5406a4b331027a7981c8e71b7168566567bb78747d7b8e4e885867680b"
+      },
+      "results/source_baselines_v1/predictions/beers/zeroed.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "2543c9829b1d696a923144cdeda7ecd0d682850db87bcc9bb4b6d1f960ef077f"
+      },
+      "results/source_baselines_v1/predictions/beers/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "b04a5753bf930485c975627185cd7dcbfbbd0f72faef4c264423fc3a2a630fae"
+      },
+      "results/source_baselines_v1/predictions/billionaire/zeroed.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "70d7de54159dfac99535cc8a12877756ddf545dce39ba765079571ff650dbe80"
+      },
+      "results/source_baselines_v1/predictions/billionaire/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "d513d72e5b3dfc169b7908ec128b00e81331d9d10e25ff257ff11db6275fd43a"
+      },
+      "results/source_baselines_v1/predictions/flights/zeroed.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "5cd71ff6175122a2fa009873f3417bf8121bee2b300ef9153e61153bdd554fff"
+      },
+      "results/source_baselines_v1/predictions/flights/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "12bb7d7e900c1982e563e91f6f0cb80847398fc43e5cb51d77cf665c951697a8"
+      },
+      "results/source_baselines_v1/predictions/hospital/zeroed.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "c54ef260a5a0d0bc0465111e0b3307fefd54f0d73266c9138aa093941799034a"
+      },
+      "results/source_baselines_v1/predictions/hospital/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "a0112bdd158c25dc24617a5b2338bd8b28b7774e521c2c291af11685d3222bc1"
+      },
+      "results/source_baselines_v1/predictions/movies/zeroed.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "3a08a9010c4ed731f4c55c02144d1815fdedb5f19e83ffbe920499cc7bd25985"
+      },
+      "results/source_baselines_v1/predictions/movies/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "f899e7ca2c09f99414f390c0ceac7edf20ab507683344985b391bb373ab6f9a3"
+      },
+      "results/source_baselines_v1/predictions/rayyan/zeroed.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "6487e845d362e10eac11daa129fde8aa8a105859b36d9f0281a007e71840641d"
+      },
+      "results/source_baselines_v1/predictions/rayyan/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "af2187282db765722d4ba1f31239b89a08a572d4b7a74102f30525305e933bbe"
+      },
+      "results/unified_loop_v6/audit/beers.jsonl": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "87a523563b5ea3d4ba3e6a7dcd5a04ec56f55e2b87b997e0fe64cc8165327e5a"
+      },
+      "results/unified_loop_v6/audit/billionaire.jsonl": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "fd3691445e1db13cb928e5a7e8f3fab2f66e95f127d1977ff8a29b7ac66987a3"
+      },
+      "results/unified_loop_v6/audit/flights.jsonl": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "23af8776981f85d68ff1460101414d76412526d1e0ddee9ee9cc5725ac0ca21b"
+      },
+      "results/unified_loop_v6/audit/hospital.jsonl": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "287ae5dfcb7fb28a97715afd86f821c30e187f9039fd1da397007be730704edd"
+      },
+      "results/unified_loop_v6/audit/movies.jsonl": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "c5fae66d3f0b2bbb70a7fc88a45762b0d752d5dcd4116eb6dfe6ba762a883d0c"
+      },
+      "results/unified_loop_v6/audit/rayyan.jsonl": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "f75d0694ca7cab7d365e4319676d502a33acf6208b94c19c5c603832ade7df45"
+      },
+      "results/unified_loop_v6/completion_manifest.json": {
+        "bindings": [
+          "observed"
+        ],
+        "sha256": "d478e444a73deaa0db06ce2dcae364d7777c0dfd636ca7dd1ce95feded3998ab"
+      },
+      "results/unified_loop_v6/diagnostics/beers.json": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "a72b621b6fd61ec8e9cc70a04b8ae95ca35b0b40ec7f512db75707221753dd3c"
+      },
+      "results/unified_loop_v6/diagnostics/billionaire.json": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "e8c1790ac53da3921494ef1313345c685a4d4b12154002648526c5b312795eb6"
+      },
+      "results/unified_loop_v6/diagnostics/flights.json": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "45801c0b45eeb12468e5514e27c952b7697cd84557e869b67e3195ebff5a6536"
+      },
+      "results/unified_loop_v6/diagnostics/hospital.json": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "90ad524fd3046b70218ee97975b490e5e97c14bddce1f37584b0df5f9a7bad79"
+      },
+      "results/unified_loop_v6/diagnostics/movies.json": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "2f156e493253c5fd94cad3fbbe0e6b57e559d03c306dca4d2b3d187b1c80ef1a"
+      },
+      "results/unified_loop_v6/diagnostics/rayyan.json": {
+        "bindings": [
+          "dataset_freeze.supporting_files"
+        ],
+        "sha256": "9300e1a2294d7b6db131848d634af61d5afe0a59f3315970aacdd746e8fc031b"
+      },
+      "results/unified_loop_v6/evaluation_attempt.json": {
+        "bindings": [
+          "evaluation_receipt.evaluation_attempt_sha256"
+        ],
+        "sha256": "c7e56e2509f24e35d2c592a0e885502712c9bf8a8b39d12a7efc5697a42d3b3e"
+      },
+      "results/unified_loop_v6/evaluation_receipt.json": {
+        "bindings": [
+          "observed"
+        ],
+        "sha256": "f7cbcccd4a1237abb98e6775319d71ba256dbcd6a4d5ba09e5611767e9a563ed"
+      },
+      "results/unified_loop_v6/frozen/beers.json": {
+        "bindings": [
+          "completion_manifest.dataset_freezes"
+        ],
+        "sha256": "5c04c94525f4463c6c317bcefa802eacb3cbd0f7e64a575d24a5af628bd5b8b0"
+      },
+      "results/unified_loop_v6/frozen/billionaire.json": {
+        "bindings": [
+          "completion_manifest.dataset_freezes"
+        ],
+        "sha256": "7a5b0d8989e2d828a75fe70b68e105098574be8efaaaacdc3dad79debc73320f"
+      },
+      "results/unified_loop_v6/frozen/flights.json": {
+        "bindings": [
+          "completion_manifest.dataset_freezes"
+        ],
+        "sha256": "e1e9d303722b774594cafa41304290532caa41b8573d186cbf0278ad72b04c2a"
+      },
+      "results/unified_loop_v6/frozen/hospital.json": {
+        "bindings": [
+          "completion_manifest.dataset_freezes"
+        ],
+        "sha256": "2f77ff5a424f6851b7d7ccf9b1bd9e52085149b91c491c776922cd58bc93329b"
+      },
+      "results/unified_loop_v6/frozen/movies.json": {
+        "bindings": [
+          "completion_manifest.dataset_freezes"
+        ],
+        "sha256": "f5ac6f6b1ccc1562a1532512ab06c4d214f0d2678316671bb58b4dd9815eb825"
+      },
+      "results/unified_loop_v6/frozen/rayyan.json": {
+        "bindings": [
+          "completion_manifest.dataset_freezes"
+        ],
+        "sha256": "306bbd6cd97fa84e439628225fdfcdb21360c096d9a6a1b2d14222177d8c00e7"
+      },
+      "results/unified_loop_v6/predictions/beers/zeroclean_loop.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files"
+        ],
+        "sha256": "fb7ecba8c5d231e566828db41761058a515f46762bdda9b54b129051975196e2"
+      },
+      "results/unified_loop_v6/predictions/beers/zeroed.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "2543c9829b1d696a923144cdeda7ecd0d682850db87bcc9bb4b6d1f960ef077f"
+      },
+      "results/unified_loop_v6/predictions/beers/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "b04a5753bf930485c975627185cd7dcbfbbd0f72faef4c264423fc3a2a630fae"
+      },
+      "results/unified_loop_v6/predictions/billionaire/zeroclean_loop.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files"
+        ],
+        "sha256": "2da7b08ca2e05e38be496ed9d836882be2a45dc58b5565a01ca635df98d37520"
+      },
+      "results/unified_loop_v6/predictions/billionaire/zeroed.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "70d7de54159dfac99535cc8a12877756ddf545dce39ba765079571ff650dbe80"
+      },
+      "results/unified_loop_v6/predictions/billionaire/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "d513d72e5b3dfc169b7908ec128b00e81331d9d10e25ff257ff11db6275fd43a"
+      },
+      "results/unified_loop_v6/predictions/flights/zeroclean_loop.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files"
+        ],
+        "sha256": "ec27eed2cf02966214c7273e0af3f7600986df89905633b76fa5e2ad32aa9a29"
+      },
+      "results/unified_loop_v6/predictions/flights/zeroed.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "5cd71ff6175122a2fa009873f3417bf8121bee2b300ef9153e61153bdd554fff"
+      },
+      "results/unified_loop_v6/predictions/flights/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "12bb7d7e900c1982e563e91f6f0cb80847398fc43e5cb51d77cf665c951697a8"
+      },
+      "results/unified_loop_v6/predictions/hospital/zeroclean_loop.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files"
+        ],
+        "sha256": "fd9239914ec484863dfcbc08027a4182c5cb16c8b8b185e92d044c71899023f1"
+      },
+      "results/unified_loop_v6/predictions/hospital/zeroed.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "c54ef260a5a0d0bc0465111e0b3307fefd54f0d73266c9138aa093941799034a"
+      },
+      "results/unified_loop_v6/predictions/hospital/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "a0112bdd158c25dc24617a5b2338bd8b28b7774e521c2c291af11685d3222bc1"
+      },
+      "results/unified_loop_v6/predictions/movies/zeroclean_loop.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files"
+        ],
+        "sha256": "465e201708779e10998e4f8c875e2b258982e45c4fa32edec7a8e5a4130af405"
+      },
+      "results/unified_loop_v6/predictions/movies/zeroed.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "3a08a9010c4ed731f4c55c02144d1815fdedb5f19e83ffbe920499cc7bd25985"
+      },
+      "results/unified_loop_v6/predictions/movies/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "f899e7ca2c09f99414f390c0ceac7edf20ab507683344985b391bb373ab6f9a3"
+      },
+      "results/unified_loop_v6/predictions/rayyan/zeroclean_loop.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files"
+        ],
+        "sha256": "e5e2e6827971a30907db6de1bcb3f339c586434c4743c46b27ad5f29e98c8242"
+      },
+      "results/unified_loop_v6/predictions/rayyan/zeroed.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "6487e845d362e10eac11daa129fde8aa8a105859b36d9f0281a007e71840641d"
+      },
+      "results/unified_loop_v6/predictions/rayyan/zeroed_zeroec_reconstruction.json": {
+        "bindings": [
+          "dataset_freeze.prediction_files",
+          "byte_preserved_baseline_input"
+        ],
+        "sha256": "af2187282db765722d4ba1f31239b89a08a572d4b7a74102f30525305e933bbe"
+      },
+      "results/unified_loop_v6/summary_metrics.json": {
+        "bindings": [
+          "initial_scorer_summary"
+        ],
+        "sha256": "043ffcb4151005702c2ba7adf567d2687d95df5eeaaa6d1b73553f1f41b33600"
+      },
+      "scripts/audit_unified_loop_v6_results.py": {
+        "bindings": [
+          "independent_auditor_source"
+        ],
+        "sha256": "393781226ef134bf68f574c0243c5e3f041ff450a6f3c3a4b9dc900b88fa3c59"
+      },
+      "scripts/evaluate_unified_loop_v6.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "c2cd9a3d55e1fbc357fd66b784bd9ff480a87d942fc12575f997d82396f83810"
+      },
+      "vendor/ZeroED/data/beers_clean.csv": {
+        "bindings": [
+          "evaluation_receipt.reference_sha256"
+        ],
+        "sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8"
+      },
+      "vendor/ZeroED/data/beers_error-01.csv": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f"
+      },
+      "vendor/ZeroED/data/billionaire_clean.csv": {
+        "bindings": [
+          "evaluation_receipt.reference_sha256"
+        ],
+        "sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf"
+      },
+      "vendor/ZeroED/data/billionaire_error-01.csv": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7"
+      },
+      "vendor/ZeroED/data/flights_clean.csv": {
+        "bindings": [
+          "evaluation_receipt.reference_sha256"
+        ],
+        "sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0"
+      },
+      "vendor/ZeroED/data/flights_error-01.csv": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c"
+      },
+      "vendor/ZeroED/data/hospital_clean.csv": {
+        "bindings": [
+          "evaluation_receipt.reference_sha256"
+        ],
+        "sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321"
+      },
+      "vendor/ZeroED/data/hospital_error-01.csv": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5"
+      },
+      "vendor/ZeroED/data/movies_clean.csv": {
+        "bindings": [
+          "evaluation_receipt.reference_sha256"
+        ],
+        "sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e"
+      },
+      "vendor/ZeroED/data/movies_error-01.csv": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052"
+      },
+      "vendor/ZeroED/data/rayyan_clean.csv": {
+        "bindings": [
+          "evaluation_receipt.reference_sha256"
+        ],
+        "sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4"
+      },
+      "vendor/ZeroED/data/rayyan_error-01.csv": {
+        "bindings": [
+          "protocol_lock.input_files"
+        ],
+        "sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592"
+      },
+      "zeroclean/__init__.py": {
+        "bindings": [
+          "protocol_lock.source_files",
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "d5ff83fa023332da935ed2e87eb185c44210c97c3785571da9a4e7d4e6e1c0d9"
+      },
+      "zeroclean/ablations.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "793618630def460d74e52420d596124997a0cc5bcf6240596bb48d7bba466cd0"
+      },
+      "zeroclean/baselines.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "c69cf09446b0dd26726a8936469b40a34b7680146532f68f2f179fe72f10f3cb"
+      },
+      "zeroclean/closed_loop.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "5da4b321d5aeef0af1c853fefdd4f42099f258d56d669fa9aa3165c979779925"
+      },
+      "zeroclean/data.py": {
+        "bindings": [
+          "protocol_lock.source_files",
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "ef4e60fd6474f0ff2855970b0bdd3622dd57fba7939e70b2b64fb88f1a4c6e00"
+      },
+      "zeroclean/evaluation.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "e6cd1338c1660481bc82a87bcfec7c6ed077acc447d1f9dff78331e7737851a6"
+      },
+      "zeroclean/fasttext_resources.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "96480834721c4791291548cb0ac769fcac1e8531c27faadbe9eeb26cf9dc9597"
+      },
+      "zeroclean/llm.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "74d79d4364119196058825f3c3cc222f5f60efbf24c73a41ce98abc462a93719"
+      },
+      "zeroclean/loop.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "179068d1171fa335313d9a144ad504073fc22c5869d4a76682ba2450c5a6d361"
+      },
+      "zeroclean/optimize.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "ed59c07dbe3406b1b6714a8e0a541e69410d83ff8f6eb7b5c7551cd1ece320ea"
+      },
+      "zeroclean/proposals.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "757cbf1b0e707123474493abe9b807860dd31065884a023a57b386520a21d8fc"
+      },
+      "zeroclean/sandbox.py": {
+        "bindings": [
+          "protocol_lock.source_files",
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "ca12fc9d5b3d467b176e83fa3670c4a6b04ca87f8d2d766c3ddadc382aaa3297"
+      },
+      "zeroclean/statistics.py": {
+        "bindings": [
+          "protocol_lock.source_files",
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "6f92ee5df16e83f7f4e10c33b7091468ef6af16b9d8a6bd245702fafc2e03612"
+      },
+      "zeroclean/types.py": {
+        "bindings": [
+          "protocol_lock.source_files",
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "2de6ea34d40767eace0a95b7723389b791220a607b7ba382b2b8ba09b369c3c1"
+      },
+      "zeroclean/upstream_sandbox.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "e3f272189689d843176700650087453720fc65051d196160e089a90ce08d9eea"
+      },
+      "zeroclean/upstream_zeroec.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "8ea387d1d26365c334efc531794b71d18d5ce90c1c519a89b196e8ede5556918"
+      },
+      "zeroclean/upstream_zeroed.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "c42358a4d18d374c965f4004dc7a7798aff7258263b9e381bfa3f8c1074891bb"
+      },
+      "zeroclean/verification.py": {
+        "bindings": [
+          "evaluation_receipt.evaluator_sources"
+        ],
+        "sha256": "7dea8c74b759a68d704903f97d65e6b06b906ffe03d8823621fbd854e76a3637"
+      }
+    }
+  },
+  "independent_qualified_comparison": {
+    "checks": {
+      "ed_each_dataset": true,
+      "ed_mean_gain": true,
+      "flights": true,
+      "rayyan": false,
+      "repair_mean_gain": true
+    },
+    "ed_gains_exact": {
+      "beers": {
+        "decimal": 0.4110403605612494,
+        "denominator": 54822974,
+        "numerator": 22534455
+      },
+      "billionaire": {
+        "decimal": 0.05748510542322397,
+        "denominator": 23973323,
+        "numerator": 1378109
+      },
+      "flights": {
+        "decimal": 0.2700886827925092,
+        "denominator": 1677101,
+        "numerator": 452966
+      },
+      "hospital": {
+        "decimal": 0.4906631329296055,
+        "denominator": 2458587,
+        "numerator": 1206338
+      },
+      "movies": {
+        "decimal": 0.42758137048443084,
+        "denominator": 312060911,
+        "numerator": 133431432
+      },
+      "rayyan": {
+        "decimal": 0.030393416288868862,
+        "denominator": 24971691,
+        "numerator": 758975
+      }
+    },
+    "ed_macro_gain_exact": {
+      "decimal": 0.2812086780799813,
+      "denominator": 160266344611463467018102974955787286170724,
+      "numerator": 45068286908900375085854119620290072678795
+    },
+    "fixed_example_count": 0,
+    "met": false,
+    "official_exact_baseline": false,
+    "repair_gains_exact": {
+      "beers": {
+        "decimal": 0.031657678601106035,
+        "denominator": 4019404,
+        "numerator": 127245
+      },
+      "billionaire": {
+        "decimal": 0.03471516416252958,
+        "denominator": 34272285,
+        "numerator": 1189768
+      },
+      "flights": {
+        "decimal": 0.6491171204764843,
+        "denominator": 41245435,
+        "numerator": 26773118
+      },
+      "hospital": {
+        "decimal": 0.00729317651706379,
+        "denominator": 1721335,
+        "numerator": 12554
+      },
+      "movies": {
+        "decimal": 0.002896210934802991,
+        "denominator": 7748745,
+        "numerator": 22442
+      },
+      "rayyan": {
+        "decimal": 0.15450293740138382,
+        "denominator": 12136067,
+        "numerator": 1875058
+      }
+    },
+    "repair_macro_gain_exact": {
+      "decimal": 0.14669704801556174,
+      "denominator": 61077188519844281304579874439778120,
+      "numerator": 8959843256951113069607644509847037
+    },
+    "status": "verified",
+    "targets": {
+      "ed_improves_each_dataset": true,
+      "ed_mean_absolute_gain": 0.035,
+      "flights_ed_f1_strictly_above": 0.76,
+      "rayyan_ed_f1_strictly_above": 0.77,
+      "repair_mean_absolute_gain": 0.08
+    }
+  },
+  "information_boundary": {
+    "evaluator_only": true,
+    "inference_recalculated": false,
+    "row_values_or_coordinates_returned": false,
+    "scoring_or_inference_modules_imported": false
+  },
+  "macro_f1_exact": {
+    "zeroclean_loop": {
+      "detection": {
+        "decimal": 0.6759977195274277,
+        "denominator": 754220731708170319428,
+        "numerator": 509851494655031017009
+      },
+      "repair": {
+        "decimal": 0.4216200550523323,
+        "denominator": 221465887191883395567,
+        "numerator": 93374459550055492648
+      }
+    },
+    "zeroed": {
+      "detection": {
+        "decimal": 0.3947890414474464,
+        "denominator": 65022743859132458159298,
+        "numerator": 25670266720429735331279
+      },
+      "repair": {
+        "decimal": 0.0,
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "zeroed_zeroec_reconstruction": {
+      "detection": {
+        "decimal": 0.3947890414474464,
+        "denominator": 65022743859132458159298,
+        "numerator": 25670266720429735331279
+      },
+      "repair": {
+        "decimal": 0.2749230070367706,
+        "denominator": 12204357329428597080,
+        "numerator": 3355258615957760537
+      }
+    }
+  },
+  "mismatches": [],
+  "official_exact_baseline_assessment": {
+    "met": false,
+    "reason": "Faithful exact ZeroEC baseline absent; recovered prompt identity remains unproven.",
+    "status": "unverified_missing_baselines_or_runs"
+  },
+  "resource_policy": {
+    "address_space_limit_bytes": 12884901888,
+    "exclusive_lock": "/home/steve/Documents/Codex/2026-10-27/why-you-chatgpt-desktop-always-quit/work/local-resume/heavy-experiment.lock",
+    "execution_context_verified": true,
+    "numerical_threads": 1
+  },
+  "schema_version": "unified-loop-v6-independent-audit-v1",
+  "status": "passed",
+  "time_utc": "2026-10-31T18:40:00.338512+00:00"
+}

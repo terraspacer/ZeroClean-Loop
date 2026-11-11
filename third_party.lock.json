@@ -1,0 +1,32 @@
+{
+  "release_bundle_v1": {
+    "description": "SHA-256-pinned cell-level JSONL audit logs and frozen upstream/LLM input packets for ZeroClean-Loop v6",
+    "filename": "zeroclean-loop-v6-audit-and-inputs.tar.gz",
+    "sha256": "a45f9a57304fc5ef689d37343462d1df0aab0e13dcc2044cd7ce576de41572e5",
+    "url": "https://github.com/terraspacer/ZeroClean-Loop/releases/download/v1.0.0/zeroclean-loop-v6-audit-and-inputs.tar.gz"
+  },
+  "zeroec": {
+    "checkout_path": "vendor/ZeroEC",
+    "commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+    "repository": "https://github.com/YangChen32768/ZeroEC.git"
+  },
+  "zeroed": {
+    "benchmark_csv_sha256": {
+      "vendor/ZeroED/data/beers_clean.csv": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+      "vendor/ZeroED/data/beers_error-01.csv": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+      "vendor/ZeroED/data/billionaire_clean.csv": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+      "vendor/ZeroED/data/billionaire_error-01.csv": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+      "vendor/ZeroED/data/flights_clean.csv": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+      "vendor/ZeroED/data/flights_error-01.csv": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+      "vendor/ZeroED/data/hospital_clean.csv": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+      "vendor/ZeroED/data/hospital_error-01.csv": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+      "vendor/ZeroED/data/movies_clean.csv": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+      "vendor/ZeroED/data/movies_error-01.csv": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+      "vendor/ZeroED/data/rayyan_clean.csv": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+      "vendor/ZeroED/data/rayyan_error-01.csv": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592"
+    },
+    "checkout_path": "vendor/ZeroED",
+    "commit": "49678b8470180ab17e9c40bcedd2c00ac49de6ff",
+    "repository": "https://github.com/WelkinNi/ZeroED.git"
+  }
+}

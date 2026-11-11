@@ -1,0 +1,3858 @@
+{
+ "audit": {
+  "address_space_limit_gib": 12.0,
+  "hash_bindings": 146,
+  "integer_fields": 219,
+  "mismatches": 0,
+  "outputs": 18,
+  "ratio_fields": 128,
+  "threads": 1
+ },
+ "billionaire_rejections": {
+  "unified_loop_v3": {
+   "abstained_cells": 1855,
+   "admitted_rules": 70,
+   "reasons": {
+    "fd_support_loss": 27,
+    "invalid_format": 17,
+    "new_rule_violation": 96,
+    "no_actionable_repair_evidence": 1,
+    "rule_satisfaction_loss": 3,
+    "weighted_consistency_loss": 32
+   },
+   "row_guard_checked": 1811,
+   "row_guard_rolled_back": 2,
+   "selected_cells": 2955
+  },
+  "unified_loop_v4": {
+   "abstained_cells": 2442,
+   "admitted_rules": 68,
+   "reasons": {
+    "counterfactual_error": 633,
+    "fd_support_loss": 27,
+    "invalid_format": 17,
+    "invalid_rule_criterion": 633,
+    "new_rule_violation": 73,
+    "no_actionable_repair_evidence": 1,
+    "rule_satisfaction_loss": 3,
+    "weighted_consistency_loss": 32
+   },
+   "row_guard_checked": 1442,
+   "row_guard_rolled_back": 1,
+   "selected_cells": 2368
+  },
+  "unified_loop_v6": {
+   "abstained_cells": 1718,
+   "admitted_rules": 70,
+   "reasons": {
+    "invalid_format": 17,
+    "no_actionable_repair_evidence": 1
+   },
+   "row_guard_checked": 1843,
+   "row_guard_rolled_back": 4,
+   "selected_cells": 3092
+  }
+ },
+ "datasets": {
+  "beers": {
+   "cells": 21690,
+   "columns": 9,
+   "error_rate_percent": 12.97833102812356,
+   "errors": 2815,
+   "rows": 2410
+  },
+  "billionaire": {
+   "cells": 57508,
+   "columns": 22,
+   "error_rate_percent": 9.156986854002922,
+   "errors": 5266,
+   "rows": 2614
+  },
+  "flights": {
+   "cells": 14256,
+   "columns": 6,
+   "entities": 100,
+   "error_rate_percent": 34.51178451178451,
+   "errors": 4920,
+   "rows": 2376,
+   "sources": 38
+  },
+  "hospital": {
+   "cells": 17000,
+   "columns": 17,
+   "error_rate_percent": 4.823529411764706,
+   "errors": 820,
+   "rows": 1000
+  },
+  "movies": {
+   "cells": 125630,
+   "columns": 17,
+   "error_rate_percent": 4.9709464299928365,
+   "errors": 6245,
+   "rows": 7390
+  },
+  "rayyan": {
+   "cells": 11000,
+   "columns": 11,
+   "error_rate_percent": 29.19090909090909,
+   "errors": 3211,
+   "rows": 1000
+  },
+  "total": {
+   "cells": 247084,
+   "errors": 23277,
+   "rows": 16790
+  }
+ },
+ "detection_actions": {
+  "beers": {
+   "actions": {
+    "demote_unsupported_positive": 14587,
+    "promote_independent_dirty_evidence": 16,
+    "retain_independent_dirty_evidence": 2540,
+    "retain_inherited_positive": 2283,
+    "retain_v6_generic_structure": 2
+   },
+   "witnesses": {
+    "dirty_leave_one_out_low_support": 249,
+    "embedded_control_or_replacement_character": 4,
+    "inferred_type_contradiction": 1,
+    "intrinsic_dirty_fd": 87,
+    "low_dirty_leave_one_out_format_support": 2,
+    "low_dirty_leave_one_out_value_support": 115,
+    "missing_in_nearly_complete_column": 6,
+    "validated_target_specific_rule_violation": 4626
+   }
+  },
+  "billionaire": {
+   "actions": {
+    "promote_independent_dirty_evidence": 357,
+    "retain_independent_dirty_evidence": 3924,
+    "retain_v6_generic_structure": 611
+   },
+   "witnesses": {
+    "dirty_leave_one_out_low_support": 2043,
+    "dominant_observed_case_space_variant": 13,
+    "inferred_type_contradiction": 505,
+    "missing_in_nearly_complete_column": 498,
+    "validated_target_specific_rule_violation": 3956
+   }
+  },
+  "flights": {
+   "actions": {
+    "demote_unsupported_positive": 4438,
+    "promote_independent_dirty_evidence": 94,
+    "promote_v6_generic_structure": 55,
+    "retain_independent_dirty_evidence": 3327,
+    "retain_inherited_positive": 3327
+   },
+   "witnesses": {
+    "dirty_leave_one_out_low_support": 1932,
+    "independent_source_consensus_contradiction": 2436,
+    "low_dirty_entity_peer_support": 2407,
+    "low_dirty_leave_one_out_format_support": 1553,
+    "low_dirty_leave_one_out_value_support": 1927,
+    "validated_target_specific_rule_violation": 2476
+   }
+  },
+  "hospital": {
+   "actions": {
+    "promote_independent_dirty_evidence": 49,
+    "promote_v6_generic_structure": 105,
+    "retain_independent_dirty_evidence": 509,
+    "retain_inherited_positive": 58,
+    "retain_v6_generic_structure": 111
+   },
+   "witnesses": {
+    "dirty_leave_one_out_low_support": 196,
+    "inferred_type_contradiction": 92,
+    "intrinsic_dirty_fd": 164,
+    "low_dirty_leave_one_out_value_support": 12,
+    "validated_target_specific_rule_violation": 567
+   }
+  },
+  "movies": {
+   "actions": {
+    "demote_unsupported_positive": 107282,
+    "promote_independent_dirty_evidence": 211,
+    "promote_v6_generic_structure": 493,
+    "retain_independent_dirty_evidence": 3655,
+    "retain_inherited_positive": 3567,
+    "retain_v6_fallback_structure": 1009,
+    "retain_v6_generic_structure": 698
+   },
+   "witnesses": {
+    "dirty_leave_one_out_low_support": 2617,
+    "inferred_type_contradiction": 355,
+    "low_dirty_leave_one_out_format_support": 1141,
+    "low_dirty_leave_one_out_value_support": 2345,
+    "missing_in_nearly_complete_column": 296,
+    "validated_target_specific_rule_violation": 2350
+   }
+  },
+  "rayyan": {
+   "actions": {
+    "demote_unsupported_positive": 7018,
+    "promote_independent_dirty_evidence": 26,
+    "retain_independent_dirty_evidence": 1119,
+    "retain_inherited_positive": 872,
+    "retain_v6_fallback_structure": 162
+   },
+   "witnesses": {
+    "dirty_leave_one_out_low_support": 546,
+    "dominant_observed_case_space_variant": 25,
+    "embedded_control_or_replacement_character": 76,
+    "low_dirty_leave_one_out_format_support": 162,
+    "low_dirty_leave_one_out_value_support": 460,
+    "missing_in_nearly_complete_column": 1,
+    "validated_target_specific_rule_violation": 930
+   }
+  }
+ },
+ "diagnostics": {
+  "unified_loop_v4": {
+   "beers": {
+    "abstained_cells": 1853,
+    "admitted_rules": 31,
+    "candidate_cells": 2450,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 2661,
+    "distinct_candidates": 2535,
+    "elapsed_seconds": 20.691718523004965,
+    "gated_columns": 7,
+    "row_guard_checked": 710,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 808
+   },
+   "billionaire": {
+    "abstained_cells": 2442,
+    "admitted_rules": 68,
+    "candidate_cells": 3109,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 4810,
+    "distinct_candidates": 3132,
+    "elapsed_seconds": 62.60727037600009,
+    "gated_columns": 0,
+    "row_guard_checked": 1442,
+    "row_guard_rolled_back": 1,
+    "selected_cells": 2368
+   },
+   "flights": {
+    "abstained_cells": 1297,
+    "admitted_rules": 26,
+    "candidate_cells": 3420,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 3421,
+    "distinct_candidates": 7745,
+    "elapsed_seconds": 66.93707200299832,
+    "gated_columns": 6,
+    "row_guard_checked": 1264,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 2124
+   },
+   "hospital": {
+    "abstained_cells": 74,
+    "admitted_rules": 59,
+    "candidate_cells": 496,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 561,
+    "distinct_candidates": 497,
+    "elapsed_seconds": 17.58071682300215,
+    "gated_columns": 2,
+    "row_guard_checked": 391,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 487
+   },
+   "movies": {
+    "abstained_cells": 3460,
+    "admitted_rules": 51,
+    "candidate_cells": 804,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 3920,
+    "distinct_candidates": 804,
+    "elapsed_seconds": 12163.676101856,
+    "gated_columns": 15,
+    "row_guard_checked": 196,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 460
+   },
+   "rayyan": {
+    "abstained_cells": 2042,
+    "admitted_rules": 37,
+    "candidate_cells": 499,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 2438,
+    "distinct_candidates": 530,
+    "elapsed_seconds": 30.811056509999617,
+    "gated_columns": 8,
+    "row_guard_checked": 289,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 396
+   },
+   "total": {
+    "abstained_cells": 11168,
+    "admitted_rules": 272,
+    "candidate_cells": 10778,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 17811,
+    "distinct_candidates": 15243,
+    "elapsed_seconds": 12362.303936091004,
+    "row_guard_checked": 4292,
+    "row_guard_rolled_back": 1,
+    "selected_cells": 6643
+   }
+  },
+  "unified_loop_v6": {
+   "beers": {
+    "abstained_cells": 213,
+    "admitted_rules": 31,
+    "candidate_cells": 2450,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 2661,
+    "distinct_candidates": 2535,
+    "elapsed_seconds": 14.125465658988105,
+    "fallback_structure": {
+     "promoted_count": 0,
+     "retained_count": 0
+    },
+    "gated_columns": 7,
+    "generic_structure": {
+     "candidate_count": 2,
+     "promoted_count": 0,
+     "retained_count": 2
+    },
+    "row_guard_checked": 1789,
+    "row_guard_rolled_back": 2,
+    "selected_cells": 2448
+   },
+   "billionaire": {
+    "abstained_cells": 1718,
+    "admitted_rules": 70,
+    "candidate_cells": 3109,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 4810,
+    "distinct_candidates": 3132,
+    "elapsed_seconds": 46.32787303900113,
+    "fallback_structure": {
+     "promoted_count": 0,
+     "retained_count": 0
+    },
+    "gated_columns": 0,
+    "generic_structure": {
+     "candidate_count": 611,
+     "promoted_count": 0,
+     "retained_count": 611
+    },
+    "row_guard_checked": 1843,
+    "row_guard_rolled_back": 4,
+    "selected_cells": 3092
+   },
+   "flights": {
+    "abstained_cells": 484,
+    "admitted_rules": 26,
+    "candidate_cells": 7858,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 3476,
+    "distinct_candidates": 17497,
+    "elapsed_seconds": 29.95180555799743,
+    "fallback_structure": {
+     "promoted_count": 0,
+     "retained_count": 0
+    },
+    "gated_columns": 6,
+    "generic_structure": {
+     "candidate_count": 55,
+     "promoted_count": 55,
+     "retained_count": 0
+    },
+    "row_guard_checked": 1523,
+    "row_guard_rolled_back": 2,
+    "selected_cells": 2992
+   },
+   "hospital": {
+    "abstained_cells": 171,
+    "admitted_rules": 59,
+    "candidate_cells": 496,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 666,
+    "distinct_candidates": 497,
+    "elapsed_seconds": 13.325898717012024,
+    "fallback_structure": {
+     "promoted_count": 0,
+     "retained_count": 0
+    },
+    "gated_columns": 2,
+    "generic_structure": {
+     "candidate_count": 216,
+     "promoted_count": 105,
+     "retained_count": 111
+    },
+    "row_guard_checked": 394,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 495
+   },
+   "movies": {
+    "abstained_cells": 3953,
+    "admitted_rules": 51,
+    "candidate_cells": 808,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 4413,
+    "distinct_candidates": 808,
+    "elapsed_seconds": 82.46205121299135,
+    "fallback_structure": {
+     "promoted_count": 0,
+     "retained_count": 1009
+    },
+    "gated_columns": 15,
+    "generic_structure": {
+     "candidate_count": 1191,
+     "promoted_count": 493,
+     "retained_count": 698
+    },
+    "row_guard_checked": 196,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 460
+   },
+   "rayyan": {
+    "abstained_cells": 773,
+    "admitted_rules": 37,
+    "candidate_cells": 534,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 1175,
+    "distinct_candidates": 566,
+    "elapsed_seconds": 8.676833334990079,
+    "fallback_structure": {
+     "promoted_count": 0,
+     "retained_count": 162
+    },
+    "gated_columns": 8,
+    "generic_structure": {
+     "candidate_count": 0,
+     "promoted_count": 0,
+     "retained_count": 0
+    },
+    "row_guard_checked": 289,
+    "row_guard_rolled_back": 0,
+    "selected_cells": 402
+   },
+   "total": {
+    "abstained_cells": 7312,
+    "admitted_rules": 274,
+    "candidate_cells": 15255,
+    "counterfactual_demoted": 0,
+    "counterfactual_promoted": 0,
+    "detected_cells": 17201,
+    "distinct_candidates": 25035,
+    "elapsed_seconds": 194.86992752098013,
+    "row_guard_checked": 6034,
+    "row_guard_rolled_back": 8,
+    "selected_cells": 9889
+   }
+  }
+ },
+ "errors_by_column": {
+  "beers": {
+   "_total_blank": 196,
+   "abv": {
+    "blank": 62,
+    "errors": 755
+   },
+   "beer_name": {
+    "blank": 0,
+    "errors": 2
+   },
+   "brewery_id": {
+    "blank": 1,
+    "errors": 2
+   },
+   "brewery_name": {
+    "blank": 0,
+    "errors": 5
+   },
+   "city": {
+    "blank": 0,
+    "errors": 128
+   },
+   "ounces": {
+    "blank": 1,
+    "errors": 1789
+   },
+   "state": {
+    "blank": 128,
+    "errors": 128
+   },
+   "style": {
+    "blank": 4,
+    "errors": 6
+   }
+  },
+  "billionaire": {
+   "Company Founded": {
+    "blank": 55,
+    "errors": 211
+   },
+   "Company Name": {
+    "blank": 85,
+    "errors": 322
+   },
+   "Company Relationship": {
+    "blank": 100,
+    "errors": 280
+   },
+   "Company Sector": {
+    "blank": 73,
+    "errors": 294
+   },
+   "Company Type": {
+    "blank": 76,
+    "errors": 415
+   },
+   "Demographics Age": {
+    "blank": 62,
+    "errors": 214
+   },
+   "Demographics Gender": {
+    "blank": 87,
+    "errors": 214
+   },
+   "Location Citizenship": {
+    "blank": 47,
+    "errors": 246
+   },
+   "Location Country Code": {
+    "blank": 57,
+    "errors": 253
+   },
+   "Location GDP": {
+    "blank": 40,
+    "errors": 170
+   },
+   "Location Region": {
+    "blank": 51,
+    "errors": 226
+   },
+   "Name": {
+    "blank": 44,
+    "errors": 251
+   },
+   "Rank": {
+    "blank": 52,
+    "errors": 211
+   },
+   "Wealth How Category": {
+    "blank": 44,
+    "errors": 248
+   },
+   "Wealth How From Emerging": {
+    "blank": 52,
+    "errors": 183
+   },
+   "Wealth How Industry": {
+    "blank": 40,
+    "errors": 273
+   },
+   "Wealth How Inherited": {
+    "blank": 59,
+    "errors": 222
+   },
+   "Wealth How Was Founder": {
+    "blank": 50,
+    "errors": 188
+   },
+   "Wealth How Was Political": {
+    "blank": 42,
+    "errors": 206
+   },
+   "Wealth Type": {
+    "blank": 72,
+    "errors": 270
+   },
+   "Wealth Worth In Billions": {
+    "blank": 36,
+    "errors": 179
+   },
+   "Year": {
+    "blank": 59,
+    "errors": 190
+   },
+   "_total_blank": 1283
+  },
+  "flights": {
+   "_total_blank": 2312,
+   "act_arr_time": {
+    "blank": 382,
+    "errors": 1351
+   },
+   "act_dep_time": {
+    "blank": 376,
+    "errors": 1558
+   },
+   "sched_arr_time": {
+    "blank": 770,
+    "errors": 1100
+   },
+   "sched_dep_time": {
+    "blank": 784,
+    "errors": 911
+   }
+  },
+  "hospital": {
+   "Address": {
+    "blank": 0,
+    "errors": 31
+   },
+   "City": {
+    "blank": 0,
+    "errors": 33
+   },
+   "Condition": {
+    "blank": 0,
+    "errors": 32
+   },
+   "CountyName": {
+    "blank": 0,
+    "errors": 60
+   },
+   "EmergencyService": {
+    "blank": 0,
+    "errors": 27
+   },
+   "HospitalName": {
+    "blank": 0,
+    "errors": 24
+   },
+   "HospitalOwner": {
+    "blank": 0,
+    "errors": 27
+   },
+   "HospitalType": {
+    "blank": 0,
+    "errors": 32
+   },
+   "MeasureCode": {
+    "blank": 0,
+    "errors": 29
+   },
+   "MeasureName": {
+    "blank": 0,
+    "errors": 75
+   },
+   "PhoneNumber": {
+    "blank": 0,
+    "errors": 34
+   },
+   "ProviderNumber": {
+    "blank": 0,
+    "errors": 28
+   },
+   "Sample": {
+    "blank": 0,
+    "errors": 115
+   },
+   "Score": {
+    "blank": 0,
+    "errors": 190
+   },
+   "State": {
+    "blank": 0,
+    "errors": 26
+   },
+   "Stateavg": {
+    "blank": 0,
+    "errors": 27
+   },
+   "ZipCode": {
+    "blank": 0,
+    "errors": 30
+   },
+   "_total_blank": 0
+  },
+  "movies": {
+   "Actors": {
+    "blank": 75,
+    "errors": 75
+   },
+   "Cast": {
+    "blank": 75,
+    "errors": 75
+   },
+   "Creator": {
+    "blank": 221,
+    "errors": 824
+   },
+   "Description": {
+    "blank": 0,
+    "errors": 1682
+   },
+   "Director": {
+    "blank": 0,
+    "errors": 46
+   },
+   "Duration": {
+    "blank": 382,
+    "errors": 489
+   },
+   "Filming Locations": {
+    "blank": 1046,
+    "errors": 1047
+   },
+   "First Shown Year": {
+    "blank": 0,
+    "errors": 197
+   },
+   "Genre": {
+    "blank": 18,
+    "errors": 198
+   },
+   "Id": {
+    "blank": 0,
+    "errors": 190
+   },
+   "Name": {
+    "blank": 0,
+    "errors": 14
+   },
+   "RatingCount": {
+    "blank": 232,
+    "errors": 232
+   },
+   "RatingValue": {
+    "blank": 254,
+    "errors": 419
+   },
+   "Release Date": {
+    "blank": 128,
+    "errors": 401
+   },
+   "ReviewCount": {
+    "blank": 356,
+    "errors": 356
+   },
+   "_total_blank": 2787
+  },
+  "rayyan": {
+   "_total_blank": 1682,
+   "article_jcreated_at": {
+    "blank": 87,
+    "errors": 809
+   },
+   "article_jissue": {
+    "blank": 53,
+    "errors": 57
+   },
+   "article_jvolumn": {
+    "blank": 22,
+    "errors": 26
+   },
+   "article_language": {
+    "blank": 358,
+    "errors": 472
+   },
+   "article_pagination": {
+    "blank": 108,
+    "errors": 241
+   },
+   "article_title": {
+    "blank": 1,
+    "errors": 81
+   },
+   "author_list": {
+    "blank": 0,
+    "errors": 147
+   },
+   "journal_abbreviation": {
+    "blank": 529,
+    "errors": 611
+   },
+   "journal_issn": {
+    "blank": 316,
+    "errors": 419
+   },
+   "journal_title": {
+    "blank": 208,
+    "errors": 348
+   }
+  }
+ },
+ "flights_grouping": {
+  "attribute_near_equal": 0.7260981912144703,
+  "attribute_near_lambda0p0": 0.6880187025131502,
+  "attribute_near_lambda0p5": 0.6896713065855655,
+  "attribute_near_lambda0p9": 0.6962473448194477,
+  "attribute_near_selectedEB": 0.6880187025131502,
+  "profile_complete_equal": 0.7872622733303848,
+  "profile_complete_lambda0p0": 0.7401538638190378,
+  "profile_complete_lambda0p5": 0.739175376134145,
+  "profile_complete_lambda0p9": 0.7407662307868778,
+  "profile_complete_selectedEB": 0.7401538638190378
+ },
+ "macro": {
+  "adapted_sequential": {
+   "detection": 0.3877882746943671,
+   "detection_precision": 0.7872621191232186,
+   "detection_recall": 0.3007051663945741,
+   "repair": 0.013525958515659143,
+   "repair_precision": 0.4689265536723164,
+   "repair_recall": 0.006958499662311087
+  },
+  "adapted_zeroed": {
+   "detection": 0.3877882746943671,
+   "detection_precision": 0.7872621191232186,
+   "detection_recall": 0.3007051663945741,
+   "repair": 0.0,
+   "repair_precision": 0.0,
+   "repair_recall": 0.0
+  },
+  "empty_carry": {
+   "detection": 0.5233735465734134,
+   "detection_precision": 0.5030195075288074,
+   "detection_recall": 0.7915707164487596,
+   "repair": 0.26680155641327447,
+   "repair_precision": 0.5286756249139724,
+   "repair_recall": 0.19516748157870567
+  },
+  "format_overlay_v1": {
+   "detection": 0.5976622570667992,
+   "detection_precision": 0.9416762946375109,
+   "detection_recall": 0.5022940416882499,
+   "repair": 0.26073910102171344,
+   "repair_precision": 0.5546785529664763,
+   "repair_recall": 0.19331117456730598
+  },
+  "full_first_round": {
+   "detection": 0.5724090275724384,
+   "detection_precision": 0.9301675538806761,
+   "detection_recall": 0.45266638180403324,
+   "repair": 0.2643115436115155,
+   "repair_precision": 0.5642555325688421,
+   "repair_recall": 0.19327952499141032
+  },
+  "seeded_carry": {
+   "detection": 0.5030930428619421,
+   "detection_precision": 0.5524359209403438,
+   "detection_recall": 0.656977520237081,
+   "repair": 0.3042350267764369,
+   "repair_precision": 0.6027396071478646,
+   "repair_recall": 0.23100593888872192
+  },
+  "sequential": {
+   "detection": 0.3947890414474464,
+   "detection_precision": 0.318349884039936,
+   "detection_recall": 0.7753320332207866,
+   "repair": 0.2749230070367706,
+   "repair_precision": 0.5830624799283916,
+   "repair_recall": 0.2065253627525324
+  },
+  "source_loop_v1": {
+   "detection": 0.5728889100541705,
+   "detection_precision": 0.9290217591519067,
+   "detection_recall": 0.45399566399165187,
+   "repair": 0.27068432394097464,
+   "repair_precision": 0.5578299138737051,
+   "repair_recall": 0.19889421750099645
+  },
+  "source_zeroed": {
+   "detection": 0.3947890414474464,
+   "detection_precision": 0.318349884039936,
+   "detection_recall": 0.7753320332207866,
+   "repair": 0.0,
+   "repair_precision": 0.0,
+   "repair_recall": 0.0
+  },
+  "v2": {
+   "detection": 0.6612754106641724,
+   "detection_precision": 0.8456420098363745,
+   "detection_recall": 0.5608701363094756,
+   "repair": 0.3991732063325766,
+   "repair_precision": 0.7371329524936471,
+   "repair_recall": 0.3025826672467144
+  },
+  "v3": {
+   "detection": 0.6685905044316889,
+   "detection_precision": 0.8288550432642784,
+   "detection_recall": 0.5795387450110092,
+   "repair": 0.3923673228679241,
+   "repair_precision": 0.761012343624822,
+   "repair_recall": 0.2891525423161837
+  },
+  "v4": {
+   "detection": 0.7206398363110647,
+   "detection_precision": 0.8329387300439316,
+   "detection_recall": 0.6409422537829391,
+   "repair": 0.3770225472532655,
+   "repair_precision": 0.7613706684811912,
+   "repair_recall": 0.2717136259976624
+  },
+  "v5": {
+   "detection": 0.6759977195274277,
+   "detection_precision": 0.8139341936159593,
+   "detection_recall": 0.598217265062823,
+   "repair": 0.4216200550523323,
+   "repair_precision": 0.7308480204100706,
+   "repair_recall": 0.33079686067024117
+  },
+  "v6": {
+   "detection": 0.6759977195274277,
+   "detection_precision": 0.8139341936159593,
+   "detection_recall": 0.598217265062823,
+   "repair": 0.4216200550523323,
+   "repair_precision": 0.7308480204100706,
+   "repair_recall": 0.33079686067024117
+  },
+  "wo_counterfactual": {
+   "detection": 0.4788263482379877,
+   "detection_precision": 0.9178668378846581,
+   "detection_recall": 0.3871447222444266,
+   "repair": 0.26587985693234684,
+   "repair_precision": 0.6515616339760218,
+   "repair_recall": 0.1939518184719519
+  },
+  "wo_multi_column": {
+   "detection": 0.4750209962619658,
+   "detection_precision": 0.8486265647003409,
+   "detection_recall": 0.3837537823648993,
+   "repair": 0.24737648140177182,
+   "repair_precision": 0.5596411691159017,
+   "repair_recall": 0.17843026904772552
+  }
+ },
+ "macro_gains_pp": {
+  "VfourEDGain": 32.58507948636182,
+  "VfourRepairGain": 10.209954021649493,
+  "VsixEDGain": 28.120867807998128,
+  "VsixRepairGain": 14.669704801556172
+ },
+ "methods": {
+  "adapted_sequential": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6583365872705974,
+     "fn": 1129,
+     "fp": 621,
+     "precision": 0.7308192457737321,
+     "predicted": 2307,
+     "recall": 0.5989342806394317,
+     "tp": 1686
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.0,
+     "fn": 2815,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.7166053258281013,
+     "fn": 1956,
+     "fp": 662,
+     "precision": 0.8333333333333334,
+     "predicted": 3972,
+     "recall": 0.6285605772882643,
+     "tp": 3310
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.021044720030063885,
+     "fn": 5210,
+     "fp": 0,
+     "precision": 1.0,
+     "predicted": 56,
+     "recall": 0.010634257500949488,
+     "tp": 56
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.19942091929062614,
+     "fn": 4369,
+     "fp": 55,
+     "precision": 0.9092409240924092,
+     "predicted": 606,
+     "recall": 0.11199186991869918,
+     "tp": 551
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0,
+     "fn": 4920,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.3364140480591497,
+     "fn": 638,
+     "fp": 80,
+     "precision": 0.6946564885496184,
+     "predicted": 262,
+     "recall": 0.22195121951219512,
+     "tp": 182
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.00243605359317905,
+     "fn": 819,
+     "fp": 0,
+     "precision": 1.0,
+     "predicted": 1,
+     "recall": 0.0012195121951219512,
+     "tp": 1
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.24597792846695918,
+     "fn": 5320,
+     "fp": 351,
+     "precision": 0.7249216300940439,
+     "predicted": 1276,
+     "recall": 0.14811849479583666,
+     "tp": 925
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.0,
+     "fn": 6245,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.1699748392507688,
+     "fn": 2907,
+     "fp": 62,
+     "precision": 0.8306010928961749,
+     "predicted": 366,
+     "recall": 0.09467455621301775,
+     "tp": 304
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.05767497747071192,
+     "fn": 3115,
+     "fp": 22,
+     "precision": 0.8135593220338984,
+     "predicted": 118,
+     "recall": 0.02989722827779508,
+     "tp": 96
+    },
+    "rows": 1000
+   }
+  },
+  "adapted_zeroed": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6583365872705974,
+     "fn": 1129,
+     "fp": 621,
+     "precision": 0.7308192457737321,
+     "predicted": 2307,
+     "recall": 0.5989342806394317,
+     "tp": 1686
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.0,
+     "fn": 2815,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.7166053258281013,
+     "fn": 1956,
+     "fp": 662,
+     "precision": 0.8333333333333334,
+     "predicted": 3972,
+     "recall": 0.6285605772882643,
+     "tp": 3310
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.0,
+     "fn": 5266,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.19942091929062614,
+     "fn": 4369,
+     "fp": 55,
+     "precision": 0.9092409240924092,
+     "predicted": 606,
+     "recall": 0.11199186991869918,
+     "tp": 551
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0,
+     "fn": 4920,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.3364140480591497,
+     "fn": 638,
+     "fp": 80,
+     "precision": 0.6946564885496184,
+     "predicted": 262,
+     "recall": 0.22195121951219512,
+     "tp": 182
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.0,
+     "fn": 820,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.24597792846695918,
+     "fn": 5320,
+     "fp": 351,
+     "precision": 0.7249216300940439,
+     "predicted": 1276,
+     "recall": 0.14811849479583666,
+     "tp": 925
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.0,
+     "fn": 6245,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.1699748392507688,
+     "fn": 2907,
+     "fp": 62,
+     "precision": 0.8306010928961749,
+     "predicted": 366,
+     "recall": 0.09467455621301775,
+     "tp": 304
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.0,
+     "fn": 3211,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 1000
+   }
+  },
+  "empty_carry": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.2808400259390432,
+     "fn": 0,
+     "fp": 14417,
+     "precision": 0.16335886722376974,
+     "predicted": 17232,
+     "recall": 1.0,
+     "tp": 2815
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.12939643942683457,
+     "fn": 2517,
+     "fp": 1493,
+     "precision": 0.16638749302065886,
+     "predicted": 1791,
+     "recall": 0.10586145648312612,
+     "tp": 298
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8109887848544088,
+     "fn": 1325,
+     "fp": 512,
+     "precision": 0.8850213339321805,
+     "predicted": 4453,
+     "recall": 0.7483858716293201,
+     "tp": 3941
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.5193896122077558,
+     "fn": 3411,
+     "fp": 22,
+     "precision": 0.988279168886521,
+     "predicted": 1877,
+     "recall": 0.3522597797189518,
+     "tp": 1855
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.7613716988569176,
+     "fn": 91,
+     "fp": 2936,
+     "precision": 0.6218931101094656,
+     "predicted": 7765,
+     "recall": 0.9815040650406504,
+     "tp": 4829
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0,
+     "fn": 4920,
+     "fp": 2,
+     "precision": 0.0,
+     "predicted": 2,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7642642642642643,
+     "fn": 311,
+     "fp": 3,
+     "precision": 0.994140625,
+     "predicted": 512,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7423780487804879,
+     "fn": 333,
+     "fp": 5,
+     "precision": 0.9898373983739838,
+     "predicted": 492,
+     "recall": 0.5939024390243902,
+     "tp": 487
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.06206284758947764,
+     "fn": 2607,
+     "fp": 107353,
+     "precision": 0.03277743240442919,
+     "predicted": 110991,
+     "recall": 0.5825460368294636,
+     "tp": 3638
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.022790267939636587,
+     "fn": 6171,
+     "fp": 175,
+     "precision": 0.2971887550200803,
+     "predicted": 249,
+     "recall": 0.011849479583666934,
+     "tp": 74
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.4607136579363684,
+     "fn": 590,
+     "fp": 5546,
+     "precision": 0.32092567650299986,
+     "predicted": 8167,
+     "recall": 0.8162566178760511,
+     "tp": 2621
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.1868549701249321,
+     "fn": 2867,
+     "fp": 127,
+     "precision": 0.7303609341825902,
+     "predicted": 471,
+     "recall": 0.10713173466209903,
+     "tp": 344
+    },
+    "rows": 1000
+   }
+  },
+  "format_overlay_v1": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.8877749029754204,
+     "fn": 70,
+     "fp": 624,
+     "precision": 0.8147818343722173,
+     "predicted": 3369,
+     "recall": 0.9751332149200711,
+     "tp": 2745
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.10711054821783969,
+     "fn": 2519,
+     "fp": 2416,
+     "precision": 0.10914454277286136,
+     "predicted": 2712,
+     "recall": 0.10515097690941386,
+     "tp": 296
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8357386801806764,
+     "fn": 1473,
+     "fp": 18,
+     "precision": 0.9952768302282865,
+     "predicted": 3811,
+     "recall": 0.7202810482339537,
+     "tp": 3793
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.5090039392234103,
+     "fn": 3457,
+     "fp": 33,
+     "precision": 0.9820846905537459,
+     "predicted": 1842,
+     "recall": 0.34352449677174324,
+     "tp": 1809
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.5369545859305432,
+     "fn": 3111,
+     "fp": 9,
+     "precision": 0.995049504950495,
+     "predicted": 1818,
+     "recall": 0.3676829268292683,
+     "tp": 1809
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0004062563477554337,
+     "fn": 4919,
+     "fp": 2,
+     "precision": 0.3333333333333333,
+     "predicted": 3,
+     "recall": 0.0002032520325203252,
+     "tp": 1
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7659894657637322,
+     "fn": 311,
+     "fp": 0,
+     "precision": 1.0,
+     "predicted": 509,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7414187643020596,
+     "fn": 334,
+     "fp": 5,
+     "precision": 0.9898167006109979,
+     "predicted": 491,
+     "recall": 0.5926829268292683,
+     "tp": 486
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.2884536364881523,
+     "fn": 5192,
+     "fp": 3,
+     "precision": 0.9971590909090909,
+     "predicted": 1056,
+     "recall": 0.16861489191353082,
+     "tp": 1053
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.018995098039215685,
+     "fn": 6183,
+     "fp": 221,
+     "precision": 0.21908127208480566,
+     "predicted": 283,
+     "recall": 0.009927942353883107,
+     "tp": 62
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.27106227106227104,
+     "fn": 2693,
+     "fp": 93,
+     "precision": 0.8477905073649754,
+     "predicted": 611,
+     "recall": 0.16132046091560262,
+     "tp": 518
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.1875,
+     "fn": 2863,
+     "fp": 153,
+     "precision": 0.6946107784431138,
+     "predicted": 501,
+     "recall": 0.10837745250700716,
+     "tp": 348
+    },
+    "rows": 1000
+   }
+  },
+  "full_first_round": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6924101198402131,
+     "fn": 995,
+     "fp": 622,
+     "precision": 0.7452907452907452,
+     "predicted": 2442,
+     "recall": 0.6465364120781527,
+     "tp": 1820
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.12861177492939388,
+     "fn": 2519,
+     "fp": 1492,
+     "precision": 0.16554809843400448,
+     "predicted": 1788,
+     "recall": 0.10515097690941386,
+     "tp": 296
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8357386801806764,
+     "fn": 1473,
+     "fp": 18,
+     "precision": 0.9952768302282865,
+     "predicted": 3811,
+     "recall": 0.7202810482339537,
+     "tp": 3793
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.5089373680506686,
+     "fn": 3458,
+     "fp": 31,
+     "precision": 0.9831430125067971,
+     "predicted": 1839,
+     "recall": 0.34333459931636917,
+     "tp": 1808
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.5373887240356083,
+     "fn": 3109,
+     "fp": 9,
+     "precision": 0.9950549450549451,
+     "predicted": 1820,
+     "recall": 0.36808943089430896,
+     "tp": 1811
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0004062563477554337,
+     "fn": 4919,
+     "fp": 2,
+     "precision": 0.3333333333333333,
+     "predicted": 3,
+     "recall": 0.0002032520325203252,
+     "tp": 1
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7659894657637322,
+     "fn": 311,
+     "fp": 0,
+     "precision": 1.0,
+     "predicted": 509,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7414187643020596,
+     "fn": 334,
+     "fp": 5,
+     "precision": 0.9898167006109979,
+     "predicted": 491,
+     "recall": 0.5926829268292683,
+     "tp": 486
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.33186490455212925,
+     "fn": 5002,
+     "fp": 3,
+     "precision": 0.9975922953451043,
+     "predicted": 1246,
+     "recall": 0.1990392313851081,
+     "tp": 1243
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.018995098039215685,
+     "fn": 6183,
+     "fp": 221,
+     "precision": 0.21908127208480566,
+     "predicted": 283,
+     "recall": 0.009927942353883107,
+     "tp": 62
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.27106227106227104,
+     "fn": 2693,
+     "fp": 93,
+     "precision": 0.8477905073649754,
+     "predicted": 611,
+     "recall": 0.16132046091560262,
+     "tp": 518
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.1875,
+     "fn": 2863,
+     "fp": 153,
+     "precision": 0.6946107784431138,
+     "predicted": 501,
+     "recall": 0.10837745250700716,
+     "tp": 348
+    },
+    "rows": 1000
+   }
+  },
+  "seeded_carry": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.24438032610883714,
+     "fn": 994,
+     "fp": 10267,
+     "precision": 0.1506452680344143,
+     "predicted": 12088,
+     "recall": 0.6468916518650089,
+     "tp": 1821
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.1289902280130293,
+     "fn": 2518,
+     "fp": 1493,
+     "precision": 0.1659217877094972,
+     "predicted": 1790,
+     "recall": 0.10550621669626999,
+     "tp": 297
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8155158069883528,
+     "fn": 1345,
+     "fp": 429,
+     "precision": 0.9013793103448275,
+     "predicted": 4350,
+     "recall": 0.7445879225218383,
+     "tp": 3921
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.6811576505067773,
+     "fn": 2477,
+     "fp": 134,
+     "precision": 0.9541566883339035,
+     "predicted": 2923,
+     "recall": 0.5296240030383593,
+     "tp": 2789
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.6717262670439927,
+     "fn": 2309,
+     "fp": 243,
+     "precision": 0.9148563419761738,
+     "predicted": 2854,
+     "recall": 0.5306910569105691,
+     "tp": 2611
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0004062563477554337,
+     "fn": 4919,
+     "fp": 2,
+     "precision": 0.3333333333333333,
+     "predicted": 3,
+     "recall": 0.0002032520325203252,
+     "tp": 1
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7642642642642643,
+     "fn": 311,
+     "fp": 3,
+     "precision": 0.994140625,
+     "predicted": 512,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.743161094224924,
+     "fn": 331,
+     "fp": 7,
+     "precision": 0.9858870967741935,
+     "predicted": 496,
+     "recall": 0.5963414634146341,
+     "tp": 489
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.06207937767087182,
+     "fn": 2606,
+     "fp": 107353,
+     "precision": 0.032786146749315265,
+     "predicted": 110992,
+     "recall": 0.5827061649319456,
+     "tp": 3639
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.08546011375236984,
+     "fn": 5952,
+     "fp": 319,
+     "precision": 0.47875816993464054,
+     "predicted": 612,
+     "recall": 0.04691753402722178,
+     "tp": 293
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.4605922150953343,
+     "fn": 590,
+     "fp": 5549,
+     "precision": 0.3208078335373317,
+     "predicted": 8170,
+     "recall": 0.8162566178760511,
+     "tp": 2621
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.1862348178137652,
+     "fn": 2866,
+     "fp": 149,
+     "precision": 0.6983805668016194,
+     "predicted": 494,
+     "recall": 0.10744316412332607,
+     "tp": 345
+    },
+    "rows": 1000
+   }
+  },
+  "sequential": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.27887928881785945,
+     "fn": 23,
+     "fp": 14416,
+     "precision": 0.16225011622501162,
+     "predicted": 17208,
+     "recall": 0.991829484902309,
+     "tp": 2792
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.15575916230366493,
+     "fn": 2577,
+     "fp": 3,
+     "precision": 0.9875518672199171,
+     "predicted": 241,
+     "recall": 0.08454706927175844,
+     "tp": 238
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.7670484396343386,
+     "fn": 1616,
+     "fp": 601,
+     "precision": 0.8586215008233357,
+     "predicted": 4251,
+     "recall": 0.6931257121154577,
+     "tp": 3650
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.657647775746496,
+     "fn": 2568,
+     "fp": 241,
+     "precision": 0.9179993194964273,
+     "predicted": 2939,
+     "recall": 0.5123433345993164,
+     "tp": 2698
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.5131414267834794,
+     "fn": 0,
+     "fp": 9336,
+     "precision": 0.3451178451178451,
+     "predicted": 14256,
+     "recall": 1.0,
+     "tp": 4920
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0015340364333652923,
+     "fn": 4916,
+     "fp": 291,
+     "precision": 0.013559322033898305,
+     "predicted": 295,
+     "recall": 0.0008130081300813008,
+     "tp": 4
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.3034149289815654,
+     "fn": 318,
+     "fp": 1987,
+     "precision": 0.2016874246685416,
+     "predicted": 2489,
+     "recall": 0.6121951219512195,
+     "tp": 502
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7349121466768526,
+     "fn": 339,
+     "fp": 8,
+     "precision": 0.983640081799591,
+     "predicted": 489,
+     "recall": 0.5865853658536585,
+     "tp": 481
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.06012739288580748,
+     "fn": 2724,
+     "fp": 107352,
+     "precision": 0.03175705536965717,
+     "predicted": 110873,
+     "recall": 0.5638110488390713,
+     "tp": 3521
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.08479953850591289,
+     "fn": 5951,
+     "fp": 395,
+     "precision": 0.42670537010159654,
+     "predicted": 689,
+     "recall": 0.04707766212970376,
+     "tp": 294
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.44612277158162816,
+     "fn": 671,
+     "fp": 5636,
+     "precision": 0.31066536203522505,
+     "predicted": 8176,
+     "recall": 0.7910308315166614,
+     "tp": 2540
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.014885382554331646,
+     "fn": 3186,
+     "fp": 123,
+     "precision": 0.16891891891891891,
+     "predicted": 148,
+     "recall": 0.007785736530675802,
+     "tp": 25
+    },
+    "rows": 1000
+   }
+  },
+  "source_loop_v1": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6924101198402131,
+     "fn": 995,
+     "fp": 622,
+     "precision": 0.7452907452907452,
+     "predicted": 2442,
+     "recall": 0.6465364120781527,
+     "tp": 1820
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.12044512328169321,
+     "fn": 2539,
+     "fp": 1492,
+     "precision": 0.15610859728506787,
+     "predicted": 1768,
+     "recall": 0.0980461811722913,
+     "tp": 276
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8386179750710693,
+     "fn": 1431,
+     "fp": 45,
+     "precision": 0.9884020618556701,
+     "predicted": 3880,
+     "recall": 0.7282567413596658,
+     "tp": 3835
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.5490571194315387,
+     "fn": 3257,
+     "fp": 43,
+     "precision": 0.9790448343079922,
+     "predicted": 2052,
+     "recall": 0.38150398784656286,
+     "tp": 2009
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.5373887240356083,
+     "fn": 3109,
+     "fp": 9,
+     "precision": 0.9950549450549451,
+     "predicted": 1820,
+     "recall": 0.36808943089430896,
+     "tp": 1811
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.00040617384240454913,
+     "fn": 4919,
+     "fp": 3,
+     "precision": 0.25,
+     "predicted": 4,
+     "recall": 0.0002032520325203252,
+     "tp": 1
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7659894657637322,
+     "fn": 311,
+     "fp": 0,
+     "precision": 1.0,
+     "predicted": 509,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7404580152671756,
+     "fn": 335,
+     "fp": 5,
+     "precision": 0.9897959183673469,
+     "predicted": 490,
+     "recall": 0.5914634146341463,
+     "tp": 485
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.33186490455212925,
+     "fn": 5002,
+     "fp": 3,
+     "precision": 0.9975922953451043,
+     "predicted": 1246,
+     "recall": 0.1990392313851081,
+     "tp": 1243
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.02623951182303585,
+     "fn": 6159,
+     "fp": 224,
+     "precision": 0.27741935483870966,
+     "predicted": 310,
+     "recall": 0.01377101681345076,
+     "tp": 86
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.27106227106227104,
+     "fn": 2693,
+     "fp": 93,
+     "precision": 0.8477905073649754,
+     "predicted": 611,
+     "recall": 0.16132046091560262,
+     "tp": 518
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.1875,
+     "fn": 2863,
+     "fp": 153,
+     "precision": 0.6946107784431138,
+     "predicted": 501,
+     "recall": 0.10837745250700716,
+     "tp": 348
+    },
+    "rows": 1000
+   }
+  },
+  "source_zeroed": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.27887928881785945,
+     "fn": 23,
+     "fp": 14416,
+     "precision": 0.16225011622501162,
+     "predicted": 17208,
+     "recall": 0.991829484902309,
+     "tp": 2792
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.0,
+     "fn": 2815,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.7670484396343386,
+     "fn": 1616,
+     "fp": 601,
+     "precision": 0.8586215008233357,
+     "predicted": 4251,
+     "recall": 0.6931257121154577,
+     "tp": 3650
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.0,
+     "fn": 5266,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.5131414267834794,
+     "fn": 0,
+     "fp": 9336,
+     "precision": 0.3451178451178451,
+     "predicted": 14256,
+     "recall": 1.0,
+     "tp": 4920
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0,
+     "fn": 4920,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.3034149289815654,
+     "fn": 318,
+     "fp": 1987,
+     "precision": 0.2016874246685416,
+     "predicted": 2489,
+     "recall": 0.6121951219512195,
+     "tp": 502
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.0,
+     "fn": 820,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.06012739288580748,
+     "fn": 2724,
+     "fp": 107352,
+     "precision": 0.03175705536965717,
+     "predicted": 110873,
+     "recall": 0.5638110488390713,
+     "tp": 3521
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.0,
+     "fn": 6245,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.44612277158162816,
+     "fn": 671,
+     "fp": 5636,
+     "precision": 0.31066536203522505,
+     "predicted": 8176,
+     "recall": 0.7910308315166614,
+     "tp": 2540
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.0,
+     "fn": 3211,
+     "fp": 0,
+     "precision": 0.0,
+     "predicted": 0,
+     "recall": 0.0,
+     "tp": 0
+    },
+    "rows": 1000
+   }
+  },
+  "v2": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6915750915750916,
+     "fn": 927,
+     "fp": 757,
+     "precision": 0.7137996219281664,
+     "predicted": 2645,
+     "recall": 0.6706927175843694,
+     "tp": 1888
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.16029497380166893,
+     "fn": 2402,
+     "fp": 1925,
+     "precision": 0.17664670658682635,
+     "predicted": 2338,
+     "recall": 0.1467140319715808,
+     "tp": 413
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8109887848544088,
+     "fn": 1325,
+     "fp": 512,
+     "precision": 0.8850213339321805,
+     "predicted": 4453,
+     "recall": 0.7483858716293201,
+     "tp": 3941
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.6856240126382307,
+     "fn": 2445,
+     "fp": 142,
+     "precision": 0.9520755990550118,
+     "predicted": 2963,
+     "recall": 0.5357007216103304,
+     "tp": 2821
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.7657338384455579,
+     "fn": 1787,
+     "fp": 130,
+     "precision": 0.9601593625498008,
+     "predicted": 3263,
+     "recall": 0.6367886178861789,
+     "tp": 3133
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.5607607327646483,
+     "fn": 2915,
+     "fp": 226,
+     "precision": 0.898700134468848,
+     "predicted": 2231,
+     "recall": 0.40752032520325204,
+     "tp": 2005
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7642642642642643,
+     "fn": 311,
+     "fp": 3,
+     "precision": 0.994140625,
+     "predicted": 512,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7345065034429993,
+     "fn": 340,
+     "fp": 7,
+     "precision": 0.9856262833675564,
+     "predicted": 487,
+     "recall": 0.5853658536585366,
+     "tp": 480
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.46401610468042276,
+     "fn": 3940,
+     "fp": 1385,
+     "precision": 0.6246612466124661,
+     "predicted": 3690,
+     "recall": 0.36909527622097676,
+     "tp": 2305
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.08769574944071588,
+     "fn": 5951,
+     "fp": 166,
+     "precision": 0.6391304347826087,
+     "predicted": 460,
+     "recall": 0.04707766212970376,
+     "tp": 294
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.47107438016528924,
+     "fn": 2185,
+     "fp": 119,
+     "precision": 0.8960698689956332,
+     "predicted": 1145,
+     "recall": 0.31952662721893493,
+     "tp": 1026
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.16615726590719646,
+     "fn": 2912,
+     "fp": 89,
+     "precision": 0.770618556701031,
+     "predicted": 388,
+     "recall": 0.0931174089068826,
+     "tp": 299
+    },
+    "rows": 1000
+   }
+  },
+  "v3": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6899196493791089,
+     "fn": 926,
+     "fp": 772,
+     "precision": 0.7098835024426907,
+     "predicted": 2661,
+     "recall": 0.6710479573712256,
+     "tp": 1889
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.1727849848192106,
+     "fn": 2502,
+     "fp": 495,
+     "precision": 0.3873762376237624,
+     "predicted": 808,
+     "recall": 0.11119005328596802,
+     "tp": 313
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8245335450575625,
+     "fn": 1112,
+     "fp": 656,
+     "precision": 0.8636174636174636,
+     "predicted": 4810,
+     "recall": 0.7888340296240031,
+     "tp": 4154
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.6837877312560857,
+     "fn": 2457,
+     "fp": 141,
+     "precision": 0.9522033898305085,
+     "predicted": 2950,
+     "recall": 0.5334219521458412,
+     "tp": 2809
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.7883946768972545,
+     "fn": 1632,
+     "fp": 133,
+     "precision": 0.9611224788073662,
+     "predicted": 3421,
+     "recall": 0.6682926829268293,
+     "tp": 3288
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.5090857467348098,
+     "fn": 3127,
+     "fp": 331,
+     "precision": 0.8441619585687382,
+     "predicted": 2124,
+     "recall": 0.3644308943089431,
+     "tp": 1793
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7371469949312093,
+     "fn": 311,
+     "fp": 52,
+     "precision": 0.9073083778966132,
+     "predicted": 561,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7345065034429993,
+     "fn": 340,
+     "fp": 7,
+     "precision": 0.9856262833675564,
+     "predicted": 487,
+     "recall": 0.5853658536585366,
+     "tp": 480
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.49503197245450076,
+     "fn": 3729,
+     "fp": 1404,
+     "precision": 0.6418367346938776,
+     "predicted": 3920,
+     "recall": 0.4028823058446757,
+     "tp": 2516
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.08769574944071588,
+     "fn": 5951,
+     "fp": 166,
+     "precision": 0.6391304347826087,
+     "predicted": 460,
+     "recall": 0.04707766212970376,
+     "tp": 294
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.47651618787049704,
+     "fn": 2166,
+     "fp": 130,
+     "precision": 0.8893617021276595,
+     "predicted": 1175,
+     "recall": 0.3254437869822485,
+     "tp": 1045
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.16634322151372333,
+     "fn": 2911,
+     "fp": 96,
+     "precision": 0.7575757575757576,
+     "predicted": 396,
+     "recall": 0.09342883836810963,
+     "tp": 300
+    },
+    "rows": 1000
+   }
+  },
+  "v4": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6899196493791089,
+     "fn": 926,
+     "fp": 772,
+     "precision": 0.7098835024426907,
+     "predicted": 2661,
+     "recall": 0.6710479573712256,
+     "tp": 1889
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.1727849848192106,
+     "fn": 2502,
+     "fp": 495,
+     "precision": 0.3873762376237624,
+     "predicted": 808,
+     "recall": 0.11119005328596802,
+     "tp": 313
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8245335450575625,
+     "fn": 1112,
+     "fp": 656,
+     "precision": 0.8636174636174636,
+     "predicted": 4810,
+     "recall": 0.7888340296240031,
+     "tp": 4154
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.5917190775681341,
+     "fn": 3008,
+     "fp": 108,
+     "precision": 0.9543533389687235,
+     "predicted": 2366,
+     "recall": 0.42878845423471323,
+     "tp": 2258
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.7883946768972545,
+     "fn": 1632,
+     "fp": 133,
+     "precision": 0.9611224788073662,
+     "predicted": 3421,
+     "recall": 0.6682926829268293,
+     "tp": 3288
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.5090857467348098,
+     "fn": 3127,
+     "fp": 331,
+     "precision": 0.8441619585687382,
+     "predicted": 2124,
+     "recall": 0.3644308943089431,
+     "tp": 1793
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7371469949312093,
+     "fn": 311,
+     "fp": 52,
+     "precision": 0.9073083778966132,
+     "predicted": 561,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7345065034429993,
+     "fn": 340,
+     "fp": 7,
+     "precision": 0.9856262833675564,
+     "predicted": 487,
+     "recall": 0.5853658536585366,
+     "tp": 480
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.49503197245450076,
+     "fn": 3729,
+     "fp": 1404,
+     "precision": 0.6418367346938776,
+     "predicted": 3920,
+     "recall": 0.4028823058446757,
+     "tp": 2516
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.08769574944071588,
+     "fn": 5951,
+     "fp": 166,
+     "precision": 0.6391304347826087,
+     "predicted": 460,
+     "recall": 0.04707766212970376,
+     "tp": 294
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.7888121791467516,
+     "fn": 983,
+     "fp": 210,
+     "precision": 0.9138638228055783,
+     "predicted": 2438,
+     "recall": 0.6938648396138275,
+     "tp": 2228
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.16634322151372333,
+     "fn": 2911,
+     "fp": 96,
+     "precision": 0.7575757575757576,
+     "predicted": 396,
+     "recall": 0.09342883836810963,
+     "tp": 300
+    },
+    "rows": 1000
+   }
+  },
+  "v5": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6899196493791089,
+     "fn": 926,
+     "fp": 772,
+     "precision": 0.7098835024426907,
+     "predicted": 2661,
+     "recall": 0.6710479573712256,
+     "tp": 1889
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.18741684090477095,
+     "fn": 2322,
+     "fp": 1953,
+     "precision": 0.20155355682747342,
+     "predicted": 2446,
+     "recall": 0.17513321492007106,
+     "tp": 493
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8245335450575625,
+     "fn": 1112,
+     "fp": 656,
+     "precision": 0.8636174636174636,
+     "predicted": 4810,
+     "recall": 0.7888340296240031,
+     "tp": 4154
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.6923629399090256,
+     "fn": 2374,
+     "fp": 196,
+     "precision": 0.9365284974093264,
+     "predicted": 3088,
+     "recall": 0.5491834409418914,
+     "tp": 2892
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.7832301095759886,
+     "fn": 1632,
+     "fp": 188,
+     "precision": 0.9459148446490219,
+     "predicted": 3476,
+     "recall": 0.6682926829268293,
+     "tp": 3288
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.6506511569098495,
+     "fn": 2347,
+     "fp": 416,
+     "precision": 0.8608230177316828,
+     "predicted": 2989,
+     "recall": 0.5229674796747967,
+     "tp": 2573
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7940780619111709,
+     "fn": 230,
+     "fp": 76,
+     "precision": 0.8858858858858859,
+     "predicted": 666,
+     "recall": 0.7195121951219512,
+     "tp": 590
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7422053231939163,
+     "fn": 332,
+     "fp": 7,
+     "precision": 0.9858585858585859,
+     "predicted": 495,
+     "recall": 0.5951219512195122,
+     "tp": 488
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.48770876337023833,
+     "fn": 3646,
+     "fp": 1814,
+     "precision": 0.5889417629730342,
+     "predicted": 4413,
+     "recall": 0.41617293835068053,
+     "tp": 2599
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.08769574944071588,
+     "fn": 5951,
+     "fp": 166,
+     "precision": 0.6391304347826087,
+     "predicted": 460,
+     "recall": 0.04707766212970376,
+     "tp": 294
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.47651618787049704,
+     "fn": 2166,
+     "fp": 130,
+     "precision": 0.8893617021276595,
+     "predicted": 1175,
+     "recall": 0.3254437869822485,
+     "tp": 1045
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.16938831995571546,
+     "fn": 2905,
+     "fp": 96,
+     "precision": 0.7611940298507462,
+     "predicted": 402,
+     "recall": 0.09529741513547181,
+     "tp": 306
+    },
+    "rows": 1000
+   }
+  },
+  "v6": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6899196493791089,
+     "fn": 926,
+     "fp": 772,
+     "precision": 0.7098835024426907,
+     "predicted": 2661,
+     "recall": 0.6710479573712256,
+     "tp": 1889
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.18741684090477095,
+     "fn": 2322,
+     "fp": 1953,
+     "precision": 0.20155355682747342,
+     "predicted": 2446,
+     "recall": 0.17513321492007106,
+     "tp": 493
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8245335450575625,
+     "fn": 1112,
+     "fp": 656,
+     "precision": 0.8636174636174636,
+     "predicted": 4810,
+     "recall": 0.7888340296240031,
+     "tp": 4154
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.6923629399090256,
+     "fn": 2374,
+     "fp": 196,
+     "precision": 0.9365284974093264,
+     "predicted": 3088,
+     "recall": 0.5491834409418914,
+     "tp": 2892
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.7832301095759886,
+     "fn": 1632,
+     "fp": 188,
+     "precision": 0.9459148446490219,
+     "predicted": 3476,
+     "recall": 0.6682926829268293,
+     "tp": 3288
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.6506511569098495,
+     "fn": 2347,
+     "fp": 416,
+     "precision": 0.8608230177316828,
+     "predicted": 2989,
+     "recall": 0.5229674796747967,
+     "tp": 2573
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7940780619111709,
+     "fn": 230,
+     "fp": 76,
+     "precision": 0.8858858858858859,
+     "predicted": 666,
+     "recall": 0.7195121951219512,
+     "tp": 590
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7422053231939163,
+     "fn": 332,
+     "fp": 7,
+     "precision": 0.9858585858585859,
+     "predicted": 495,
+     "recall": 0.5951219512195122,
+     "tp": 488
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.48770876337023833,
+     "fn": 3646,
+     "fp": 1814,
+     "precision": 0.5889417629730342,
+     "predicted": 4413,
+     "recall": 0.41617293835068053,
+     "tp": 2599
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.08769574944071588,
+     "fn": 5951,
+     "fp": 166,
+     "precision": 0.6391304347826087,
+     "predicted": 460,
+     "recall": 0.04707766212970376,
+     "tp": 294
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.47651618787049704,
+     "fn": 2166,
+     "fp": 130,
+     "precision": 0.8893617021276595,
+     "predicted": 1175,
+     "recall": 0.3254437869822485,
+     "tp": 1045
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.16938831995571546,
+     "fn": 2905,
+     "fp": 96,
+     "precision": 0.7611940298507462,
+     "predicted": 402,
+     "recall": 0.09529741513547181,
+     "tp": 306
+    },
+    "rows": 1000
+   }
+  },
+  "wo_counterfactual": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6924101198402131,
+     "fn": 995,
+     "fp": 622,
+     "precision": 0.7452907452907452,
+     "predicted": 2442,
+     "recall": 0.6465364120781527,
+     "tp": 1820
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.11682345219864362,
+     "fn": 2548,
+     "fp": 1489,
+     "precision": 0.1520501138952164,
+     "predicted": 1756,
+     "recall": 0.09484902309058614,
+     "tp": 267
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8292411954227308,
+     "fn": 1534,
+     "fp": 3,
+     "precision": 0.9991967871485944,
+     "predicted": 3735,
+     "recall": 0.7086973034561337,
+     "tp": 3732
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.5225527161011032,
+     "fn": 3395,
+     "fp": 24,
+     "precision": 0.987335092348285,
+     "predicted": 1895,
+     "recall": 0.35529813900493734,
+     "tp": 1871
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.004460665044606651,
+     "fn": 4909,
+     "fp": 1,
+     "precision": 0.9166666666666666,
+     "predicted": 12,
+     "recall": 0.0022357723577235773,
+     "tp": 11
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.0036496350364963502,
+     "fn": 4911,
+     "fp": 3,
+     "precision": 0.75,
+     "predicted": 12,
+     "recall": 0.001829268292682927,
+     "tp": 9
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7659894657637322,
+     "fn": 311,
+     "fp": 0,
+     "precision": 1.0,
+     "predicted": 509,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7404580152671756,
+     "fn": 335,
+     "fp": 5,
+     "precision": 0.9897959183673469,
+     "predicted": 490,
+     "recall": 0.5914634146341463,
+     "tp": 485
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.3097943722943723,
+     "fn": 5100,
+     "fp": 2,
+     "precision": 0.998256320836966,
+     "predicted": 1147,
+     "recall": 0.1833466773418735,
+     "tp": 1145
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.025786646201074445,
+     "fn": 6161,
+     "fp": 186,
+     "precision": 0.3111111111111111,
+     "predicted": 270,
+     "recall": 0.01345076060848679,
+     "tp": 84
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.27106227106227104,
+     "fn": 2693,
+     "fp": 93,
+     "precision": 0.8477905073649754,
+     "predicted": 611,
+     "recall": 0.16132046091560262,
+     "tp": 518
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.18600867678958785,
+     "fn": 2868,
+     "fp": 134,
+     "precision": 0.7190775681341719,
+     "predicted": 477,
+     "recall": 0.106820305200872,
+     "tp": 343
+    },
+    "rows": 1000
+   }
+  },
+  "wo_multi_column": {
+   "beers": {
+    "columns": 9,
+    "detection": {
+     "actual": 2815,
+     "f1": 0.6927905649610043,
+     "fn": 994,
+     "fp": 621,
+     "precision": 0.7457002457002457,
+     "predicted": 2442,
+     "recall": 0.6468916518650089,
+     "tp": 1821
+    },
+    "dirty_sha256": "29a20b2f382a852b2007115cfe85150e72869d2c01d7d3d953cd80b1be07eb7f",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "d340f6a4d725843eb2ba6f84d4a2211860b7c1b4f25dae298a48d2e2375bd7d8",
+    "repair": {
+     "actual": 2815,
+     "f1": 0.12747443985207743,
+     "fn": 2522,
+     "fp": 1489,
+     "precision": 0.1644219977553311,
+     "predicted": 1782,
+     "recall": 0.10408525754884547,
+     "tp": 293
+    },
+    "rows": 2410
+   },
+   "billionaire": {
+    "columns": 22,
+    "detection": {
+     "actual": 5266,
+     "f1": 0.8223066607063031,
+     "fn": 1587,
+     "fp": 3,
+     "precision": 0.9991852254209669,
+     "predicted": 3682,
+     "recall": 0.6986327383213065,
+     "tp": 3679
+    },
+    "dirty_sha256": "c1c3f3a20b1778603b0655027c64b1e74153d350edf181e164bdf4ae016940d7",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "9103811393f2c192094f339963c2b0537adf1384ddb2803a5783da41a326b8cf",
+    "repair": {
+     "actual": 5266,
+     "f1": 0.40879650549781593,
+     "fn": 3909,
+     "fp": 16,
+     "precision": 0.9883466860888566,
+     "predicted": 1373,
+     "recall": 0.257690846942651,
+     "tp": 1357
+    },
+    "rows": 2614
+   },
+   "flights": {
+    "columns": 6,
+    "detection": {
+     "actual": 4920,
+     "f1": 0.0008123476848090983,
+     "fn": 4918,
+     "fp": 2,
+     "precision": 0.5,
+     "predicted": 4,
+     "recall": 0.0004065040650406504,
+     "tp": 2
+    },
+    "dirty_sha256": "a08e99f1d7f16582656603885cb66c995eae4e6eedd130d844c0453fee3c825c",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "36faeddfd951f04ae67b4af5289f770292236ae3717b9fc14806e07caea48af0",
+    "repair": {
+     "actual": 4920,
+     "f1": 0.00040617384240454913,
+     "fn": 4919,
+     "fp": 3,
+     "precision": 0.25,
+     "predicted": 4,
+     "recall": 0.0002032520325203252,
+     "tp": 1
+    },
+    "rows": 2376
+   },
+   "hospital": {
+    "columns": 17,
+    "detection": {
+     "actual": 820,
+     "f1": 0.7659894657637322,
+     "fn": 311,
+     "fp": 0,
+     "precision": 1.0,
+     "predicted": 509,
+     "recall": 0.6207317073170732,
+     "tp": 509
+    },
+    "dirty_sha256": "d60e876544fd7886ba4c6e8b85d65fedb144e375e8ad31f196a8aa646e7b65e5",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "22e88af0a18377635f0dcc151c52aa4beb77fc14e8ff67b55c33c94315645321",
+    "repair": {
+     "actual": 820,
+     "f1": 0.7394957983193278,
+     "fn": 336,
+     "fp": 5,
+     "precision": 0.9897750511247444,
+     "predicted": 489,
+     "recall": 0.5902439024390244,
+     "tp": 484
+    },
+    "rows": 1000
+   },
+   "movies": {
+    "columns": 17,
+    "detection": {
+     "actual": 6245,
+     "f1": 0.29716466739367503,
+     "fn": 5155,
+     "fp": 1,
+     "precision": 0.999083409715857,
+     "predicted": 1091,
+     "recall": 0.1745396317053643,
+     "tp": 1090
+    },
+    "dirty_sha256": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "65b7f10b62a41c4f9141eb11bccf07afe72c99f96c4a65ba31c5b83b36e8471e",
+    "repair": {
+     "actual": 6245,
+     "f1": 0.02261959345865811,
+     "fn": 6171,
+     "fp": 224,
+     "precision": 0.2483221476510067,
+     "predicted": 298,
+     "recall": 0.011849479583666934,
+     "tp": 74
+    },
+    "rows": 7390
+   },
+   "rayyan": {
+    "columns": 11,
+    "detection": {
+     "actual": 3211,
+     "f1": 0.27106227106227104,
+     "fn": 2693,
+     "fp": 93,
+     "precision": 0.8477905073649754,
+     "predicted": 611,
+     "recall": 0.16132046091560262,
+     "tp": 518
+    },
+    "dirty_sha256": "8db954610060b5f23b5d0abfc420608d7a32fcd2aa996b48f61efde60ef3a592",
+    "reference_policy": "exact strings; no normalization",
+    "reference_sha256": "a36f26d7953a4dc41886d2342d7b3b6a16ccc6904d4eb8a648539dd545737ff4",
+    "repair": {
+     "actual": 3211,
+     "f1": 0.18546637744034708,
+     "fn": 2869,
+     "fp": 135,
+     "precision": 0.7169811320754716,
+     "predicted": 477,
+     "recall": 0.10650887573964497,
+     "tp": 342
+    },
+    "rows": 1000
+   }
+  }
+ },
+ "positive_repair_datasets": {
+  "empty_carry": 2,
+  "format_overlay_v1": 2,
+  "seeded_carry": 4,
+  "sequential": 0,
+  "source_loop_v1": 2,
+  "v2": 5,
+  "v3": 5,
+  "v4": 4,
+  "v5": 6,
+  "v6": 6
+ },
+ "published_zeroed_f1": {
+  "beers": 0.774,
+  "billionaire": 0.767,
+  "flights": 0.722,
+  "hospital": 0.811,
+  "movies": 0.765,
+  "rayyan": 0.732
+ },
+ "repair_by_column": {
+  "beers": {
+   "abv": {
+    "correct": 233,
+    "wrong": 461
+   },
+   "beer_name": {
+    "correct": 1,
+    "wrong": 2
+   },
+   "brewery_id": {
+    "correct": 1,
+    "wrong": 2
+   },
+   "brewery_name": {
+    "correct": 1,
+    "wrong": 0
+   },
+   "city": {
+    "correct": 128,
+    "wrong": 0
+   },
+   "ounces": {
+    "correct": 0,
+    "wrong": 1486
+   },
+   "state": {
+    "correct": 128,
+    "wrong": 1
+   },
+   "style": {
+    "correct": 1,
+    "wrong": 1
+   }
+  },
+  "billionaire": {
+   "Company Founded": {
+    "correct": 92,
+    "wrong": 14
+   },
+   "Company Name": {
+    "correct": 67,
+    "wrong": 14
+   },
+   "Company Relationship": {
+    "correct": 99,
+    "wrong": 5
+   },
+   "Company Sector": {
+    "correct": 58,
+    "wrong": 15
+   },
+   "Company Type": {
+    "correct": 119,
+    "wrong": 10
+   },
+   "Demographics Age": {
+    "correct": 43,
+    "wrong": 2
+   },
+   "Demographics Gender": {
+    "correct": 64,
+    "wrong": 0
+   },
+   "Location Citizenship": {
+    "correct": 191,
+    "wrong": 1
+   },
+   "Location Country Code": {
+    "correct": 235,
+    "wrong": 6
+   },
+   "Location GDP": {
+    "correct": 89,
+    "wrong": 33
+   },
+   "Location Region": {
+    "correct": 223,
+    "wrong": 2
+   },
+   "Name": {
+    "correct": 83,
+    "wrong": 30
+   },
+   "Rank": {
+    "correct": 53,
+    "wrong": 5
+   },
+   "Wealth How Category": {
+    "correct": 192,
+    "wrong": 8
+   },
+   "Wealth How From Emerging": {
+    "correct": 183,
+    "wrong": 0
+   },
+   "Wealth How Industry": {
+    "correct": 191,
+    "wrong": 40
+   },
+   "Wealth How Inherited": {
+    "correct": 138,
+    "wrong": 0
+   },
+   "Wealth How Was Founder": {
+    "correct": 188,
+    "wrong": 0
+   },
+   "Wealth How Was Political": {
+    "correct": 206,
+    "wrong": 0
+   },
+   "Wealth Type": {
+    "correct": 147,
+    "wrong": 0
+   },
+   "Wealth Worth In Billions": {
+    "correct": 73,
+    "wrong": 2
+   },
+   "Year": {
+    "correct": 158,
+    "wrong": 9
+   }
+  },
+  "flights": {
+   "act_arr_time": {
+    "correct": 555,
+    "wrong": 94
+   },
+   "act_dep_time": {
+    "correct": 206,
+    "wrong": 314
+   },
+   "sched_arr_time": {
+    "correct": 942,
+    "wrong": 2
+   },
+   "sched_dep_time": {
+    "correct": 870,
+    "wrong": 6
+   }
+  },
+  "hospital": {
+   "Address": {
+    "correct": 30,
+    "wrong": 0
+   },
+   "City": {
+    "correct": 33,
+    "wrong": 0
+   },
+   "Condition": {
+    "correct": 32,
+    "wrong": 0
+   },
+   "CountyName": {
+    "correct": 35,
+    "wrong": 4
+   },
+   "EmergencyService": {
+    "correct": 27,
+    "wrong": 0
+   },
+   "HospitalName": {
+    "correct": 24,
+    "wrong": 0
+   },
+   "HospitalOwner": {
+    "correct": 27,
+    "wrong": 0
+   },
+   "HospitalType": {
+    "correct": 32,
+    "wrong": 0
+   },
+   "MeasureCode": {
+    "correct": 29,
+    "wrong": 0
+   },
+   "MeasureName": {
+    "correct": 36,
+    "wrong": 0
+   },
+   "PhoneNumber": {
+    "correct": 34,
+    "wrong": 0
+   },
+   "ProviderNumber": {
+    "correct": 28,
+    "wrong": 0
+   },
+   "Sample": {
+    "correct": 24,
+    "wrong": 1
+   },
+   "Score": {
+    "correct": 14,
+    "wrong": 2
+   },
+   "State": {
+    "correct": 26,
+    "wrong": 0
+   },
+   "Stateavg": {
+    "correct": 27,
+    "wrong": 0
+   },
+   "ZipCode": {
+    "correct": 30,
+    "wrong": 0
+   }
+  },
+  "movies": {
+   "Creator": {
+    "correct": 0,
+    "wrong": 1
+   },
+   "Director": {
+    "correct": 4,
+    "wrong": 1
+   },
+   "Duration": {
+    "correct": 52,
+    "wrong": 55
+   },
+   "Filming Locations": {
+    "correct": 0,
+    "wrong": 1
+   },
+   "First Shown Year": {
+    "correct": 167,
+    "wrong": 23
+   },
+   "Genre": {
+    "correct": 68,
+    "wrong": 37
+   },
+   "RatingValue": {
+    "correct": 3,
+    "wrong": 48
+   }
+  },
+  "rayyan": {
+   "article_jvolumn": {
+    "correct": 1,
+    "wrong": 0
+   },
+   "article_language": {
+    "correct": 106,
+    "wrong": 30
+   },
+   "article_pagination": {
+    "correct": 23,
+    "wrong": 40
+   },
+   "author_list": {
+    "correct": 0,
+    "wrong": 13
+   },
+   "journal_abbreviation": {
+    "correct": 71,
+    "wrong": 1
+   },
+   "journal_issn": {
+    "correct": 64,
+    "wrong": 8
+   },
+   "journal_title": {
+    "correct": 41,
+    "wrong": 4
+   }
+  }
+ }
+}

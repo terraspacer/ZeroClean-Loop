@@ -1,0 +1,27 @@
+{
+  "cohort": "local-unified-loop-v6-20261031",
+  "dataset_freezes": {
+    "beers": "5c04c94525f4463c6c317bcefa802eacb3cbd0f7e64a575d24a5af628bd5b8b0",
+    "billionaire": "7a5b0d8989e2d828a75fe70b68e105098574be8efaaaacdc3dad79debc73320f",
+    "flights": "e1e9d303722b774594cafa41304290532caa41b8573d186cbf0278ad72b04c2a",
+    "hospital": "2f77ff5a424f6851b7d7ccf9b1bd9e52085149b91c491c776922cd58bc93329b",
+    "movies": "f5ac6f6b1ccc1562a1532512ab06c4d214f0d2678316671bb58b4dd9815eb825",
+    "rayyan": "306bbd6cd97fa84e439628225fdfcdb21360c096d9a6a1b2d14222177d8c00e7"
+  },
+  "datasets": [
+    "hospital",
+    "flights",
+    "beers",
+    "rayyan",
+    "billionaire",
+    "movies"
+  ],
+  "evaluation_performed": false,
+  "ground_truth_access": false,
+  "method_files": {
+    "unified_loop_v6": "zeroclean_loop.json"
+  },
+  "protocol_lock_sha256": "ea4fe11ea08e267e483da7c6154833dbfe0e304eaab31d8f1ae063a002944273",
+  "schema_version": "unified-loop-v6-freeze-v1",
+  "six_dataset_inference_complete": true
+}

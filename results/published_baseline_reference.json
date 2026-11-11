@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-26T19:32:48.142661+00:00",
+  "classification": "uncontrolled_reference_not_reproduced_measurement",
+  "purpose": "Research-only published aggregate anchors; keep separate from same-model source baseline measurements.",
+  "new_experiment_measurement": false,
+  "reproduced_published_performance": false,
+  "permitted_as_inference_input": false,
+  "source": {
+    "title": "ZeroED: Hybrid Zero-shot Error Detection through Large Language Model Reasoning",
+    "url": "https://arxiv.org/html/2504.05345v1",
+    "pdf_url": "https://arxiv.org/pdf/2504.05345v1#page=10",
+    "version": "arXiv:2504.05345v1",
+    "source_kind": "primary_author_manuscript",
+    "publisher_full_text_independently_compared": false,
+    "performance_table": "III",
+    "dataset_information_table": "II",
+    "printed_decimal_places": 3,
+    "extraction": "Exact transcription of tabulated values; no graph digitization.",
+    "metric_aggregation": "Each reported result is the mean of three repeated experiments; metrics are copied independently, not recomputed from printed precision and recall."
+  },
+  "paper_default_protocol": {
+    "model": "Qwen2.5-72b",
+    "temperature": 0,
+    "maximum_output_tokens": 4096,
+    "llm_label_rate": 0.05,
+    "related_attributes": 2,
+    "batch_size_tuples": 20,
+    "representative_sampling": "k-means described in Section III-C",
+    "manual_labels_for_zeroed": 0,
+    "manual_labeled_tuples_for_label_dependent_baselines": 2,
+    "input_file_hashes_in_inspected_settings": null,
+    "null_serialization": "empty string, as specified in Section III-B"
+  },
+  "zeroed_ed_reference": {
+    "hospital": {
+      "precision": 0.936,
+      "recall": 0.715,
+      "f1": 0.811,
+      "published_dataset_signature": {
+        "tuples": 1000,
+        "attributes": 20,
+        "error_percent": 4.82
+      },
+      "precision_status": "exactly_transcribed_at_published_precision"
+    },
+    "flights": {
+      "precision": 0.935,
+      "recall": 0.586,
+      "f1": 0.722,
+      "published_dataset_signature": {
+        "tuples": 2376,
+        "attributes": 7,
+        "error_percent": 34.51
+      },
+      "precision_status": "exactly_transcribed_at_published_precision"
+    },
+    "beers": {
+      "precision": 0.888,
+      "recall": 0.689,
+      "f1": 0.774,
+      "published_dataset_signature": {
+        "tuples": 2410,
+        "attributes": 11,
+        "error_percent": 12.98
+      },
+      "precision_status": "exactly_transcribed_at_published_precision"
+    },
+    "rayyan": {
+      "precision": 0.778,
+      "recall": 0.692,
+      "f1": 0.732,
+      "published_dataset_signature": {
+        "tuples": 1000,
+        "attributes": 11,
+        "error_percent": 29.19
+      },
+      "precision_status": "exactly_transcribed_at_published_precision"
+    },
+    "billionaire": {
+      "precision": 0.768,
+      "recall": 0.767,
+      "f1": 0.767,
+      "published_dataset_signature": {
+        "tuples": 2615,
+        "attributes": 22,
+        "error_percent": 9.84
+      },
+      "precision_status": "exactly_transcribed_at_published_precision"
+    },
+    "movies": {
+      "precision": 0.724,
+      "recall": 0.812,
+      "f1": 0.765,
+      "published_dataset_signature": {
+        "tuples": 7390,
+        "attributes": 17,
+        "error_percent": 4.97
+      },
+      "precision_status": "exactly_transcribed_at_published_precision"
+    }
+  },
+  "requested_project_protocol": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "reference_comparison": "raw CSV strings; no normalization or Pandas NA conversion",
+    "fixed_correction_examples": false,
+    "human_labels": false,
+    "source_zeroed_mask_for_correction": true,
+    "generated_responses": "fresh dirty-only requests",
+    "representative_sampling": "pinned public source RANDOM branch"
+  },
+  "protocol_mismatch_notes": [
+    {
+      "topic": "model",
+      "note": "The requested model and reasoning setting differ from the paper default. The source local model argument is the unpinned literal ./qwen2.5-72bs-instruct; its API branch names qwen2.5-7b-instruct.",
+      "sources": [
+        "https://arxiv.org/html/2504.05345v1",
+        "https://github.com/WelkinNi/ZeroED/blob/49678b8470180ab17e9c40bcedd2c00ac49de6ff/utility.py#L107"
+      ]
+    },
+    {
+      "topic": "representative_sampling",
+      "note": "The paper describes k-means. Both the pinned WelkinNi source and the paper-linked public fork call RANDOM for fresh clustering.",
+      "sources": [
+        "https://arxiv.org/html/2504.05345v1",
+        "https://github.com/WelkinNi/ZeroED/blob/49678b8470180ab17e9c40bcedd2c00ac49de6ff/main.py#L458",
+        "https://github.com/ZJU-DataVIP-Lab/ZeroED/blob/2b84266e1d8b2014d36643d343429d9a20bd769e/main.py#L457"
+      ]
+    },
+    {
+      "topic": "empty_predicate_path",
+      "note": "Both inspected repositories return no conditioned predicates for all-clean representatives. Their clean-label filter divides zero passes by len(criteria)+1e-6, so an empty criterion list removes pseudo-clean labels. Algorithm 1 does not specify an empty-set fallback. This is static protocol evidence, not attribution of any experiment outcome.",
+      "sources": [
+        "https://arxiv.org/html/2504.05345v1",
+        "https://github.com/WelkinNi/ZeroED/blob/49678b8470180ab17e9c40bcedd2c00ac49de6ff/main.py#L190",
+        "https://github.com/WelkinNi/ZeroED/blob/49678b8470180ab17e9c40bcedd2c00ac49de6ff/main.py#L967",
+        "https://github.com/ZJU-DataVIP-Lab/ZeroED/blob/2b84266e1d8b2014d36643d343429d9a20bd769e/main.py#L967"
+      ]
+    },
+    {
+      "topic": "evaluation",
+      "note": "Pinned ZeroED final evaluation uses Pandas dtype=str, default missing-value recognition, then fillna(nan). The requested evaluator preserves raw CSV strings. Both compare cells exactly after their respective loaders; parsed truth sets need not be identical.",
+      "sources": [
+        "https://github.com/WelkinNi/ZeroED/blob/49678b8470180ab17e9c40bcedd2c00ac49de6ff/measure.py#L3",
+        "zeroclean/data.py",
+        "zeroclean/evaluation.py"
+      ]
+    },
+    {
+      "topic": "dataset_variant",
+      "note": "Shared dataset names and printed dimensions do not certify byte identity. The current loader and source feature loader select _error-01.csv. Benchmark tables were not opened for this audit.",
+      "sources": [
+        "https://arxiv.org/html/2504.05345v1",
+        "https://github.com/WelkinNi/ZeroED/blob/49678b8470180ab17e9c40bcedd2c00ac49de6ff/feature.py#L272",
+        "zeroclean/data.py"
+      ]
+    },
+    {
+      "topic": "source_revision",
+      "note": "The manuscript repository URL redirects to ZJU-DataVIP-Lab/ZeroED at 2b84266e1d8b2014d36643d343429d9a20bd769e. The adapter pins WelkinNi/ZeroED at 49678b8470180ab17e9c40bcedd2c00ac49de6ff. Their main.py files differ; utility.py is byte-identical.",
+      "sources": [
+        "https://github.com/ZJU-Data-Governance-and-Services-Team/ZeroED",
+        "https://api.github.com/repos/ZJU-DataVIP-Lab/ZeroED/branches?per_page=100",
+        "https://github.com/WelkinNi/ZeroED/blob/49678b8470180ab17e9c40bcedd2c00ac49de6ff/main.py"
+      ]
+    },
+    {
+      "topic": "repetition_and_response_provenance",
+      "note": "Published values are three-run means. Fresh project responses and declared seeds are newly generated measurements, not replayed original responses.",
+      "sources": [
+        "https://arxiv.org/html/2504.05345v1",
+        "docs/baseline_audit.md"
+      ]
+    },
+    {
+      "topic": "zeroec_fixed_examples_and_prompt_identity",
+      "note": "The upstream zero-shot correction call includes fixed general correction examples; the requested protocol excludes them. The missing original system prompt remains unverified, including when author ZeroDC candidates are selected.",
+      "sources": [
+        "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/correction_zero_shot.py#L1063",
+        "docs/zeroec_prompt_recovery.md"
+      ]
+    }
+  ],
+  "zeroec_published_context": {
+    "original_publisher_url": "https://ieeexplore.ieee.org/document/11113193/",
+    "doi": "10.1109/ICDE65448.2025.00221",
+    "full_text_access_status": "Publisher robot gate; direct PDF endpoints HTTP 418; no accessible original full text recovered in bounded primary-source search.",
+    "published_per_dataset_metrics": null,
+    "published_model_and_budget_verified": false,
+    "source_code_only_facts": {
+      "regular_human_repair_budget": 10,
+      "regular_human_repair_unit": "selected rows, copied from reference table",
+      "regular_evaluator_dirty_argument": "already human-repaired table",
+      "zero_shot_human_repair_budget": 0,
+      "zero_shot_correction_model_literal": "gpt-3.5-turbo-0125",
+      "zero_shot_temperature": 0,
+      "zero_shot_fixed_general_examples": true,
+      "supplied_detection_mask_supported": true,
+      "perfect_detection_helper": "Can derive supplied mask from dirty/reference inequality; supplied masks were not opened or presumed to have this origin.",
+      "evaluation_na_fill_literal": "null",
+      "evaluation_comparison": "exact equality after Pandas CSV parsing",
+      "historical_system_prompt_identity_established": false
+    },
+    "sources": [
+      "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/README.md",
+      "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/correction.py#L1105",
+      "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/correction.py#L1243",
+      "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/correction.py#L1272",
+      "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/correction_zero_shot.py#L1232",
+      "https://github.com/YangChen32768/ZeroEC/blob/d76ef45509d7e0f9e7cc0fa98d445c06afbb157c/perfect_detection.py"
+    ]
+  },
+  "report": "docs/published_baseline_context.md",
+  "scope_attestation": {
+    "benchmark_tables_opened": false,
+    "experiment_predictions_opened": false,
+    "failure_rows_opened": false,
+    "supplied_masks_opened": false,
+    "inference_performed": false,
+    "code_changed": false,
+    "findings_sent_to_inference_agents": false
+  }
+}

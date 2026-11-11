@@ -1,0 +1,65 @@
+{
+  "audit_date": "2026-10-26T18:21:58.473592+00:00",
+  "purpose": "Read-only primary-source prompt recovery. Files are verbatim author-source candidates from ZeroDC, not established copies of missing ZeroEC files.",
+  "source_repository": "https://github.com/YangChen32768/ZeroDC",
+  "source_commit": "29cde9e0dbcdde04c34bbc4c185c73b357817390",
+  "target_repository": "https://github.com/YangChen32768/ZeroEC",
+  "target_commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+  "fidelity_conclusion": "Exact identity to omitted ZeroEC SystemMessage_EC.txt remains unproven. HumanMessage_EC.txt and general_examples_EC.txt match existing differently named pinned ZeroEC artifacts byte for byte.",
+  "files": [
+    {
+      "file": "SystemMessage_EC.txt",
+      "bytes": 1714,
+      "sha256": "aecc5b7719a0da05b01d7d544b64ebd7ab10af5c61fae6a92010747a0ce66248",
+      "source_url": "https://raw.githubusercontent.com/YangChen32768/ZeroDC/29cde9e0dbcdde04c34bbc4c185c73b357817390/prompt_templates/SystemMessage_EC.txt",
+      "source_blob_url": "https://github.com/YangChen32768/ZeroDC/blob/29cde9e0dbcdde04c34bbc4c185c73b357817390/prompt_templates/SystemMessage_EC.txt",
+      "first_public_commit": "4e0420044bf786416393eb1bd09b937d452e792f",
+      "first_public_commit_date": "2026-07-21T01:18:45Z",
+      "zeroec_comparison_file": "prompt_templates/SystemMessage.txt",
+      "zeroec_comparison_commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+      "byte_identical_to_zeroec_comparison": false,
+      "zeroec_comparison_sha256": "cd85a3cebf9d7d19f02311304471d00768e73fa4792c5cb72e072a03dfd689d5",
+      "placeholders": [
+        "general_examples",
+        "dataset_specific_examples"
+      ]
+    },
+    {
+      "file": "HumanMessage_EC.txt",
+      "bytes": 189,
+      "sha256": "3695f49cb835a0d2d931cccd91f1a1ebdceeb91b9be5ac5e6eb6ca7ca0b8d3f4",
+      "source_url": "https://raw.githubusercontent.com/YangChen32768/ZeroDC/29cde9e0dbcdde04c34bbc4c185c73b357817390/prompt_templates/HumanMessage_EC.txt",
+      "source_blob_url": "https://github.com/YangChen32768/ZeroDC/blob/29cde9e0dbcdde04c34bbc4c185c73b357817390/prompt_templates/HumanMessage_EC.txt",
+      "first_public_commit": "4e0420044bf786416393eb1bd09b937d452e792f",
+      "first_public_commit_date": "2026-07-21T01:18:45Z",
+      "zeroec_comparison_file": "prompt_templates/HumanMessage.txt",
+      "zeroec_comparison_commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+      "byte_identical_to_zeroec_comparison": true,
+      "zeroec_comparison_sha256": "3695f49cb835a0d2d931cccd91f1a1ebdceeb91b9be5ac5e6eb6ca7ca0b8d3f4",
+      "placeholders": [
+        "Dirty_Tuple",
+        "Erroneous_value",
+        "Relevant_clean_tuples",
+        "format_instructions"
+      ]
+    },
+    {
+      "file": "general_examples_EC.txt",
+      "bytes": 5356,
+      "sha256": "b420e6160f2a8d92c56930f1d08bb4d7d94fefd05f5cf73d9bb727d7e23b4ee6",
+      "source_url": "https://raw.githubusercontent.com/YangChen32768/ZeroDC/29cde9e0dbcdde04c34bbc4c185c73b357817390/prompt_templates/general_examples_EC.txt",
+      "source_blob_url": "https://github.com/YangChen32768/ZeroDC/blob/29cde9e0dbcdde04c34bbc4c185c73b357817390/prompt_templates/general_examples_EC.txt",
+      "first_public_commit": "4e0420044bf786416393eb1bd09b937d452e792f",
+      "first_public_commit_date": "2026-07-21T01:18:45Z",
+      "zeroec_comparison_file": "prompt_templates/examples.txt",
+      "zeroec_comparison_commit": "d76ef45509d7e0f9e7cc0fa98d445c06afbb157c",
+      "byte_identical_to_zeroec_comparison": true,
+      "zeroec_comparison_sha256": "b420e6160f2a8d92c56930f1d08bb4d7d94fefd05f5cf73d9bb727d7e23b4ee6",
+      "parse_validation": {
+        "parser": "ast.literal_eval",
+        "type": "list",
+        "example_count": 4
+      }
+    }
+  ]
+}

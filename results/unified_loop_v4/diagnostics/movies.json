@@ -1,0 +1,2401 @@
+{
+  "candidate_pool": {
+    "candidate_cells": 804,
+    "distinct_candidates": 804,
+    "exact_duplicate_records_merged": 348,
+    "proposal_records_seen": 1152
+  },
+  "cohort": "local-unified-loop-v4-20261029",
+  "consensus": {
+    "config": {
+      "consistency_weight": 0.15,
+      "format_weight": 0.35,
+      "max_key_columns": 2,
+      "min_agreement": 0.6666666666666666,
+      "min_margin": 0.2,
+      "min_multisource_coverage": 0.5,
+      "min_peer_sources": 2,
+      "min_repeated_entities": 2,
+      "min_slot_uniqueness": 0.8,
+      "min_winning_sources": 2,
+      "peer_weight": 0.5,
+      "reliability_floor": 0.2,
+      "reliability_prior_strength": 3.0
+    },
+    "exact_peer_strings_only": true,
+    "policy_version": "intrinsic-key-source-consensus-v1",
+    "proposals_are_conditional_on_separate_detection": true,
+    "reason": "no_temporal_columns",
+    "score_semantics": "heuristic_evidence_strength_not_calibrated_correctness",
+    "source_votes_capped": true,
+    "status": "not_applicable",
+    "temporal_columns": [],
+    "temporal_role_discovery_observation_unit": "distinct_exact_dirty_row"
+  },
+  "detection": {
+    "aggregate": {
+      "changed_cell_count": 107343,
+      "final_positive_count": 3920,
+      "gated_column_count": 15,
+      "inherited_positive_count": 110991,
+      "promoted_cell_count": 211,
+      "promoted_inherited_negative_count": 61,
+      "unknown_fallback_column_count": 0
+    },
+    "columns": [
+      {
+        "column": 0,
+        "column_name": "Id",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7200,
+        "dirty_profile": {
+          "distinct_fraction": 1.0,
+          "distinct_nonempty_formats": 30,
+          "distinct_nonempty_values": 7390,
+          "dominant_format": "A9",
+          "dominant_format_fraction": 0.9742895805142084,
+          "nonempty_observations": 7390,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": true,
+            "tokens": [
+              "id"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 18,
+        "retained_by_rule_count": 190,
+        "retained_positive_count": 190,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 18,
+          "validated_target_specific_rule_violation": 190
+        },
+        "validated_rule_violation_count": 190
+      },
+      {
+        "column": 1,
+        "column_name": "Name",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7389,
+        "dirty_profile": {
+          "distinct_fraction": 0.9741542625169147,
+          "distinct_nonempty_formats": 465,
+          "distinct_nonempty_values": 7199,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.272936400541272,
+          "nonempty_observations": 7390,
+          "observations": 7390,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "name"
+            ]
+          },
+          "structured_fraction": 0.05493910690121786
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 1,
+        "retained_positive_count": 1,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 1
+        },
+        "validated_rule_violation_count": 1
+      },
+      {
+        "column": 2,
+        "column_name": "First Shown Year",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7185,
+        "dirty_profile": {
+          "distinct_fraction": 0.02259810554803789,
+          "distinct_nonempty_formats": 2,
+          "distinct_nonempty_values": 167,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.9742895805142084,
+          "nonempty_observations": 7390,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "first",
+              "shown",
+              "year"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 57,
+        "retained_by_rule_count": 190,
+        "retained_positive_count": 205,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "inferred_type_contradiction": 190,
+          "validated_target_specific_rule_violation": 190
+        },
+        "validated_rule_violation_count": 190
+      },
+      {
+        "column": 3,
+        "column_name": "Release Date",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7072,
+        "dirty_profile": {
+          "distinct_fraction": 0.6746075461305425,
+          "distinct_nonempty_formats": 8,
+          "distinct_nonempty_values": 4899,
+          "dominant_format": "9 A 9 (A)",
+          "dominant_format_fraction": 0.9059487744423024,
+          "nonempty_observations": 7262,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "date",
+              "release"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 128,
+        "retained_by_rule_count": 190,
+        "retained_positive_count": 318,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 128,
+          "missing_in_nearly_complete_column": 128,
+          "validated_target_specific_rule_violation": 190
+        },
+        "validated_rule_violation_count": 190
+      },
+      {
+        "column": 4,
+        "column_name": "Director",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7369,
+        "dirty_profile": {
+          "distinct_fraction": 0.5069012178619756,
+          "distinct_nonempty_formats": 71,
+          "distinct_nonempty_values": 3746,
+          "dominant_format": "A A",
+          "dominant_format_fraction": 0.7841677943166441,
+          "nonempty_observations": 7390,
+          "observations": 7390,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "director"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7389,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 20,
+        "retained_positive_count": 20,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "promoted_cells": 1,
+          "promoted_inherited_negatives": 1,
+          "validated_target_specific_rule_violation": 21
+        },
+        "validated_rule_violation_count": 21
+      },
+      {
+        "column": 5,
+        "column_name": "Creator",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7339,
+        "dirty_profile": {
+          "distinct_fraction": 0.8610684893290557,
+          "distinct_nonempty_formats": 136,
+          "distinct_nonempty_values": 6173,
+          "dominant_format": "A A,A A",
+          "dominant_format_fraction": 0.49700097642627983,
+          "nonempty_observations": 7169,
+          "observations": 7390,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "creator"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 51,
+        "retained_positive_count": 51,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "validated_target_specific_rule_violation": 51
+        },
+        "validated_rule_violation_count": 51
+      },
+      {
+        "column": 6,
+        "column_name": "Actors",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7371,
+        "dirty_profile": {
+          "distinct_fraction": 0.986056049213944,
+          "distinct_nonempty_formats": 174,
+          "distinct_nonempty_values": 7213,
+          "dominant_format": "A A,A A,A A",
+          "dominant_format_fraction": 0.7648667122351333,
+          "nonempty_observations": 7315,
+          "observations": 7390,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "actors"
+            ]
+          },
+          "structured_fraction": 0.0005468215994531784
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 19,
+        "retained_positive_count": 19,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "missing_in_nearly_complete_column": 75,
+          "promoted_cells": 75,
+          "promoted_inherited_negatives": 0,
+          "validated_target_specific_rule_violation": 19
+        },
+        "validated_rule_violation_count": 19
+      },
+      {
+        "column": 7,
+        "column_name": "Cast",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7390,
+        "dirty_profile": {
+          "distinct_fraction": 0.9989063568010936,
+          "distinct_nonempty_formats": 3324,
+          "distinct_nonempty_values": 7307,
+          "dominant_format": "A A,A A,A A,A A,A A,A A,A A,A A,A A,A A,A A,A A,A A,A A,A A",
+          "dominant_format_fraction": 0.15502392344497606,
+          "nonempty_observations": 7315,
+          "observations": 7390,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "cast"
+            ]
+          },
+          "structured_fraction": 0.0010936431989063567
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 0,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "missing_in_nearly_complete_column": 75,
+          "promoted_cells": 75,
+          "promoted_inherited_negatives": 0
+        },
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 8,
+        "column_name": "Language",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 6909,
+        "dirty_profile": {
+          "distinct_fraction": 0.0679296346414073,
+          "distinct_nonempty_formats": 36,
+          "distinct_nonempty_values": 502,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.7798376184032476,
+          "nonempty_observations": 7390,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "language"
+            ]
+          },
+          "structured_fraction": 0.00027063599458728013
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 481,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 481,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 481
+        },
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 9,
+        "column_name": "Country",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7011,
+        "dirty_profile": {
+          "distinct_fraction": 0.05412719891745602,
+          "distinct_nonempty_formats": 33,
+          "distinct_nonempty_values": 400,
+          "dominant_format": "A",
+          "dominant_format_fraction": 0.789851150202977,
+          "nonempty_observations": 7390,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "country"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 379,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 379,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 379
+        },
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 10,
+        "column_name": "Duration",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 6845,
+        "dirty_profile": {
+          "distinct_fraction": 0.030393835616438356,
+          "distinct_nonempty_formats": 3,
+          "distinct_nonempty_values": 213,
+          "dominant_format": "9 A",
+          "dominant_format_fraction": 0.9847317351598174,
+          "nonempty_observations": 7008,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "duration"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 490,
+        "retained_by_rule_count": 107,
+        "retained_positive_count": 545,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 490,
+          "validated_target_specific_rule_violation": 107
+        },
+        "validated_rule_violation_count": 107
+      },
+      {
+        "column": 11,
+        "column_name": "RatingValue",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 6955,
+        "dirty_profile": {
+          "distinct_fraction": 0.03181053811659193,
+          "distinct_nonempty_formats": 7,
+          "distinct_nonempty_values": 227,
+          "dominant_format": "numeric",
+          "dominant_format_fraction": 0.976877802690583,
+          "nonempty_observations": 7136,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "rating",
+              "value"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 428,
+        "retained_by_rule_count": 187,
+        "retained_positive_count": 435,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 255,
+          "inferred_type_contradiction": 165,
+          "validated_target_specific_rule_violation": 187
+        },
+        "validated_rule_violation_count": 187
+      },
+      {
+        "column": 12,
+        "column_name": "RatingCount",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7390,
+        "dirty_profile": {
+          "distinct_fraction": 0.8245319921765857,
+          "distinct_nonempty_formats": 3,
+          "distinct_nonempty_values": 5902,
+          "dominant_format": "9,9",
+          "dominant_format_fraction": 0.767532830399553,
+          "nonempty_observations": 7158,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "count",
+              "rating"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 0,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {},
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 13,
+        "column_name": "ReviewCount",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 7034,
+        "dirty_profile": {
+          "distinct_fraction": 0.7523457492180836,
+          "distinct_nonempty_formats": 3,
+          "distinct_nonempty_values": 5292,
+          "dominant_format": "9 A,9 A",
+          "dominant_format_fraction": 0.9316178561273812,
+          "nonempty_observations": 7034,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "count",
+              "review"
+            ]
+          },
+          "structured_fraction": 1.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 356,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 356,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 356
+        },
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 14,
+        "column_name": "Genre",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 6823,
+        "dirty_profile": {
+          "distinct_fraction": 0.09712425393380358,
+          "distinct_nonempty_formats": 52,
+          "distinct_nonempty_values": 716,
+          "dominant_format": "A,A,A",
+          "dominant_format_fraction": 0.44126424308193163,
+          "nonempty_observations": 7372,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "genre"
+            ]
+          },
+          "structured_fraction": 0.0
+        },
+        "gate_triggers": [
+          "source_empty_predicate_fallback",
+          "source_positive_fraction_above_threshold"
+        ],
+        "gated": true,
+        "inherited_positive_count": 7390,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 510,
+        "retained_by_rule_count": 130,
+        "retained_positive_count": 567,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": true,
+          "empty_predicate_fallback": true,
+          "evidence": [
+            "clean_predicate_count_after_filter=zero",
+            "source_edge_case=empty_predicate_description"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 7390,
+        "source_positive_fraction": 1.0,
+        "v3_evidence_counts": {
+          "dirty_leave_one_out_low_support": 510,
+          "missing_in_nearly_complete_column": 18,
+          "validated_target_specific_rule_violation": 130
+        },
+        "validated_rule_violation_count": 130
+      },
+      {
+        "column": 15,
+        "column_name": "Filming Locations",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.5028373266078184,
+          "distinct_nonempty_formats": 770,
+          "distinct_nonempty_values": 3190,
+          "dominant_format": "A, A, A",
+          "dominant_format_fraction": 0.17749054224464061,
+          "nonempty_observations": 6344,
+          "observations": 7390,
+          "schema": {
+            "free_text": false,
+            "identifier": false,
+            "tokens": [
+              "filming",
+              "locations"
+            ]
+          },
+          "structured_fraction": 0.2460592686002522
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 2,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 2,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 2,
+        "source_positive_fraction": 0.00027063599458728013,
+        "v3_evidence_counts": {},
+        "validated_rule_violation_count": 0
+      },
+      {
+        "column": 16,
+        "column_name": "Description",
+        "contextual_low_support_count": 0,
+        "demoted_positive_count": 0,
+        "dirty_profile": {
+          "distinct_fraction": 0.9828146143437078,
+          "distinct_nonempty_formats": 5590,
+          "distinct_nonempty_values": 7263,
+          "dominant_format": "A A A",
+          "dominant_format_fraction": 0.015561569688768605,
+          "nonempty_observations": 7390,
+          "observations": 7390,
+          "schema": {
+            "free_text": true,
+            "identifier": false,
+            "tokens": [
+              "description"
+            ]
+          },
+          "structured_fraction": 0.1273342354533153
+        },
+        "gate_triggers": [],
+        "gated": false,
+        "inherited_positive_count": 140,
+        "retained_by_contextual_low_support_count": 0,
+        "retained_by_intrinsic_low_support_count": 0,
+        "retained_by_rule_count": 0,
+        "retained_positive_count": 140,
+        "source_metadata": {
+          "conflicting_evidence": false,
+          "constant_positive_classifier": false,
+          "empty_predicate_fallback": false,
+          "evidence": [
+            "clean_predicate_count_after_filter=positive"
+          ],
+          "malformed_fields": [],
+          "status": "known"
+        },
+        "source_positive_count": 21,
+        "source_positive_fraction": 0.002841677943166441,
+        "v3_evidence_counts": {
+          "promoted_cells": 60,
+          "promoted_inherited_negatives": 60,
+          "validated_target_specific_rule_violation": 179
+        },
+        "validated_rule_violation_count": 179
+      }
+    ],
+    "config": {
+      "canonical_min_agreement": 0.9,
+      "canonical_min_support": 5,
+      "context_global_min_agreement": 0.97,
+      "context_min_agreement": 0.95,
+      "context_min_coverage": 0.15,
+      "context_min_gain_over_marginal": 0.1,
+      "context_min_groups": 2,
+      "context_min_peers": 3,
+      "demoted_score": 0.49,
+      "identifier_unique_fraction": 0.6,
+      "max_domain_distinct_fraction": 0.2,
+      "max_missing_fraction": 0.02,
+      "max_rare_peer_count": 1,
+      "max_rare_peer_fraction": 0.02,
+      "min_comparison_peers": 8,
+      "min_core_mass_fraction": 0.9,
+      "min_core_value_count": 3,
+      "min_domain_observations": 30,
+      "min_dominant_format_fraction": 0.9,
+      "min_structured_fraction": 0.9,
+      "missing_min_observations": 30,
+      "promoted_score": 0.75,
+      "source_positive_fraction_threshold": 0.4,
+      "type_min_fraction": 0.95
+    },
+    "decision_threshold": 0.5,
+    "decision_threshold_operator": ">",
+    "input_fingerprint": "9619572928640d87017ff123c128f6f14f2b388a7c9d02f0c0e7f2bcde526052",
+    "intrinsic_context": {
+      "conflicting_cell_count": 0,
+      "contradicting_cell_count": 0,
+      "qualified_relations": []
+    },
+    "observation_source": "immutable_original_dirty_strings",
+    "protocol": "unified_loop_v4_dirty_intrinsic_promotions_v1",
+    "score_semantics": "policy_scores_not_calibrated_probabilities",
+    "shape": [
+      7390,
+      17
+    ],
+    "starting_scores": "completed_empty_carry",
+    "v4_structural_promotion": {
+      "candidate_count": 128,
+      "column_semantics": [
+        "abbreviation",
+        "author",
+        "authors",
+        "created",
+        "date",
+        "issn",
+        "issue",
+        "journal",
+        "language",
+        "page",
+        "pagination",
+        "volume",
+        "volumn"
+      ],
+      "policy": "semantic_metadata_missing_and_closed_grammar_v1",
+      "promoted_count": 0,
+      "retained_count": 128
+    }
+  },
+  "detection_mask_sha256": "6e4ad8556b6160d6ef5ab38f678f27c992f193f27c7852b3c50e64db2ec086c7",
+  "elapsed_local_seconds": 12163.676101856,
+  "fresh_rule_input": {
+    "dependency_count": 0,
+    "model": {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "xhigh"
+    },
+    "provenance": {
+      "clean_reference_access": false,
+      "dirty_only": true,
+      "evaluation_feedback_access": false,
+      "external_metadata_access": false,
+      "input_packet_sha256": "ef274186ed1272948b9b549159c8adfb0cb01df2d9165375f9ad14fa2312730f",
+      "request_hash": "0c2978249c9c811ddf9e80e812a85fca9c631a1796e3d3f211ecbefa2f83112b",
+      "response_sha256": "674fb483020c5f87a228dc00ea1f9a1cc2cfdc77bbf6b51aa406949ad424b6f6",
+      "study_version": "unified_loop_v4",
+      "transport_protocol_hash": "082b2a2a4640cb100325360a45a060203aedb89c698f858d84bc73606a39e117"
+    },
+    "rule_count": 13,
+    "rule_union": {
+      "input_dependency_counts": {
+        "cached": 3,
+        "fresh": 0
+      },
+      "input_rule_counts": {
+        "cached": 38,
+        "fresh": 13
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 3,
+      "union_rule_count": 51
+    },
+    "schema_version": "unified-loop-v4-dirty-rules-v1"
+  },
+  "probabilities_sha256": "6be26f2b2b7dc21ad57bb51806e9c3646b9c24dab9683e2106c923652b0186eb",
+  "repair": {
+    "catalog_roles": null,
+    "catalog_safeguard": false,
+    "config": {
+      "candidate_cap": 3,
+      "catalog_min_exact_peers": 2,
+      "consensus_min_agreement": 0.6666666666666666,
+      "consensus_min_margin": 0.2,
+      "consensus_min_sources": 2,
+      "consensus_min_winning_sources": 2,
+      "cts_min_agreement": 0.9,
+      "cts_min_margin": 0.5,
+      "cts_min_peers": 3,
+      "fd_min_peers": 2,
+      "feature_weights": [
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
+      "numeric_min_canonical_agreement": 0.95,
+      "numeric_min_exact_peers": 3,
+      "tolerance": 1e-12,
+      "unit_min_numeric_fraction": 0.6,
+      "unit_min_numeric_peers": 2
+    },
+    "counts": {
+      "abstained_cells": 3460,
+      "budget_pruned_strings": 0,
+      "candidate_cells_outside_detection": 0,
+      "detection_positive_cells": 3920,
+      "guarded_candidate_selection": 453,
+      "noisy_seeded_carry": 7,
+      "null_abstention_records": 0,
+      "selected_cells": 460
+    },
+    "detection_mask_modified": false,
+    "method": "unified_loop_v4",
+    "requires_combined_row_guard": true
+  },
+  "row_guard": {
+    "checked_rows": 196,
+    "rolled_back_rows": 0
+  },
+  "rules": {
+    "accepted_rule_count": 51,
+    "applicability": [
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:id_shape",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 190
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:year_shape",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 190
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:release_date_shape",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 190
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:release_date_calendar",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:duration_shape",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 107
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:rating_value_shape",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 165
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:rating_count_shape",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:review_count_shape",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:language_list_integrity",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:country_list_integrity",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:genre_alternate_taxonomy",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 130
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_id",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          0
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_name",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_first_shown_year",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_release_date",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_director",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_creator",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_actors",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_cast",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          7
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_language",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_country",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_duration",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_ratingvalue",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_ratingcount",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_reviewcount",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_genre",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_filming_locations",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          15
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:text_integrity_description",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:description_mojibake",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:rating_missing_despite_votes",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 22
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:director_source_expansion",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 13
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:creator_source_expansion",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 50
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:genre_source_expansion",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 26
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:director_cast_contamination",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 4
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:director_redundant_aliases",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          4
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 9
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:creator_redundant_supported_alias",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          5
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:description_alternate_editorial_source",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          16
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 178
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "cached:name_presentation_suffix",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          1
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 1
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_year_multiple_values",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 190
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_rating_multiple_scores",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 124
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_rating_outside_scale",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          11
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_duration_nonpositive",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          10
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_rating_count_negative_or_fractional",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          12
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_review_count_negative_or_fractional",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_review_duplicate_category",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          13
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_release_impossible_calendar_day",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          3
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_first_shown_after_release",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          2
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_actors_cast_total_disagreement",
+        "observed_constant_false_guard": false,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          6
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 19
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_language_malformed_list",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          8
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_country_malformed_list",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          9
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      },
+      {
+        "counterfactual_guard_applicable": true,
+        "detection_applicable": true,
+        "detection_status": "target_specific",
+        "id": "fresh:movies_genre_malformed_list",
+        "observed_constant_false_guard": true,
+        "runtime_error_rows": 0,
+        "target_columns": [
+          14
+        ],
+        "valid_rows": 7390,
+        "violation_rows": 0
+      }
+    ],
+    "input_union": {
+      "input_dependency_counts": {
+        "cached": 3,
+        "fresh": 0
+      },
+      "input_rule_counts": {
+        "cached": 38,
+        "fresh": 13
+      },
+      "policy": "stable_cached_then_fresh_exact_executable_union",
+      "union_dependency_count": 3,
+      "union_rule_count": 51
+    },
+    "raw_row_count": 7390,
+    "validation": [
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:id_shape",
+        "source_sha256": "061b71fc88d89373c70126128c81ad2e0c01c056c19a0f9f18ea5108e031e4b8",
+        "target": "Id"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:year_shape",
+        "source_sha256": "b442405caaaf006da6f12ab60ed6e9c23caa7763e4d78184747d84e7227a4542",
+        "target": "First Shown Year"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:release_date_shape",
+        "source_sha256": "47a838f8db3a5d4a4e2c884f7e08fd074f1a027d7d4a7aba8c5f0a7b9e9a9be8",
+        "target": "Release Date"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:release_date_calendar",
+        "source_sha256": "686f954dfdf113f145b329eeef448a50b232b3ca6a260101a8e0924967befb63",
+        "target": "Release Date"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:duration_shape",
+        "source_sha256": "adea27671388598a0c788cd16e84148119d0ccb62d524c1ce9b4c4c8dec4cc5d",
+        "target": "Duration"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:rating_value_shape",
+        "source_sha256": "3bdb77e78ee60662dbc5461e27694035463129227c99dce174b581cc4b783c8b",
+        "target": "RatingValue"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:rating_count_shape",
+        "source_sha256": "5ededab2c6e9ff3af0dc13aa90a5d76c6318ba5ab22e363ef1ffe5ac6bff07ae",
+        "target": "RatingCount"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:review_count_shape",
+        "source_sha256": "3f4a1c2528910e4239fd649224435ce74c98e292ee9ed504a7cf3be6109e39b7",
+        "target": "ReviewCount"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:language_list_integrity",
+        "source_sha256": "e9d310d5f6ff1fae737057c03e0b6703ac1f9bb14da190f6a791814d73bb7446",
+        "target": "Language"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:country_list_integrity",
+        "source_sha256": "949c1ea634c083f7751b6d8f887155a2ac9f0837f7f5516ff0b1d85963af1549",
+        "target": "Country"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:genre_alternate_taxonomy",
+        "source_sha256": "bcefa2b1075c89b60a4fce26d6ddf503d2624a14b21293c214aefe38a280a108",
+        "target": "Genre"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_id",
+        "source_sha256": "4d63c507e7c3855bdb7c7a57ab5136e084b7d15ced03b16ff9dcc5b71fad9454",
+        "target": "Id"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_name",
+        "source_sha256": "874a8b11ec2afbfcc19cb4590e350649331967e282a89afd8922056de27b6a72",
+        "target": "Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_first_shown_year",
+        "source_sha256": "b41374945501bc6cd1a04bbbbe544669e70a518f33a168292da0dd336c5a4833",
+        "target": "First Shown Year"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_release_date",
+        "source_sha256": "2aececd40491b643b6bbe9e56b3f81f2cabf722250798dfa3eac1536a8067842",
+        "target": "Release Date"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_director",
+        "source_sha256": "b3b80f4e3a00ea76c07c93a2957749d2ed3016676e538671d65ca78a577e9bf0",
+        "target": "Director"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_creator",
+        "source_sha256": "d623b0c38499275f1f9673f1a6b111e80099c593ee9c768920c6d017ed641585",
+        "target": "Creator"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_actors",
+        "source_sha256": "3b4dfa3040212d18a4676fed1ed216fdfac41c79ed58d54b8a3e10fcca693911",
+        "target": "Actors"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_cast",
+        "source_sha256": "5bfa3630a1af157b391ac0b2d415e07d4275e6af9896dba32ce256b557b622b0",
+        "target": "Cast"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_language",
+        "source_sha256": "16eac2a1e244401149b839058bed0c492880bb83be2bb8fc08839f4f330b3362",
+        "target": "Language"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_country",
+        "source_sha256": "0063bbf963ec0caa2ca53c1a21e4af26f89303cccdf85cc5c48d86c37bfcc0f7",
+        "target": "Country"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_duration",
+        "source_sha256": "2f39f5792f48d4694f2e0229ce5a5c8d4e57990acac5307c8fca8c4c548a179a",
+        "target": "Duration"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_ratingvalue",
+        "source_sha256": "71e3741b989003d484d5a635b97847af47c021497c9fc4b3bb3fc3ef8cb0e21c",
+        "target": "RatingValue"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_ratingcount",
+        "source_sha256": "d451eb57cbe2a22b83ff3cff51dc6653a0de5b4a51fc123385690a9045e08c08",
+        "target": "RatingCount"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_reviewcount",
+        "source_sha256": "9af481af4a2b8d272958b6a9680aa3c6b7898fc4a246fe553272f3a2058c5ca8",
+        "target": "ReviewCount"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_genre",
+        "source_sha256": "4f579086485ab6d87b0036be72328aff0223473df650291d4d5821f6246f1d07",
+        "target": "Genre"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_filming_locations",
+        "source_sha256": "ea49558e7fe90d0dce510210c2775ff9c7c96be01b493eea3b0c90a6f0c22c03",
+        "target": "Filming Locations"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:text_integrity_description",
+        "source_sha256": "fd9a936fe9657226ad16fc468e245e045fdab6090c381f2781a0c6f9c3e03fbc",
+        "target": "Description"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:description_mojibake",
+        "source_sha256": "89a837ed15017fbe8af572a8aab8878eb0ba4ed02b20157ada279df927800343",
+        "target": "Description"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:rating_missing_despite_votes",
+        "source_sha256": "1e417d85d050d92d5f9a037b98669752ce186a626b7942fe6a67ae21719b79ce",
+        "target": "RatingValue"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:director_source_expansion",
+        "source_sha256": "01c4aea4e89a03a268977453baaa3aee3ded5d79f590b50df052dd68534f5eb2",
+        "target": "Director"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:creator_source_expansion",
+        "source_sha256": "02e45a260ea35cd5b0a783407ee1bb238d45d17c950e5da32295d161d1a1c07b",
+        "target": "Creator"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:genre_source_expansion",
+        "source_sha256": "4ceb3b3bf92b7ef2f4f870d96732b0f9bcc8fcb322a56fb2deb2aa7d629d3328",
+        "target": "Genre"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:director_cast_contamination",
+        "source_sha256": "0b4f56557e9810592fd35de227e894d80d9074d864a878ae92a8311c1b609077",
+        "target": "Director"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:director_redundant_aliases",
+        "source_sha256": "b832396698bd0c78b262cb2e1df9261771d9f06c2df381e8849ef34aa99bea6a",
+        "target": "Director"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:creator_redundant_supported_alias",
+        "source_sha256": "aa0c0f93e1f2abf3bd9c78438b390b273617c8a87d45b7b00968b1f58283bc37",
+        "target": "Creator"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:description_alternate_editorial_source",
+        "source_sha256": "83a882cf4694580d6ad60438778379d40155082130e9e39bcb9a96bcee416d15",
+        "target": "Description"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "cached:name_presentation_suffix",
+        "source_sha256": "a2b95f13b01e2c56f37090cf6f0559a8c5f9020073b2e407a96824e5128621da",
+        "target": "Name"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_year_multiple_values",
+        "source_sha256": "547800f8bf9b07a6dfce9c897beeae7861fcdf091251f1c6735aa40a0aed5bdf",
+        "target": "First Shown Year"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_rating_multiple_scores",
+        "source_sha256": "8189390d1ec566d8c601a3faea02770b7877aa7b8c10b93c44ba17e04621bf4d",
+        "target": "RatingValue"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_rating_outside_scale",
+        "source_sha256": "3dced7e622eeebb1bc53b111119c330028b883fc604f4050faf89c393a3501be",
+        "target": "RatingValue"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_duration_nonpositive",
+        "source_sha256": "67168a6c67204f296ef8da2dd9c6af4b0d0e8d810f6143000481039eb3838832",
+        "target": "Duration"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_rating_count_negative_or_fractional",
+        "source_sha256": "2bcaacb09faec495e59f169078ba1bde77e14a2d78f4bd59acaffbea29391643",
+        "target": "RatingCount"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_review_count_negative_or_fractional",
+        "source_sha256": "6fce34ebb81eecd5c03aa0a15a24866ce6a906f44da4d6036b62fb61159bc929",
+        "target": "ReviewCount"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_review_duplicate_category",
+        "source_sha256": "14218fd4412a11729a1465285f92a542eb60b4a781658032693331840d188936",
+        "target": "ReviewCount"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_release_impossible_calendar_day",
+        "source_sha256": "fdd7f97f20488714d9e4c0e46f4a074cee8bbfea2b148d8d676295e9a253c87b",
+        "target": "Release Date"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_first_shown_after_release",
+        "source_sha256": "1607d3ff27b51af4a54557a23a43cc3728699218c56a976100377e7e8e1688c0",
+        "target": "First Shown Year"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_actors_cast_total_disagreement",
+        "source_sha256": "2be7a4c3e601c633c0f598e6ddbbc7b7e3c50119b78a63aced52ecfdf1920604",
+        "target": "Actors"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_language_malformed_list",
+        "source_sha256": "161aad1da1e2a44e477c8d9712240c704a7e276b9bb758c040c494ea08c60fcd",
+        "target": "Language"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_country_malformed_list",
+        "source_sha256": "7d46a6f34286364af226e5e88f6ae300dcfd002b7f770b8860bbc5da80b429b6",
+        "target": "Country"
+      },
+      {
+        "accepted": true,
+        "batch_status_counts": {
+          "accepted": 8
+        },
+        "error_count": 0,
+        "error_rate": 0.0,
+        "error_samples": [],
+        "evaluated_rows": 7390,
+        "id": "fresh:movies_genre_malformed_list",
+        "source_sha256": "596788abcbe3a627efe476ac2eb9d68bf0954df2f00deb36da3ac6b351328ef5",
+        "target": "Genre"
+      }
+    ]
+  }
+}
